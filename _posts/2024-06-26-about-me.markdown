@@ -1,2 +1,8 @@
+---
+layout: post
+title:  "Welcome to my homepage!"
+date:   2024-06-26 21:07:15 +0800
+categories: jekyll person
+---
 # About me
 I am an 2023 undergraduate at **Chinese University of Hong Kong, Shenzhen**. My major is **computer science**, and I am interested in AI, more specifically LLM.
