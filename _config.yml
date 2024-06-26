@@ -22,10 +22,10 @@ title: My Personal Blog
 email: chenziqi1@link.cuhk.edu.cn
 description: 
   This is my personal blog website for my CS journey!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://ziqichen.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: None
+github_username:  Ghost04718
 
 # Build settings
 theme: minima
