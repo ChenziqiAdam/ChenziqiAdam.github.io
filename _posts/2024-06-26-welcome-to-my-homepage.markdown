@@ -6,4 +6,4 @@ categories: jekyll update
 ---
 # Welcome to my homepage!
 
-==This is still in preparation phase.==
+**This is still in preparation phase.**
