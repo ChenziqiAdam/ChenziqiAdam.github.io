@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ziqi Chen's Homepage
+title: My Homepage
 email: chenziqi1@link.cuhk.edu.cn
 description: 
-  About me
+  Ziqi Chen's Homepage
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -29,10 +29,12 @@ github_username:  jekyll
 
 
 # Site default teaser image
-teaser: /assets/images/v2-d4854541d4c229136f1a06ea114e0d67_r.jpg
+teaser: /assets/images/wlop.jpg
+# Site Masthead logo
+logo: "/assets/images/wlop.jpg"
 
 # Site masthead title
-masthead_title: "About me"
+masthead_title: "My Homepage"
 
 # Post dates
 defaults:
@@ -42,6 +44,17 @@ defaults:
       type: posts
     values:
       show_date: true
+      read_time: true
+      author_profile: true
+      author:
+        name     : "Ziqi Chen"
+        avatar   : "/assets/images/wlop.jpg"
+        bio      : "If you are going through hell, keep going."
+        location : "Shenzhen, China"
+        links:
+          - label: "GitHub"
+            icon: "fab fa-fw fa-github"
+            url: "https://github.com/Ghost04718"
 
 # Code block copy button
 enable_copy_code_button: true
