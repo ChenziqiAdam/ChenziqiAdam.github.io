@@ -18,14 +18,34 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My Personal Blog
+title: Ziqi Chen's Homepage
 email: chenziqi1@link.cuhk.edu.cn
 description: 
-  Ziqi Chen's personal blog
-baseurl: "" # the subpath of your site, e.g. /blog
+  About me
+baseurl: "/jekyll/update" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+
+
+# Site default teaser image
+teaser: /assets/images/v2-d4854541d4c229136f1a06ea114e0d67_r.jpg
+
+# Site masthead title
+masthead_title: "About me"
+
+# Post dates
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+
+# Code block copy button
+enable_copy_code_button: true
+
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
