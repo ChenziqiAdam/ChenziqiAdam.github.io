@@ -31,7 +31,7 @@ github_username:  jekyll
 # Site default teaser image
 teaser: /assets/images/wlop.jpg
 # Site Masthead logo
-logo: "/assets/images/wlop.jpg"
+logo: "/images/wlop.jpg"
 
 # Site masthead title
 masthead_title: "My Homepage"
