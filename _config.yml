@@ -29,9 +29,9 @@ github_username:  jekyll
 
 
 # Site default teaser image
-teaser: /assets/images/wlop.jpg
+teaser: "/_site/assets/images/wlop.jpg"
 # Site Masthead logo
-logo: "/images/wlop.jpg"
+logo: "/_site/assets/images/wlop.jpg"
 
 # Site masthead title
 masthead_title: "My Homepage"
@@ -48,7 +48,7 @@ defaults:
       author_profile: true
       author:
         name     : "Ziqi Chen"
-        avatar   : "/assets/images/wlop.jpg"
+        avatar   : "/_site/assets/images/wlop.jpg"
         bio      : "If you are going through hell, keep going."
         location : "Shenzhen, China"
         links:
