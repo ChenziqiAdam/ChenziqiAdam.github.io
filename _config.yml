@@ -29,12 +29,12 @@ github_username:  jekyll
 
 
 # Site default teaser image
-teaser: "/_site/assets/images/wlop.jpg"
+teaser: "/images/wlop.jpg"
 # Site Masthead logo
-logo: "/_site/assets/images/wlop.jpg"
+logo: "/images/wlop.jpg"
 
 # Site masthead title
-masthead_title: "My Homepage"
+masthead_title: "Homepage"
 
 # Post dates
 defaults:
@@ -48,7 +48,7 @@ defaults:
       author_profile: true
       author:
         name     : "Ziqi Chen"
-        avatar   : "/_site/assets/images/wlop.jpg"
+        avatar   : "images/wlop.jpg"
         bio      : "If you are going through hell, keep going."
         location : "Shenzhen, China"
         links:
@@ -57,8 +57,7 @@ defaults:
             url: "https://github.com/Ghost04718"
 
 # Code block copy button
-enable_copy_code_button: true
-
+# enable_copy_code_button: true
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
