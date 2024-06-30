@@ -52,6 +52,9 @@ defaults:
         bio      : "If you are going through hell, keep going."
         location : "Shenzhen, China"
         links:
+          - label: "User"
+            icon: "fas fa-fw fa-user"
+            url: "https://ghost04718.github.io/about-me/"
           - label: "GitHub"
             icon: "fab fa-fw fa-github"
             url: "https://github.com/Ghost04718"

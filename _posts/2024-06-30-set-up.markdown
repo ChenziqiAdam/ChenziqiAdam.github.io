@@ -1,0 +1,16 @@
+---
+layout: single
+title:  "My homepage is set up!"
+date:   2024-06-30 11:37:10 +0800
+categories: jekyll update
+---
+# Finally set up!
+My homepage is now set up! I mean the most basic part.
+
+- 6.26 Set up **GitHub Pages**
+- 6.27 Trial and error
+- 6.28 Set up **Minimal Mistakes** via remote-theme with the help of ChatGPT
+- 6.29 Trial and error
+- 6.30 Set up author profile and **images** with the help of Google (more specificlly StackOverflow)
+
+I just find it is really **life-saving** to learn how to search for information effectively.
