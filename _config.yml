@@ -47,7 +47,7 @@ defaults:
       author_profile: true
       author:
         name     : "Ziqi Chen"
-        avatar   : "images/protrait.jpg"
+        avatar   : "images/portrait.jpg"
         bio      : "If you are going through hell, keep going."
         location : "Shenzhen, China"
         links:
