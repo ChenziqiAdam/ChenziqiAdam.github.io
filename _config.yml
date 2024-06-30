@@ -29,9 +29,9 @@ github_username:  jekyll
 
 
 # Site default teaser image
-teaser: "/images/wlop.jpg"
+teaser: "/images/landscape.jpg"
 # Site Masthead logo
-logo: "/images/wlop.jpg"
+logo: "/images/landscape.jpg"
 
 # Site masthead title
 masthead_title: "Homepage"
@@ -44,15 +44,14 @@ defaults:
       type: posts
     values:
       show_date: true
-      read_time: true
       author_profile: true
       author:
         name     : "Ziqi Chen"
-        avatar   : "images/wlop.jpg"
+        avatar   : "images/protrait.jpg"
         bio      : "If you are going through hell, keep going."
         location : "Shenzhen, China"
         links:
-          - label: "User"
+          - label: "About me"
             icon: "fas fa-fw fa-user"
             url: "https://ghost04718.github.io/about-me/"
           - label: "GitHub"
