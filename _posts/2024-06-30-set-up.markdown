@@ -4,7 +4,7 @@ title:  "My homepage is set up!"
 date:   2024-06-30 11:37:10 +0800
 categories: jekyll update
 ---
-# Finally set up!
+### Finally set up!
 My homepage is now set up! I mean the most basic part.
 
 - 6.26 Set up **GitHub Pages**
