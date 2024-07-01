@@ -27,6 +27,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Home page layout
+paginate: 2
+paginate_path: /page:num/
 
 # Site default teaser image
 teaser: "/images/landscape.jpg"
