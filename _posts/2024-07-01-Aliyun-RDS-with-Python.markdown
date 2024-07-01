@@ -12,7 +12,7 @@ tags:
 1. Retrive your host from your RDS console as well as your RDS account and password (**make sure your account have access to your target database**)
 2. Install PyMySQL: `pip install pymysql` (this applies for **Python3**, not sure about older verions)
 3. Example code:
-    ```Python
+    {% highlight ruby %}
     import pymysql.cursors
 
     connection = pymysql.connect(host='your_host',
@@ -32,7 +32,8 @@ tags:
 	    print(row)
 
     connection.close()
-    ```
-    More see [Alibaba Cloud official website](https://www.alibabacloud.com/en?_p_lc=1)
+    {% endhighlight %}
+
+More see [Alibaba Cloud official website](https://www.alibabacloud.com/en?_p_lc=1)
 
 Now it is done!
