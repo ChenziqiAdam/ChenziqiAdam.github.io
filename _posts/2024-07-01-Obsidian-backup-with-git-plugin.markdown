@@ -1,0 +1,21 @@
+---
+layout: single
+title:  "How to backup Obsidian"
+date:   2024-07-01 23:08:10 +0800
+categories: jekyll update
+tags:
+  - Obsidian
+  - Git
+---
+### How to backup Obsidian with Git plugin
+Since Obsidian files are local, it is important to backup. The Git plugin is a free option compared to the official.
+
+1. Download the **Git plugin** in Obsidian (it is a **third-party** plugin so make sure you turn off the security mode).
+2. Download **Git**
+3. Create a repository in **GitHub**
+4. Initialize the **local** Obsidian vault: `git init` (all codes run in Git terminal)
+5. Add `origin` to the local Git repository(vault): `git remote add origin https://github.com/your_username/your_repository_name/` (make sure your **current working dirctory** is your local vault)
+6. 'Merge' the local Git repository with the remote one: `git pull https://github.com/your_username/your_repository_name/ main --allow-unrelated-histories` (your branch name maybe **`master`** instead of **`main`** the line does not work)
+7. Then the configuration is done. You can custom the 'Vault backup interval' and 'Auto pull interval' in Obsidian Git plugin.
+
+Now it is done!

@@ -6,6 +6,7 @@ categories: jekyll update
 tags:
   - RA
   - CS
+  - Skill
 ---
 ### How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python
 

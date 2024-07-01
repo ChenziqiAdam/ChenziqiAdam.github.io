@@ -6,6 +6,7 @@ categories: jekyll update
 tags:
   - RA
   - CS
+  - Skill
 ---
 ### How to connect to a remote server in Visual Studio Code
 This blog takes **Visual Studio Code** as an example for how to connect to a remote server.
