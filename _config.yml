@@ -28,13 +28,13 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Home page layout
-paginate: 2
+paginate: 5
 paginate_path: /page:num/
 
 # Site default teaser image
-teaser: "/images/landscape.jpg"
+teaser: "/images/wlop-Xiaolv-landscape.jpg"
 # Site Masthead logo
-logo: "/images/landscape.jpg"
+logo: "/images/wlop-Xiaolv-landscape.jpg"
 
 # Site masthead title
 masthead_title: "Homepage"
@@ -50,7 +50,7 @@ defaults:
       author_profile: true
       author:
         name     : "Ziqi Chen"
-        avatar   : "images/portrait.jpg"
+        avatar   : "images/wlop-Xiaolv-portrait.jpg"
         bio      : "If you are going through hell, keep going."
         location : "Shenzhen, China"
         links:
