@@ -18,14 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My Homepage
+title: Ziqi Chen's Site
 email: chenziqi1@link.cuhk.edu.cn
 description: 
-  Ziqi Chen's Homepage
+  This is my personal site!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+
+# Skin
+minimal_mistakes_skin: "default"
 
 # Home page layout
 paginate: 5
@@ -36,8 +39,13 @@ teaser: "/images/wlop-Xiaolv-landscape.jpg"
 # Site Masthead logo
 logo: "/images/wlop-Xiaolv-landscape.jpg"
 
+# Site search
+search: true
+lunr:
+  search_within_pages: true
+
 # Site masthead title
-masthead_title: "Homepage"
+masthead_title: "Ziqi Chen's Site"
 
 # Post dates
 defaults:
@@ -46,21 +54,34 @@ defaults:
       path: ""
       type: posts
     values:
+      layout: single
       show_date: true
       author_profile: true
-      author:
-        name     : "Ziqi Chen"
-        avatar   : "images/wlop-Xiaolv-portrait.jpg"
-        bio      : "If you are going through hell, keep going."
-        location : "Shenzhen, China"
-        links:
-          - label: "About me"
-            icon: "fas fa-fw fa-user"
-            url: "https://ghost04718.github.io/about-me/"
-          - label: "GitHub"
-            icon: "fab fa-fw fa-github"
-            url: "https://github.com/Ghost04718"
 
+# Site author
+author:
+  name     : "Ziqi Chen"
+  avatar   : "images/wlop-Xiaolv-portrait.jpg"
+  bio      : "If you are going through hell, keep going."
+  location : "Shenzhen, China"
+  links:
+    - label: "About me"
+      icon: "fas fa-fw fa-user"
+      url: "https://ghost04718.github.io/about-me/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ghost04718"
+
+# Site footer 
+footer:
+  links:
+    - label: "About me"
+      icon: "fas fa-fw fa-user"
+      url: "https://ghost04718.github.io/about-me/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ghost04718"
+            
 # Code block copy button
 enable_copy_code_button: true
 
