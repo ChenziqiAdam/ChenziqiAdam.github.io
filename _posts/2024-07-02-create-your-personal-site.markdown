@@ -8,6 +8,7 @@ tags:
   - GitHub
   - Minimal Mistakes
   - Git
+  - Skill
 ---
 ### How to create your own site with GitHub Pages
 This blog will show the steps of how to create your own personal site like this.
