@@ -18,7 +18,7 @@ It is too inefficient and time-consuming to add manually. So I did what a progra
 {% highlight ruby %}
 #!/bin/bash
 
-line_to_add=">[[$1]]"
+line_to_add="$1"
 directory="./Obsidian/$2"
 for file in "$directory"/*
 do
