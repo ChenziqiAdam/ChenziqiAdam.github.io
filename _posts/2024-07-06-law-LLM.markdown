@@ -37,7 +37,7 @@ def get_embedding(text, model="text-embedding-3-small"):
    return openai_client.embeddings.create(input = [text], model=model).data[0].embedding
 
 raw_vector = get_embedding(raw_content)
-{% end highlight %}
+{% endhighlight %}
 
 4. Prepare your **Zilliz Collection** with your law_article data: remember to use **Openai embedding** to build your Collection, or there will be **size-matching error** (Openai embedding's vectors' dimension are 1536). More see [the official ducument](https://docs.zilliz.com/docs/quick-start).
 5. Search for the **nearest** content from Zilliz Collection (you can adjust the search, see [here](https://docs.zilliz.com/docs/single-vector-search))
@@ -69,7 +69,7 @@ milvus_get = str(milvus_get) # Otherwise it will be an Extralist
 law_article_pattern = r"'law_article':\s*'([^']*?)'"
 law_article_match = re.search(law_article_pattern, milvus_get)
 law_article = law_article_match.group(1)
-{% end highlight %}
+{% endhighlight %}
 
 - More related content see [OpenAi documentation](https://platform.openai.com/docs/overview) and [Zilliz documentation](https://docs.zilliz.com/docs/quick-start).
 
