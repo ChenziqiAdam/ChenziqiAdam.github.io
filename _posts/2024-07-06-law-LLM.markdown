@@ -9,68 +9,70 @@ tags:
   - Zilliz
 ---
 ### How to build your own law Large Language Model
-Conponents: **OpenAI** + **Zilliz Cloud**
 
-With the **model** and **embedding** from **Openai**, we can build our own **law Large Language Model** with our specific **Collection** from **Zilliz Cloud** (this will guarantee the correctness of our output by utilizing LLM **illusion**, if any).
+With the **model** and **embedding** from **OpenAI**, we can build our own **law Large Language Model** with our specific **Collection** from **Zilliz Cloud** (this will guarantee the correctness of our output by utilizing LLM **illusion**, if any).
 
-1. Retrive your **OpenAI API key** from your Openai account setting.
-2. Call the **OpenAI model** to generate your target law article in response to your question
 {% highlight ruby %}
 from openai import OpenAI
+from pymilvus import MilvusClient
+import numpy as np
+import re
 
-client = OpenAI(
+# Configuration for OpenAI
+openai_client = OpenAI(
     api_key=your_api_key
 )
 
-completion = client.chat.completions.create(
-    model="gpt-4o",
+# Call the model to generate your target content
+completion = openai_client.chat.completions.create(
+    model="gpt-4o", # Pick an model
     messages=[
-        {"role": "system", "content": "your_system_content"},
-        {"role": "user", "content": "your_user_content"}
+        {"role": "system", "content": "your_system_content"}, # Set the setting
+        {"role": "user", "content": "your_user_content"} # Ask your questions
     ]
 )
 raw_content = completion.choices[0].message.content
-{% endhighlight %}
 
-3. Embed the raw content (i.e. **vectorize** the text). This is because **Zilliz Collection** uses **vector search**
-{% highlight ruby %}
+# Embed the raw_content
 def get_embedding(text, model="text-embedding-3-small"):
     return openai_client.embeddings.create(input = [text], model=model).data[0].embedding
 
 raw_vector = get_embedding(raw_content)
-{% endhighlight %}
-
-4. Prepare your **Zilliz Collection** with your law_article data: remember to use **OpenAI embedding** to build your Collection, or there will be **size-matching error** (Openai embedding's vectors' dimension are 1536). More see [the official ducument](https://docs.zilliz.com/docs/quick-start).
-5. Search for the **nearest** content **id** from Zilliz Collection (you can adjust the search, see [here](https://docs.zilliz.com/docs/single-vector-search))
-{% highlight ruby %}
-import numpy as np
-import re
-
 vector = np.array(raw_vector) # Convert it to a (1536, ) vector
+
+# Configuration for Zilliz
+milvus_client = MilvusClient(
+    uri=your_url
+    token=your_token
+)
+
+# Search the vector in Collection
 milvus_search = milvus_client.search(
-    collection_name="your_collection",
+    collection_name="your_collection", # Your Collection name
     data=[vector],
     limit=1, # The number of results to return
-    search_params={"metric_type": "COSINE", "params": {"nprobe": 10}}
+    search_params={"metric_type": "COSINE", "params": {"nprobe": 10}} # Custom your params
 )
-milvus_search = str(milvus_search)
+milvus_search = str(milvus_search) # Otherwise it will be an Extralist
 
+# Retrive the id from the search result with regexes
 id_pattern = r"'id':\s*(\d+)"
 id_match = re.search(id_pattern, milvus_search)
-id = int(id_match.group(1)) # Retrive the id using regexes
-{% endhighlight %}
+id = int(id_match.group(1))
 
-6. Get the law_article with the **id**
-{% highlight ruby %}
+# Get the content with id in Collection
 milvus_get = milvus_client.get(
     collection_name="your_collection",
     ids=[id]
 )
 milvus_get = str(milvus_get) # Otherwise it will be an Extralist
 
+# Retrive the law_article from the get result with regexes
 law_article_pattern = r"'law_article':\s*'([^']*?)'"
 law_article_match = re.search(law_article_pattern, milvus_get)
-law_article = law_article_match.group(1) # Retrive the content using regexes
+law_article = law_article_match.group(1)
+
+print(law_article)
 {% endhighlight %}
 
 - More related content see [OpenAI documentation](https://platform.openai.com/docs/overview) and [Zilliz documentation](https://docs.zilliz.com/docs/quick-start).
