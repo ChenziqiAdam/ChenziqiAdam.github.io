@@ -57,6 +57,9 @@ defaults:
       layout: single
       show_date: true
       author_profile: true
+      toc: true
+      toc_label: "My Table of Contents"
+      toc_icon: "cog"
 
 # Site author
 author:
@@ -85,12 +88,31 @@ footer:
 # Code block copy button
 enable_copy_code_button: true
 
+# jekyll-archives config
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-github-metadata
+  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
