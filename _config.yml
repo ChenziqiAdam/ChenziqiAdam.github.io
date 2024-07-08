@@ -90,10 +90,10 @@ enable_copy_code_button: true
 
 # jekyll-archives config
 category_archive:
-  type: jekyll-archives
+  type: liquid
   path: /categories/
 tag_archive:
-  type: jekyll-archives
+  type: liquid
   path: /tags/
 jekyll-archives:
   enabled:
