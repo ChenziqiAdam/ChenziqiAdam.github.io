@@ -2,11 +2,12 @@
 layout: single
 title:  "How to connect to Alibaba Cloud RDS"
 date:   2024-07-01 21:05:55 +0800
-categories: jekyll update
-tags:
-  - RA
+categories:
   - CS
-  - Skill
+  - RA
+  - Skills
+tags:
+  - Aibaba Cloud
 ---
 ### How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python
 

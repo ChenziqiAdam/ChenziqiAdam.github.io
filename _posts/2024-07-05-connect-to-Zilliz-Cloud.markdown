@@ -2,9 +2,11 @@
 layout: single
 title:  "How to connect to Zilliz Cloud"
 date:   2024-07-05 14:57:40 +0800
-categories: jekyll update
+categories:
+  - CS
+  - RA
+  - Skills
 tags:
-  - Skill
   - Zilliz
 ---
 ### How to connect to Zilliz Cloud in Python?

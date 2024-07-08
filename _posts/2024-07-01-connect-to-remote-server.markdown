@@ -2,11 +2,10 @@
 layout: single
 title:  "How to connect to a remote server"
 date:   2024-07-01 18:41:15 +0800
-categories: jekyll update
-tags:
-  - RA
+categories:
   - CS
-  - Skill
+  - RA
+  - Skills
 ---
 ### How to connect to a remote server in Visual Studio Code
 This blog takes **Visual Studio Code** as an example for how to connect to a remote server.

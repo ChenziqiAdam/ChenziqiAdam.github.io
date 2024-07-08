@@ -2,10 +2,11 @@
 layout: single
 title:  "How to edit multiple files in Obsidian"
 date:   2024-07-02 17:51:25 +0800
-categories: jekyll update
+categories: 
+  - Obsidian
+  - Skills
 tags:
   - Git
-  - Skill
   - Obsidian
 ---
 ### How to edit multiple files in Obsidian with Git

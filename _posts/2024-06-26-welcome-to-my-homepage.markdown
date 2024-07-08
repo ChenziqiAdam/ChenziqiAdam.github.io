@@ -2,7 +2,7 @@
 layout: single
 title:  "Welcome to my site!"
 date:   2024-06-26 21:07:15 +0800
-categories: jekyll update
+categories: Others
 ---
 ### Welcome to Ziqi Chen's personal site!
 This is my personal site!
