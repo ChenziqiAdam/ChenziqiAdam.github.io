@@ -9,9 +9,9 @@ tags:
 ---
 ### How to pass command line arguments (CLA) in IntelliJ IDEA?
 
-1. Go to the toolbar on the top right and choose **Run**.
-2. Choose **Run Congiguration**.
-3. Click **+** on the top right coner and choose **Application**.
-4. In **Build and run**, modify your configuration, i.e. **Main class** and **Program arguments**. (The **Program arguments** here is not limited to **CLA**.)
+1. Go to the toolbar on the top left corner and choose **Run**.
+2. Choose **Run Configuration**.
+3. Click **+** on the top left corner and choose **Application**.
+4. In **Build and run**, modify your configuration, i.e. **Main class** and **Program arguments** (The **Program arguments** here is not limited to **CLA**).
 
 Now it is done!
