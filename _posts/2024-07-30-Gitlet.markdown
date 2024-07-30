@@ -1,0 +1,115 @@
+---
+layout: single
+title:  "How to implement your own Git"
+date:   2024-07-30 16:16:15 +0800
+categories:
+  - CS
+tags:
+  - Git
+---
+### How to implement your own version control system based on Git (based on UCB CS 61B)
+This is all based on **UCB CS 61B (Data Structures, Spring 2021)**. More see [the official website](https://sp21.datastructur.es/materials/proj/proj2/proj2).
+
+Git is a powerful, distributed VCS (vision control system) widely used in software development. Created by Linus Torvalds in 2005, Git enables developers to track changes, collaborate seamlessly, and manage their codebase efficiently.
+
+### 1. Git Basic
+Git is a distributed version control system that allows multiple developers to work on a project simultaneously without overwriting each other's changes. It helps track changes, revert to previous states, and collaborate efficiently. More detailed see [MIT Missing Semester, Vision Control (Git)](https://missing.csail.mit.edu/2020/version-control/).
+#### Key Concepts
+- **Repository**: A repository (or repo) is a directory that contains all of your project files and the history of their changes.
+- **Commit**: A commit is a snapshot of your repository at a specific point in time. Each commit has a unique ID.
+{% highlight ruby %}
+o <-- o <-- o <-- o  (main)
+{% endhighlight %}
+- **Branch**: A branch is a separate line of development. The default branch name in Git is main.
+{% highlight ruby %}
+o <-- o <-- o <-- o  (main)
+           \
+            \
+             o <-- o  (new_feature)
+{% endhighlight %}
+- **Merge**: Merging is the process of combining the changes from one branch into another.
+{% highlight ruby %}
+o <-- o <-- o <-- o <---- o  (main)
+           ^            /
+            \          v
+            --- o <-- o  (new_feature)
+{% endhighlight %}
+- **Staging Area (Index)**: The staging area is where you place changes that you want to include in your next commit.
+- **HEAD**: HEAD is a pointer to the current commit or the tip of the current branch.
+- **Checkout**: Checkout is used to switch branches.
+#### Git Terminologies
+{% highlight ruby %}
+// a file is a bunch of bytes
+type blob = array<byte>
+	
+// a commit has parents, metadata, and the top-level tree
+type commit = struct {
+    parents: array<commit>
+    author: string
+    message: string
+    snapshot: tree
+}
+
+// an object is a blob or commit
+type object = blob | commit
+
+// all objects are content-addressed by their SHA-1 hash
+objects = map<string, object>
+	
+def store(object):
+    id = sha1(object)
+    objects[id] = object
+	
+def load(id):
+    return objects[id]
+{% endhighlight %}
+### 2. Overview of Gitlet
+Let's call our version **Gitlet**, which mimics some basic features of **Git**. 
+A version-control system helps manage and track changes in projects, allowing you to save, restore, and view different versions of files. Key functionalities in Gitlet include:
+1. **Committing**: Saving the state of a directory of files.
+2. **Checking out**: Restoring a previous version of files or commits.
+3. **Logging**: Viewing the history of commits.
+4. **Branching**: Maintaining separate sequences of commits.
+5. **Merging**: Integrating changes from one branch into another.
+Gitlet visualizes commits as a linked list, with each commit pointing to its parent. The HEAD pointer tracks the current state in the commit history. Gitlet also supports branching, allowing you to maintain and switch between different versions of your project, visualized as a commit tree. Once created, commits in Gitlet are immutable, ensuring that past states are preserved and not accidentally deleted.
+### 3. `.gitlet` Directory Structure
+Our `.gitlet` directory is similar to the official `.git`, which is created when you initialize a Git repository with git init. It contains all the metadata and object database for your repository.
+{% highlight ruby %}
+.gitlet
+├── HEAD
+├── stageIndex
+├── objects
+├── refs
+    └── heads
+        └── main
+{% endhighlight %}
+- **HEAD**: Points to the current branch reference. It contains the path to the current branch in `refs/heads/`.
+{% highlight ruby %}
+HEAD -> refs/heads/main
+{% endhighlight %}
+- **stageIndex**: A binary file that keeps track of the staged files for the next commit. It's also called the staging area.
+- **objects/**: Contains all the objects (blobs, trees, and commits) that make up the history of the repository.
+{% highlight ruby %}
+objects/
+    ├── 1234567890abcdef...
+    ├── 34567890abcdef12...
+    │
+{% endhighlight %}
+- **refs/**: Stores references to commit objects. It contains `heads/` for local branches. 
+{% highlight ruby %}
+refs/
+    └── heads/
+        └── main
+{% endhighlight %}
+### 4. Project Structure (Java)
+{% highlight ruby %}
+Gitlet
+├── Main.java
+├── Commands.java
+├── Branch.java
+├── Commit.java
+└── Utils.java
+{% endhighlight %}
+More see [my implementation](https://github.com/Ghost04718/cs61b-Gitlet).
+
+Now it is done!
