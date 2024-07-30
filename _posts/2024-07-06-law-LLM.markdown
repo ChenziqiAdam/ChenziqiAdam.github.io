@@ -87,6 +87,6 @@ law_article = law_article_match.group(1)
 print(law_article)
 {% endhighlight %}
 
-- More related content see [OpenAI documentation](https://platform.openai.com/docs/overview) and [Zilliz documentation](https://docs.zilliz.com/docs/quick-start).
+More details see [OpenAI documentation](https://platform.openai.com/docs/overview) and [Zilliz documentation](https://docs.zilliz.com/docs/quick-start).
 
 Now it is done!

@@ -8,12 +8,12 @@ tags:
   - Git
 ---
 ### How to implement your own version control system based on Git (based on UCB CS 61B)
-This is all based on **UCB CS 61B (Data Structures, Spring 2021)**. More see [the official website](https://sp21.datastructur.es/materials/proj/proj2/proj2).
+This blog is all based on **UCB CS 61B (Data Structures, Spring 2021)**. More see [the official website](https://sp21.datastructur.es/materials/proj/proj2/proj2).
 
-Git is a powerful, distributed VCS (vision control system) widely used in software development. Created by Linus Torvalds in 2005, Git enables developers to track changes, collaborate seamlessly, and manage their codebase efficiently.
+Git is a powerful, distributed **VCS** (vision control system) widely used in software development. Created by Linus Torvalds in 2005, Git enables developers to track changes, collaborate seamlessly, and manage their codebase efficiently.
 
 ### 1. Git Basic
-Git is a distributed version control system that allows multiple developers to work on a project simultaneously without overwriting each other's changes. It helps track changes, revert to previous states, and collaborate efficiently. More detailed see [MIT Missing Semester, Vision Control (Git)](https://missing.csail.mit.edu/2020/version-control/).
+Git is a distributed version control system that allows multiple developers to work on a project simultaneously without overwriting each other's changes. It helps track changes, revert to previous states, and collaborate efficiently. More detailed introduction see [MIT Missing Semester, Vision Control (Git)](https://missing.csail.mit.edu/2020/version-control/).
 #### Key Concepts
 - **Repository**: A repository (or repo) is a directory that contains all of your project files and the history of their changes.
 - **Commit**: A commit is a snapshot of your repository at a specific point in time. Each commit has a unique ID.
@@ -37,6 +37,7 @@ o <-- o <-- o <-- o <---- o  (main)
 - **Staging Area (Index)**: The staging area is where you place changes that you want to include in your next commit.
 - **HEAD**: HEAD is a pointer to the current commit or the tip of the current branch.
 - **Checkout**: Checkout is used to switch branches.
+
 #### Git Terminologies
 {% highlight ruby %}
 // a file is a bunch of bytes
