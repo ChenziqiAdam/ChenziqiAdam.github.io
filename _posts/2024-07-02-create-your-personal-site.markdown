@@ -31,7 +31,8 @@ Set up **Jekyll**: you can go to Jekyll documents at the button of GitHub Pages 
 > - If there is error about "wdm", try comment this line in **Gemfile**: `gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]`
 > - Remember to run `bundle install` and `bundle update` everytime after you modify the **Gemfile**.
 6. **Build** the site and see it on your local server: `bundle exec jekyll serve`.
-- So far Jekyll should be set up, you can custom it in `_config.yml`. More see [the official guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll).
+
+So far Jekyll should be set up, you can custom it in `_config.yml`. More see [the official guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll).
 ### 3. Minimal Mistakes
 Set up **Minimal Mistakes** (a Jekyll theme)
 1. Go to [Minimal Mistakes document](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) and install via **Remote theme method**.

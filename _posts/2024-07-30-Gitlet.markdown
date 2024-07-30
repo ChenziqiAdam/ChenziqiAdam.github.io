@@ -71,6 +71,7 @@ A version-control system helps manage and track changes in projects, allowing yo
 3. **Logging**: Viewing the history of commits.
 4. **Branching**: Maintaining separate sequences of commits.
 5. **Merging**: Integrating changes from one branch into another.
+
 Gitlet visualizes commits as a linked list, with each commit pointing to its parent. The HEAD pointer tracks the current state in the commit history. Gitlet also supports branching, allowing you to maintain and switch between different versions of your project, visualized as a commit tree. Once created, commits in Gitlet are immutable, ensuring that past states are preserved and not accidentally deleted.
 ### 3. `.gitlet` Directory Structure
 Our `.gitlet` directory is similar to the official `.git`, which is created when you initialize a Git repository with git init. It contains all the metadata and object database for your repository.
@@ -93,7 +94,7 @@ HEAD -> refs/heads/main
 objects/
     ├── 1234567890abcdef...
     ├── 34567890abcdef12...
-    │
+    └── ...
 {% endhighlight %}
 - **refs/**: Stores references to commit objects. It contains `heads/` for local branches. 
 {% highlight ruby %}
