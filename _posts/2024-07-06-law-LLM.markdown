@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "How to build your own law LLM"
+title:  "How to utilize AI hallucination"
 date:   2024-07-06 23:18:30 +0800
 categories: 
   - CS
@@ -9,16 +9,21 @@ tags:
   - OpenAI
   - Zilliz
 ---
-### How to build your own law Large Language Model
+### How to utilize AI hallucination with RAG
+AI hallucination seems to be unavoidable, but we can utilize this with RAG (Retrieval-Augmented Generation) to optimize the output. Below is an example to illustrate how to ask ChatGPT to generate the desired legal provisions.
 
-With the **model** and **embedding** from **OpenAI**, we can build our own **law Large Language Model** with our specific **Collection** from **Zilliz Cloud** (this will guarantee the correctness of our output by utilizing LLM **illusion**, if any).
+**Conponents**: OpenAI API, Zilliz Cloud Collection
 
+### 1. Setup
 {% highlight ruby %}
 from openai import OpenAI
 from pymilvus import MilvusClient
 import numpy as np
 import re
+{% endhighlight %}
 
+### 2. ChatGPT
+{% highlight ruby %}
 # Configuration for OpenAI
 openai_client = OpenAI(
     api_key=your_api_key
@@ -33,7 +38,10 @@ completion = openai_client.chat.completions.create(
     ]
 )
 raw_content = completion.choices[0].message.content
+{% endhighlight %}
 
+### 3. Vector Search in Zilliz Cloud Collection
+{% highlight ruby %}
 # Embed the raw_content
 def get_embedding(text, model="text-embedding-3-small"):
     return openai_client.embeddings.create(input = [text], model=model).data[0].embedding
@@ -47,7 +55,7 @@ milvus_client = MilvusClient(
     token=your_token
 )
 
-# Search the vector in Collection
+# Vector Search in Collection
 milvus_search = milvus_client.search(
     collection_name="your_collection", # Your Collection name
     data=[vector],
@@ -55,7 +63,10 @@ milvus_search = milvus_client.search(
     search_params={"metric_type": "COSINE", "params": {"nprobe": 10}} # Custom your params
 )
 milvus_search = str(milvus_search) # Otherwise it will be an Extralist
+{% endhighlight %}
 
+### 4. Retrive the target content from Zilliz Cloud Collection
+{% highlight ruby %}
 # Retrive the id from the search result with regexes
 id_pattern = r"'id':\s*(\d+)"
 id_match = re.search(id_pattern, milvus_search)
