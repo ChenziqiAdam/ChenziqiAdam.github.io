@@ -7,21 +7,21 @@ header:
 excerpt: >
   Welcome to Ziqi Chen's personal site!
 feature_row:
-  - image_path: /images/homepage.png
+  - image_path: /images/wlop-night.jpg
     alt: "Homepage"
     title: "My homepage"
     excerpt: "See my homepage!"
     url: "/home/"
     btn_class: "btn--primary"
     btn_label: "Homepage"
-  - image_path: /images/posts.png
+  - image_path: /images/wlop-Fengling-reading.jpg
     alt: "Posts"
     title: "My posts"
     excerpt: "See my posts!"
     url: "/tags/"
     btn_class: "btn--primary"
     btn_label: "Posts"
-  - image_path: /images/about-me.png
+  - image_path: /images/wlop-Haiqinyan-reflection.jpg
     alt: "About me"
     title: "About me"
     excerpt: "Learn more about me!"
