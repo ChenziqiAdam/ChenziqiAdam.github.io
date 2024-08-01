@@ -18,7 +18,7 @@ pip install selenium
 pip install bs4
 ```
 2. Use `selenium` to run the driver and `bs4` to get the website content
-{% highlight ruby %}
+{% highlight python %}
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import re

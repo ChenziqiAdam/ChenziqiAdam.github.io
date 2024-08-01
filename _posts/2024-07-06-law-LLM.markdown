@@ -10,12 +10,12 @@ tags:
   - Zilliz
 ---
 ### How to utilize AI hallucination with RAG
-AI hallucination seems to be unavoidable, but we can utilize this with RAG (Retrieval-Augmented Generation) to optimize the output. Below is an example to illustrate how to ask ChatGPT to generate the desired legal provisions.
+AI hallucination seems to be unavoidable, but we can utilize this with **RAG** (Retrieval-Augmented Generation) to optimize the output. Below is an example to illustrate how to ask ChatGPT to generate the desired legal provisions.
 
 **Conponents**: OpenAI API, Zilliz Cloud Collection
 
 ### 1. Setup
-{% highlight ruby %}
+{% highlight Python %}
 from openai import OpenAI
 from pymilvus import MilvusClient
 import numpy as np
@@ -23,7 +23,7 @@ import re
 {% endhighlight %}
 
 ### 2. ChatGPT
-{% highlight ruby %}
+{% highlight Python %}
 # Configuration for OpenAI
 openai_client = OpenAI(
     api_key=your_api_key
@@ -41,7 +41,7 @@ raw_content = completion.choices[0].message.content
 {% endhighlight %}
 
 ### 3. Vector Search in Zilliz Cloud Collection
-{% highlight ruby %}
+{% highlight Python %}
 # Embed the raw_content
 def get_embedding(text, model="text-embedding-3-small"):
     return openai_client.embeddings.create(input = [text], model=model).data[0].embedding
@@ -66,7 +66,7 @@ milvus_search = str(milvus_search) # Otherwise it will be an Extralist
 {% endhighlight %}
 
 ### 4. Retrive the target content from Zilliz Cloud Collection
-{% highlight ruby %}
+{% highlight Python %}
 # Retrive the id from the search result with regexes
 id_pattern = r"'id':\s*(\d+)"
 id_match = re.search(id_pattern, milvus_search)

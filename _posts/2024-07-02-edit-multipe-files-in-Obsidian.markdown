@@ -16,7 +16,7 @@ The background is that I have a directory, and its name is "George-Martin". In t
 It is too inefficient and time-consuming to add manually. So I did what a programmer should do: **code**.
 
 - Create a **Shell script** in **Git**: `vim script.sh` (for **vim** users) (if you use **Visual Studio Code**, run `code script.sh`) and code:
-{% highlight ruby %}
+{% highlight shell %}
 #!/bin/bash
 
 line_to_add="$1"

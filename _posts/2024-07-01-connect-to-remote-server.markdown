@@ -11,7 +11,7 @@ categories:
 This blog takes **Visual Studio Code** as an example for how to connect to a remote server.
 
 1. Open Visual Studio Code and click the **blue button** on the button left.
-2. Click "connect to a host"
+2. Click `connect to a host`
 3. Type in your host
 4. Enter your password
 
