@@ -25,7 +25,10 @@ git remote add origin https://github.com/your_username/your_repository_name/
 ```
 git pull https://github.com/your_username/your_repository_name/ main --allow-unrelated-histories`
 ```
-> **Note**: the default branch name for GitHub repository is **main**, while the default branch name for local repository is **master**. You may troubleshoot by replacing `main` with `maste` in the command.
+> **Note**: the default branch name for GitHub repository is **main**, while the default branch name for local repository is **master**. This may cause errors. You can create a local branch named **main**.
+```
+git branch -M main
+```
 7. Then the configuration is done. You can custom the `Vault backup interval` and `Auto pull interval` in Obsidian Git plugin.
 
 More see [Obsidian-Git documentation](https://publish.obsidian.md/git-doc/Start+here) (although I find it quite useless and unclear to beginners).
