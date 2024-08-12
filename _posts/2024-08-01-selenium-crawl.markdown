@@ -8,8 +8,8 @@ categories:
 tags:
   - Selenium
 ---
-### How to crawl internet novel with Python Selenium
-It is important for **ML** (machine learning) to prepare qulified data. It is common to crawl on the internet to retrive the target data. This blog is an example for internet novels.
+### How to crawl network novels with Python Selenium
+It is important for **ML** (machine learning) to prepare qulified data. It is common to crawl on the internet to retrive the target data. This blog is an example for crawling **Chinese network novels**. More about **data cleaning** see [my next blog](https://ghost04718.github.io/cs/skills/2024/08/10/chinese-data-cleaning.html).
 
 **Conponents**: Selenium, Beautiful Soup
 1. Install `selenium` and `bs4`
@@ -21,8 +21,6 @@ pip install bs4
 {% highlight python %}
 from selenium import webdriver
 from bs4 import BeautifulSoup
-import re
-import sys
 
 # Selenium driver
 driver = webdriver.Chrome()
@@ -40,7 +38,7 @@ text = soup.get_text(separator="\n")
 # Clean the data with regexes
 ...
 
-# Store the cleaned data in a local file
+# Store the cleaned data in local files or databases
 ...
 {% endhighlight %}
 > **Note**: this just takes Chrome driver as an example. You can download the Chrome driver from [getwebdriver,com](https://getwebdriver.com/chromedriver).
