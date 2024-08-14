@@ -9,11 +9,11 @@ tags:
   - Obsidian
 ---
 ### How to DIY your Obsidian homepage from scratch?
-Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. As for me, a good homepage works as a **dashboard** and facilitate my workflow. I searched online for the template I want, but I failed to find the one that suits me. So I wonder, why not DIY my own version from scratch? Here is my version of Obsidian homepage.
+Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. As for me, a good homepage works as a **dashboard** and facilitate my workflow. I searched online for the template I want, but I failed to find the one that suits me. So I wonder, why not DIY my own version from scratch? Here is my version of Obsidian homepage, you can also see [my GitHub repository](https://github.com/Ghost04718/Obsidian-Homepage).
 
 #### Screenshots
 ![screenshot](/images/obsidian-homepage-dark.png)
----
+
 ![screenshot](/images/obsidian-homepage-light.png)
 
 #### Key Features
