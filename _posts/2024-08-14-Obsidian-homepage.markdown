@@ -9,7 +9,9 @@ tags:
   - Obsidian
 ---
 ### How to DIY your Obsidian homepage from scratch?
-Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. As for me, a good homepage works as a **dashboard** and facilitate my workflow. I searched online for the template I want, but I failed to find the one that suits me. So I wonder, why not DIY my own version from scratch? Here is my version of Obsidian homepage, you can also see [my GitHub repository](https://github.com/Ghost04718/Obsidian-Homepage).
+Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. 
+As for me, a good homepage works as a **dashboard** and facilitate my workflow. I searched online for the template I want, but I failed to find the one that suits me. So I wonder, why not **DIY** my own version from scratch? 
+Here is my version of Obsidian homepage, you can also see [my GitHub repository](https://github.com/Ghost04718/Obsidian-Homepage).
 
 #### Screenshots
 ![screenshot](/images/obsidian-homepage-dark.png)
@@ -60,6 +62,7 @@ cssclasses:
 ---
 {% endhighlight %}
 > **Note**: if your **YAML** is still there after you switch into **reading mode** in Obsidian, check whether you have the CSS snippets downloaded and activated (in Obsidian **Appearance**). 
+
 2. Create the middle columns
 {% highlight markdown %}
 > [!multi-column]
@@ -91,6 +94,7 @@ cssclasses:
 >   - In **dataview**, `""` works for folders while `#` works for tags. For YAML you should use `WHERE`.
 >   - In **dataviewjs**, by contrast, you need to use `""` for tags and `'""'` for folers. (Personally I think it is confusing for beginners, especailly those who have no idea about writing Javascript.)
 >   - `![[]]` will give `dataviewjs` the file content, and then `dv.paragraph` will display in the particular position.
+
 3. Create the button column
 {% highlight markdown %}
 >[!multi-column]
