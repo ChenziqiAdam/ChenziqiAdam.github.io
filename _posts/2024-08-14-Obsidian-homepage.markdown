@@ -47,10 +47,10 @@ Here is my version of Obsidian homepage, you can also see [my GitHub repository]
     - Rollover Daily Todos
     - Style Settings
 - **CSS Snippets**
-    - You can download the CSS snippets from [my github repository](https://github.com/Ghost04718/Obsidian-Homepage/tree/main/snippets) and drag them into your vault/.obsidian/snippets (if the folder does not exist you can create one yourself) .
+    - You can download the CSS snippets from [my github repository](https://github.com/Ghost04718/Obsidian-Homepage/tree/main/snippets) and drag them into your `vault/.obsidian/snippets` (if the folder does not exist you can create one yourself) .
 
 #### Start From Scratch
-1. Create the banner image
+##### 1. Create the banner image
 {% highlight markdown %}
 ---
 banner: "![[homepage.jpg]]"
@@ -63,7 +63,7 @@ cssclasses:
 {% endhighlight %}
 > **Note**: if your **YAML** is still there after you switch into **reading mode** in Obsidian, check whether you have the CSS snippets downloaded and activated (in Obsidian **Appearance**). 
 
-2. Create the middle columns
+##### 2. Create the middle columns
 {% highlight markdown %}
 > [!multi-column]
 >> [!summary] AGENDA
@@ -75,17 +75,17 @@ cssclasses:
 >> action Daily notes: Open today's daily note
 >> ```
 >> ## Notebooks
->>```dataview
->>TABLE WITHOUT ID link(file.link, title) as "File", file.ctime AS "Time"
->>WHERE alias = "notebook"
+>> ```dataview
+>> TABLE WITHOUT ID link(file.link, title) as "File", file.ctime AS "Time"
+>> WHERE alias = "notebook"
 >> ```
 >
 >> [!tip] 每日一句
->>```dataviewjs
->>let files = dv.pages("#文学/人生/每日一句");
->>let length = files.length;
->>dv.paragraph("![["+files[Math.floor(Math.random() * length)].file.name+"]]");
->>```
+>> ```dataviewjs
+>> let files = dv.pages("#文学/人生/每日一句");
+>> let length = files.length;
+>> dv.paragraph("![["+files[Math.floor(Math.random() * length)].file.name+"]]");
+>> ```
 >
 {% endhighlight %}
 > **Note**: 
@@ -95,17 +95,17 @@ cssclasses:
 >   - In **dataviewjs**, by contrast, you need to use `""` for tags and `'""'` for folers. (Personally I think it is confusing for beginners, especailly those who have no idea about writing Javascript.)
 >   - `![[]]` will give `dataviewjs` the file content, and then `dv.paragraph` will display in the particular position.
 
-3. Create the button column
+##### 3. Create the button column
 {% highlight markdown %}
->[!multi-column]
+> [!multi-column]
 >> [!blank-container]
 >> ## Recently Modified 
 >> ```dataview
->>TABLE WITHOUT ID link(file.link, title) AS "File", file.mtime AS "Time"
->>FROM -"句读"
->>SORT file.mtime DESC
->>LIMIT 5
->>```
+>> TABLE WITHOUT ID link(file.link, title) AS "File", file.mtime AS "Time"
+>> FROM -"句读"
+>> SORT file.mtime DESC
+>> LIMIT 5
+>> ```
 >
 >> [!blank-container]
 >>## Recently Created
@@ -118,6 +118,6 @@ cssclasses:
 >
 {% endhighlight %}
 
-> **Note**: if you get into trouble, remember to check the **prerequisites**. Meanwhile, **Google** is always your helping hand (Saddly, I don't think ChatGPT can handle such a specialzed problem).
+> **Note**: if you get into trouble, remember to check the **prerequisites**. Meanwhile, **Google** is always your helping hand. (Saddly, I don't think ChatGPT can handle such a specialzed problem)
 
 Now it is done!
