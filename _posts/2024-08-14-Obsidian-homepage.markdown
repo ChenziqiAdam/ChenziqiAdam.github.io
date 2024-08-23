@@ -15,8 +15,7 @@ Here is my version of Obsidian homepage, you can also see [my GitHub repository]
 
 #### Screenshots
 ![screenshot](/images/obsidian-homepage-dark.png)
-
-![screenshot](/images/obsidian-homepage-light.png)
+> **Attention**: this blog has not been updated to the newest version of my homepage. But it still works.
 
 #### Key Features
 - Daily Sentence
