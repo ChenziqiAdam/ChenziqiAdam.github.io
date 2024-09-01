@@ -110,6 +110,7 @@ This column contains the display of the file called `Countdown` and **Obsidian h
 >>```
 {% endhighlight %}
 > **Note**: you need to create a file called `Countdown` and write your countdowns in that file. 
+
 ###### 2. Second column: Daily note button and file shortcuts
 This column contains the button that executes the command `Daily note: Open taday's daily note` and the lists of files with certain properties.
 {% highlight markdown %}
@@ -132,6 +133,7 @@ This column contains the button that executes the command `Daily note: Open tada
 >> ```
 {% endhighlight %}
 > **Note**: your language should be **English** otherwise the button won't work due to the error `Command not found`.
+
 ###### 3. Third column: Daily Sentence
 This column contains the **daily sentence**, which displays the content of a random file from a list of files with the same **tag**.
 {% highlight markdown %}
@@ -183,9 +185,9 @@ This three columns contain the display of recent files and **Habit Tracker**.
 {% endhighlight %}
 > **Note**: the **Habit Tracker** actually collects your data from your notes. You need to have your target **task**, i.e. `searchTarget`, in your **daily note**, i.e. files in the `folder`, and click it manually which gives the `searchType: task.done`.
 
-> - **Dataview Troubleshooting**:
->   - In **dataview**, `""` works for folders while `#` works for tags. For YAML you should use `WHERE`.
->   - In **dataviewjs**, by contrast, you need to use `""` for tags and `'""'` for folers. (Personally I think it is confusing for beginners, especailly those who have no idea about writing Javascript.)
->   - `![[]]` will give `dataviewjs` the file content, and then `dv.paragraph` will display in the particular position.
+> **Dataview Troubleshooting**:
+> - In **dataview**, `""` works for folders while `#` works for tags. For YAML you should use `WHERE`.
+> - In **dataviewjs**, by contrast, you need to use `""` for tags and `'""'` for folers. (Personally I think it is confusing for beginners, especailly those who have no idea about writing Javascript.)
+> - `![[]]` will give `dataviewjs` the file content, and then `dv.paragraph` will display in the particular position.
 
 Now it is done!
