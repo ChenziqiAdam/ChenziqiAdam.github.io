@@ -8,8 +8,9 @@ tags:
   - GRE
 ---
 ### 如何两个月自学GRE实现GRE325+
-This blog is for Chinese students to prepare for GRE.
-本文针对中国学生如何**免费自学**GRE，两个月实现GRE**325+**。
+> **Note**: This blog is for **Chinese students** to prepare for **GRE**.
+
+本文针对中国学生如何**免费自学**GRE，两个月实现**GRE325+**。
 
 #### 资源
 - 张巍（微信公众号）
