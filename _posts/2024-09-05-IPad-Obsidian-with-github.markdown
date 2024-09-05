@@ -26,9 +26,9 @@ Obsidian works will on PC with the **Git** plugin and **GitHub**. However, due t
 5. Now your local vault has synced with your GitHub repo. Don't forget to set the settings and pulgins.
 
 > **Troubleshooting**:
-    - Cannot init your local repository
-        - run `git config --global --add safe.directory '*'`
-    - Cannot authorize with your GitHub password
-        - go to your GitHub account -> `Settings` -> `Developer Settings` -> retrive your **Personal access token** -> replace the password with the token
+>   - Cannot init your local repository
+>       - run `git config --global --add safe.directory '*'`
+>   - Cannot authorize with your GitHub password
+>       - go to your GitHub account -> `Settings` -> `Developer Settings` -> retrive your **Personal access token** -> replace the password with the token
 
 Now it is done!
