@@ -4,15 +4,16 @@ title:  "How to sync Obsidian on iPad with PC"
 date:   2024-09-05 18:43:30 +0800
 categories:
   - Skills
+  - Obsidian
 tags:
   - Obsidian
   - Git
-  - Github
+  - GitHub
 ---
 ### How to sync your Obsidian on iPad with PC via GitHub?
 This blog requires you to backup your Obsidian vault via **GitHub**. See [my blog](https://ghost04718.github.io/obsidian/2024/07/01/Obsidian-backup-with-git-plugin.html) about how to do it.
 
-Obsidian works will on PC with the **Git** plugin and **GitHub**. However, due to limited ways to sync Obsidian, it is difficult to sync your Obsidian on iPad with that on your PC. This blog is about using **iSH** (an app which is called "Linux shell for iOS) to sync your Obsidian vault with **GitHub**.
+Obsidian works well on PC with the **Git** plugin and **GitHub**. However, due to limited ways to sync Obsidian, it is difficult to sync your Obsidian on iPad with that on your PC. This blog is about using **iSH** (an app which is called "Linux shell for iOS) to sync your Obsidian vault with **GitHub**.
 
 1. Download Obsidian and iSH in App Store.
 2. Open Obsidian, specify a folder for your Obsidian vaults and create your vault.
