@@ -10,7 +10,22 @@ tags:
 ### 如何两个月自学GRE实现GRE325+
 > **Note**: This blog is for **Chinese students** to prepare for **GRE**.
 
-本文针对中国学生如何**免费自学**GRE，两个月实现**GRE325+**。
+本文针对中国学生如何**免费自学**GRE，两个月实现**GRE325+**。本文以博主的GRE备考经验为主，博主在暑假两个月自学实现**159+170+3.5**。
+
+#### GRE简介
+- 分数分布
+    - **Verbal Reasoning (语文)**: 170 （目标155+）
+    - **Quantitative Reasoning (数学)**: 170 （目标165+）
+    - **Analytical Writing (写作)**: 6
+    - 理想状态是，保证数学170之后，冲击语文160+。
+- 时间分布
+    - 总时长2小时
+    - 前30分钟写作，后90分钟语文+数学
+    - 语文和数学各2个section
+        - 语文 section1：12道题，18分钟
+        - 数学 section1：12道题，21分钟
+        - 语文 section2：15道题，23分钟
+        - 数学 section2：15道题，26分钟
 
 #### 资源
 - 张巍（微信公众号）
