@@ -3,5 +3,7 @@ main:
     url: /home/
   - title: "Posts"
     url: /tags/
+  - title: "Collections"
+    url: /games/
   - title: "About me"
     url: /about-me/
