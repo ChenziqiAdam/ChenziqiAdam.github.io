@@ -1,0 +1,40 @@
+body {
+    background-color: #282c34;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #61dafb;
+}
+
+p {
+    font-size: 20px;
+}
+
+.game-list {
+    list-style: none;
+    padding: 0;
+}
+
+.game-list li {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
