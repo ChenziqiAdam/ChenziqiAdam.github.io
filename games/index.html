@@ -8,11 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Game Collection</h1>
+        <h1>🎮 My Game Collection</h1>
         <p>Select a game to play:</p>
-        <ul class="game-list">
-            <li><a href="tic-tac-toe/index.html">🎮 Tic-Tac-Toe</a></li>
-        </ul>
+        <div id="game-list" class="game-list">
+            <!-- Game links will be injected here -->
+        </div>
     </div>
+    <script>
+        const games = [
+            { name: "Snake Game", url: "snake/index.html", emoji: "🐍" },
+            { name: "Tic-Tac-Toe", url: "tic-tac-toe/index.html", emoji: "🧩" },
+        ];
+
+        const gameList = document.getElementById('game-list');
+
+        games.forEach(game => {
+            const gameItem = document.createElement('a');
+            gameItem.href = game.url;
+            gameItem.className = 'game-item';
+            gameItem.innerHTML = `${game.emoji} ${game.name}`;
+            gameList.appendChild(gameItem);
+        });
+    </script>
 </body>
 </html>

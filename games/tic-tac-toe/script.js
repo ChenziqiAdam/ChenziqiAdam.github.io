@@ -19,8 +19,9 @@ const handleCellClick = (e) => {
     board[index] = currentPlayer;
     e.target.textContent = currentPlayer;
 
-    checkWinner();
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    statusText.textContent = `Player ${currentPlayer}'s turn`; // Update turn text
+    checkWinner();
 };
 
 const checkWinner = () => {
@@ -35,7 +36,8 @@ const checkWinner = () => {
     }
 
     if (roundWon) {
-        statusText.textContent = `${currentPlayer} Wins!`;
+	let winnerPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        statusText.textContent = `${winnerPlayer} Wins!`;
         isGameActive = false;
         return;
     }
@@ -50,9 +52,13 @@ const restartGame = () => {
     board = ['', '', '', '', '', '', '', '', ''];
     isGameActive = true;
     currentPlayer = 'X';
-    statusText.textContent = '';
+    statusText.textContent = `Player ${currentPlayer}'s turn`;
     cells.forEach(cell => (cell.textContent = ''));
 };
 
+// Initialize the game
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 restartBtn.addEventListener('click', restartGame);
+
+// Set initial status text
+statusText.textContent = `Player ${currentPlayer}'s turn`;
