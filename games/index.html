@@ -13,6 +13,7 @@
         <div id="game-list" class="game-list">
             <!-- Game links will be injected here -->
         </div>
+	<button class="back-home-button" onclick="goHome()">⬅️ Back to Home</button>
     </div>
     <script>
         const games = [
@@ -29,6 +30,10 @@
             gameItem.innerHTML = `${game.emoji} ${game.name}`;
             gameList.appendChild(gameItem);
         });
+
+	function goHome() {
+	    window.location.href = '../home/';
+	}
     </script>
 </body>
 </html>

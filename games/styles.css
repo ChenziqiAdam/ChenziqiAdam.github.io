@@ -57,3 +57,20 @@ p {
         transform: translateY(0);
     }
 }
+
+.back-home-button {
+    background-color: #61dafb;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.back-home-button:hover {
+    background-color: #3498db;
+    transform: translateY(-5px);
+}
