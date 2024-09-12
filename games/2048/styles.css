@@ -1,0 +1,116 @@
+/* Global styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 425px;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Game Board */
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    width: 450px;
+    margin-bottom: 0 auto;
+}
+
+/* Tiles */
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc0b3;
+    color: #776e65;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tile[data-value="2"] {
+    background-color: #eee4da;
+}
+
+.tile[data-value="4"] {
+    background-color: #ede0c8;
+}
+
+.tile[data-value="8"] {
+    background-color: #f2b179;
+    color: white;
+}
+
+.tile[data-value="16"] {
+    background-color: #f59563;
+    color: white;
+}
+
+.tile[data-value="32"] {
+    background-color: #f67c5f;
+    color: white;
+}
+
+.tile[data-value="64"] {
+    background-color: #f65e3b;
+    color: white;
+}
+
+/* Add more color variations for higher numbers as needed */
+
+button {
+    background-color: #61dafb;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: translateY(-5px);
+}
+
+.restart-button, .back-button {
+    width: 150px; /* Ensures consistent button width */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Score styling */
+#score {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
