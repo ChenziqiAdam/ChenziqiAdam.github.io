@@ -1,0 +1,70 @@
+/* Global Styling for consistency with other games */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Gomoku Canvas Styling */
+canvas {
+    background-color: #fff;
+    border: 2px solid #1e1e1e;
+    margin: 20px auto; /* Center the canvas horizontally */
+    display: block; /* Ensure it's treated like a block-level element */
+}
+
+/* Status Text */
+#gomokuStatus {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #61dafb;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: translateY(-5px);
+}
+
+.restart-button, .back-button {
+    width: 150px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
