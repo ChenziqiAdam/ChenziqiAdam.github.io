@@ -45,36 +45,51 @@ h1 {
     align-items: center;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .tile[data-value="2"] {
     background-color: #eee4da;
 }
-
 .tile[data-value="4"] {
     background-color: #ede0c8;
 }
 
 .tile[data-value="8"] {
     background-color: #f2b179;
-    color: white;
 }
 
 .tile[data-value="16"] {
     background-color: #f59563;
-    color: white;
 }
 
 .tile[data-value="32"] {
     background-color: #f67c5f;
-    color: white;
 }
 
 .tile[data-value="64"] {
     background-color: #f65e3b;
-    color: white;
 }
 
+.tile[data-value="128"] {
+    background-color: #edcf72;
+}
+
+.tile[data-value="256"] {
+    background-color: #edcc61;
+}
+
+.tile[data-value="512"] {
+    background-color: #edc850;
+}
+
+.tile[data-value="1024"] {
+    background-color: #edc53f;
+}
+
+.tile[data-value="2048"] {
+    background-color: #edc22e;
+}
 /* Add more color variations for higher numbers as needed */
 
 button {

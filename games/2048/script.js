@@ -46,18 +46,24 @@ function drawBoard() {
 // Move and merge tiles based on direction
 function move(direction) {
     let moved = false;
+    let merged = false;
 
     switch (direction) {
         case 'left':
             for (let row = 0; row < size; row++) {
                 let newRow = board[row].filter(tile => tile !== 0);
                 for (let i = 0; i < newRow.length - 1; i++) {
-                    if (newRow[i] === newRow[i + 1]) {
-                        newRow[i] *= 2;
-                        score += newRow[i];
-                        newRow.splice(i + 1, 1);
+                    if (!merged) {
+                        if (newRow[i] === newRow[i + 1]) {
+                            newRow[i] *= 2;
+                            score += newRow[i];
+                            newRow.splice(i + 1, 1);
+                            newRow.push(0);
+                            merged = true;
+                        }
                     }
                 }
+                merged = false;
                 while (newRow.length < size) newRow.push(0);
                 if (newRow.join('') !== board[row].join('')) moved = true;
                 board[row] = newRow;
@@ -68,12 +74,17 @@ function move(direction) {
             for (let row = 0; row < size; row++) {
                 let newRow = board[row].filter(tile => tile !== 0);
                 for (let i = newRow.length - 1; i > 0; i--) {
-                    if (newRow[i] === newRow[i - 1]) {
-                        newRow[i] *= 2;
-                        score += newRow[i];
-                        newRow.splice(i - 1, 1);
+                    if (!merged) {
+                        if (newRow[i] === newRow[i - 1]) {
+                            newRow[i] *= 2;
+                            score += newRow[i];
+                            newRow.splice(i - 1, 1);
+                            newRow.unshift(0);
+                            merged = true;
+                        }
                     }
                 }
+                merged = false;
                 while (newRow.length < size) newRow.unshift(0);
                 if (newRow.join('') !== board[row].join('')) moved = true;
                 board[row] = newRow;
@@ -87,12 +98,17 @@ function move(direction) {
                     if (board[row][col] !== 0) newCol.push(board[row][col]);
                 }
                 for (let i = 0; i < newCol.length - 1; i++) {
-                    if (newCol[i] === newCol[i + 1]) {
-                        newCol[i] *= 2;
-                        score += newCol[i];
-                        newCol.splice(i + 1, 1);
+                    if (!merged) {
+                        if (newCol[i] === newCol[i + 1]) {
+                            newCol[i] *= 2;
+                            score += newCol[i];
+                            newCol.splice(i + 1, 1);
+                            newCol.push(0);
+                            merged = true;
+                        }
                     }
                 }
+                merged = false;
                 while (newCol.length < size) newCol.push(0);
                 for (let row = 0; row < size; row++) {
                     if (board[row][col] !== newCol[row]) moved = true;
@@ -108,12 +124,17 @@ function move(direction) {
                     if (board[row][col] !== 0) newCol.push(board[row][col]);
                 }
                 for (let i = newCol.length - 1; i > 0; i--) {
-                    if (newCol[i] === newCol[i - 1]) {
-                        newCol[i] *= 2;
-                        score += newCol[i];
-                        newCol.splice(i - 1, 1);
+                    if (!merged) {
+                        if (newCol[i] === newCol[i - 1]) {
+                            newCol[i] *= 2;
+                            score += newCol[i];
+                            newCol.splice(i - 1, 1);
+                            newCol.unshift(0);
+                            merged = true;
+                        }
                     }
                 }
+                merged = false;
                 while (newCol.length < size) newCol.unshift(0);
                 for (let row = 0; row < size; row++) {
                     if (board[row][col] !== newCol[row]) moved = true;
@@ -127,6 +148,17 @@ function move(direction) {
         generateTile();
         drawBoard();
         scoreElement.textContent = `Score: ${score}`;
+    } else {
+        for (let row = 0; row < size; row++) {
+            for (let col = 0; col < size; col++) {
+                if (board[row][col] === 2048) {
+                    alert(`You won! Your score is: ${score}.`);
+                    return;
+                }
+                if (board[row][col] === 0) return;
+            }
+        }
+        alert(`Game over! Your score is: ${score}.`);
     }
 }
 
