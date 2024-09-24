@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "How to design and implement an AI agent"
-date:   2024-09-08 15:41:20 +0800
+title:  "How to deploy websites on a remote server"
+date:   2024-09-24 19:07:30 +0800
 categories:
   - CS
   - Skills
