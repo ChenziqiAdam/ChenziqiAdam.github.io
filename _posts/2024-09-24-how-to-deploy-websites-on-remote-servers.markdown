@@ -9,7 +9,7 @@ tags:
   - Flask
 ---
 ### How to deploy your websites on your remote server?
-It is a good idea to use your remote server to host your websites. This blog takes a Flask app as an example.
+It is a good idea to use your remote server to host your websites. Play around in [my website](http://47.120.70.36:9999). This blog takes a Flask app as an example.
 
 **Conponents**: Flask, Nginx, Gunicorn
 #### 1. Set up  a virtual environment
