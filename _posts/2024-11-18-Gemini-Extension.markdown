@@ -15,7 +15,7 @@ Chrome Extensions do not support direct `import` in your **javascript** code. An
 
 #### Use webpack or bundle to build your project
 1. Include this code script in your `package.json`.
-```javascript
+```json
 "scripts": {
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --watch --config webpack.config.js"
@@ -38,11 +38,15 @@ Chrome Extensions do not support direct `import` in your **javascript** code. An
 
 2. Put all your **source codes** in `src` folder (including `manifest.json` and your `image` folder if any).
 
-3. Add a `webpack.config.js` in your project.
-```javascript
+3. Import Gemini.
+```js
+import { GoogleGenerativeAI } from '@google/generative-ai';
+```
+
+4. Add a `webpack.config.js` in your project.
+```js
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-
 module.exports = {
   mode: 'production',
   entry: {
@@ -79,6 +83,6 @@ module.exports = {
 };
 ```
 
-4. Run `npm install` and `npm run build`. Upload the new `dist` folder to your Chrome.
+5. Run `npm install` and `npm run build`. Upload the new `dist` folder to your Chrome.
 
 Now it is done!
