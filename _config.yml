@@ -45,7 +45,7 @@ lunr:
   search_within_pages: true
 
 # Site masthead title
-masthead_title: "Ziqi Chen's Site"
+masthead_title: "Adam Chen's Site"
 
 # Post dates
 defaults:
@@ -66,7 +66,7 @@ author:
   name     : "Ziqi Chen"
   avatar   : "images/wlop-Xiaolv-portrait.jpg"
   bio      : "If you are going through hell, keep going."
-  location : "Shenzhen, China"
+  location : "Hong Kong"
   links:
     - label: "About me"
       icon: "fas fa-fw fa-user"
@@ -74,6 +74,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Ghost04718"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "www.linkedin.com/in/adam-chen-a2a5b42a6"
 
 # Site footer 
 footer:
@@ -84,7 +87,10 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Ghost04718"
-            
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "www.linkedin.com/in/adam-chen-a2a5b42a6
+"         
 # Code block copy button
 enable_copy_code_button: true
 

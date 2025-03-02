@@ -5,7 +5,5 @@ main:
     url: /tags/
   - title: "Gallery"
     url: /gallery/
-  - title: "Games"
-    url: /games/
   - title: "About me"
     url: /about-me/
