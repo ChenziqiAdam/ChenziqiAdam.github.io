@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Ziqi Chen's Site
-email: chenziqi1@link.cuhk.edu.cn
+email: ziqichen1@link.cuhk.edu.cn
 description: 
   This is my personal site!
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -45,7 +45,7 @@ lunr:
   search_within_pages: true
 
 # Site masthead title
-masthead_title: "Adam Chen's Site"
+masthead_title: "Ziqi Chen's Site"
 
 # Post dates
 defaults:
