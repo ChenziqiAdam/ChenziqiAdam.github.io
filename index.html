@@ -1,11 +1,12 @@
---
+---
 layout: default
 ---
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ziqi Chen's Site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.150.1/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
     :root {
       --mm-primary: #494e52;
@@ -27,7 +28,6 @@ layout: default
       color: var(--mm-text);
       line-height: 1.6;
       background-color: var(--mm-background);
-      overflow-x: hidden;
     }
     
     a {
@@ -46,78 +46,94 @@ layout: default
       padding: 0 20px;
     }
     
-    /* Hero */
-    .hero {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 0;
-      overflow: hidden;
+    /* Header */
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     
-    #hero-canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    
+    .site-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--mm-primary);
+    }
+    
+    .site-logo {
+      max-height: 40px;
+      margin-right: 10px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav li {
+      margin-left: 1.5rem;
+    }
+    
+    nav a {
+      color: var(--mm-primary);
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* Hero */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6rem 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://via.placeholder.com/1600x900');
+      background-size: cover;
+      background-position: center;
     }
     
     .hero-content {
-      position: relative;
-      text-align: center;
-      max-width: 800px;
-      padding: 3rem;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-      transform: translateY(30px);
-      opacity: 0;
+      flex: 0 0 50%;
     }
     
     .hero-title {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 800;
       margin-bottom: 1rem;
       color: var(--mm-primary);
-      background: linear-gradient(45deg, var(--mm-primary), var(--mm-link));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
     
     .hero-subtitle {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--mm-accent);
       margin-bottom: 2rem;
     }
     
-    .scroll-indicator {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 2rem;
-      animation: bounce 2s infinite;
-      z-index: 1;
+    .hero-image {
+      flex: 0 0 40%;
+      position: relative;
     }
     
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
-      40% {transform: translateY(-20px) translateX(-50%);}
-      60% {transform: translateY(-10px) translateX(-50%);}
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
     
     /* Section */
     section {
-      padding: 7rem 0;
-      position: relative;
+      padding: 5rem 0;
     }
     
     section:nth-child(even) {
@@ -125,9 +141,9 @@ layout: default
     }
     
     .section-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
       text-align: center;
       color: var(--mm-primary);
       position: relative;
@@ -136,361 +152,167 @@ layout: default
     .section-title::after {
       content: "";
       position: absolute;
-      bottom: -15px;
+      bottom: -10px;
       left: 50%;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--mm-link), #3b7b8f);
+      width: 60px;
+      height: 3px;
+      background-color: var(--mm-link);
       transform: translateX(-50%);
-      border-radius: 2px;
     }
     
     /* Projects */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
     }
     
     .project-card {
-      position: relative;
       background: #fff;
-      border-radius: 15px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
-      transform-origin: center bottom;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .project-card:hover {
-      transform: translateY(-15px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
     
     .project-image {
-      height: 250px;
+      height: 180px;
       overflow: hidden;
-      position: relative;
-    }
-    
-    .project-image::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%);
-      z-index: 1;
-      pointer-events: none;
     }
     
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.8s ease;
+      transition: transform 0.5s ease;
     }
     
     .project-card:hover .project-image img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     
     .project-content {
-      padding: 2rem;
-      position: relative;
+      padding: 1.5rem;
     }
     
     .project-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      transition: color 0.3s ease;
-    }
-    
-    .project-card:hover .project-title {
-      color: var(--mm-link);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
     
     .project-tags {
       display: flex;
       flex-wrap: wrap;
-      margin: 1rem 0;
-      gap: 0.5rem;
+      margin: 0.5rem 0;
     }
     
     .project-tag {
-      background: linear-gradient(135deg, var(--mm-link) 0%, #3b7b8f 100%);
-      color: white;
+      background-color: var(--mm-background);
       font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.4rem 0.8rem;
-      border-radius: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card:hover .project-tag {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 10px rgba(59, 123, 143, 0.2);
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     
     /* Books, Games, Music */
-    .media-section {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .media-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('/api/placeholder/1000/800') center/cover no-repeat fixed;
-      opacity: 0.08;
-      z-index: 0;
-    }
-    
-    .media-container {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .media-tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 3rem;
-    }
-    
-    .media-tab {
-      padding: 1rem 2rem;
-      background: transparent;
-      border: none;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--mm-accent);
-      position: relative;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
-    
-    .media-tab::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 3px;
-      background: var(--mm-link);
-      transition: width 0.3s ease, left 0.3s ease;
-    }
-    
-    .media-tab.active {
-      color: var(--mm-primary);
-    }
-    
-    .media-tab.active::after {
-      width: 80%;
-      left: 10%;
-    }
-    
-    .media-panel {
-      display: none;
-    }
-    
-    .media-panel.active {
-      display: block;
-      animation: fadeIn 0.5s ease forwards;
-    }
-    
     .media-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
     }
     
     .media-item {
-      position: relative;
       text-align: center;
-      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      transform-style: preserve-3d;
-      perspective: 1000px;
+      transition: transform 0.3s ease;
     }
     
     .media-item:hover {
-      transform: translateY(-10px) rotateY(5deg);
+      transform: translateY(-5px);
     }
     
     .media-image {
-      height: 280px;
+      height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .media-image::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(82, 173, 200, 0.2) 0%, rgba(59, 123, 143, 0.2) 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 2;
-    }
-    
-    .media-item:hover .media-image::before {
-      opacity: 1;
-    }
-    
-    .media-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-    }
-    
-    .media-item:hover .media-image img {
-      transform: scale(1.05);
-    }
-    
-    .media-title {
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-      transition: color 0.3s ease;
-    }
-    
-    .media-item:hover .media-title {
-      color: var(--mm-link);
-    }
-    
-    .media-subtitle {
-      font-size: 0.9rem;
-      color: var(--mm-accent);
-      position: relative;
-      display: inline-block;
-    }
-    
-    .media-subtitle::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--mm-link);
-      transition: width 0.3s ease;
-    }
-    
-    .media-item:hover .media-subtitle::after {
-      width: 100%;
-    }
-    
-    /* Travel Map */
-    .travel-section {
-      position: relative;
-      padding: 7rem 0;
-      background: linear-gradient(to bottom, #fff, var(--mm-background));
-    }
-    
-    .map-container {
-      height: 600px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 1;
-    }
-    
-    .map-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(82, 173, 200, 0.1) 0%, rgba(59, 123, 143, 0.1) 100%);
-      pointer-events: none;
-      z-index: 2;
-    }
-    
-    .map-stats {
-      position: absolute;
-      bottom: 30px;
-      right: 30px;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      z-index: 3;
-      max-width: 250px;
-    }
-    
-    .stat-item {
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       margin-bottom: 1rem;
     }
     
-    .stat-value {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--mm-link);
-      margin-bottom: 0.2rem;
+    .media-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
     }
     
-    .stat-label {
+    .media-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .media-subtitle {
+      font-size: 0.85rem;
+      color: var(--mm-accent);
+    }
+    
+    /* Travel Map */
+    .map-container {
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #fff;
+      padding: 2rem 0;
+      border-top: 1px solid var(--mm-border);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-link {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem;
       font-size: 0.9rem;
+      color: var(--mm-primary);
+    }
+    
+    .footer-link i {
+      margin-right: 0.5rem;
+    }
+    
+    .footer-text {
+      text-align: center;
+      font-size: 0.85rem;
       color: var(--mm-accent);
     }
     
     /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    
-    @keyframes zoomIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    
-    .animate {
-      opacity: 0;
-    }
-    
-    .animate.fade-in {
+    .fade-in {
       animation: fadeIn 0.8s ease forwards;
-    }
-    
-    .animate.slide-left {
-      animation: slideInLeft 0.8s ease forwards;
-    }
-    
-    .animate.slide-right {
-      animation: slideInRight 0.8s ease forwards;
-    }
-    
-    .animate.zoom-in {
-      animation: zoomIn 0.8s ease forwards;
+      opacity: 0;
     }
     
     .delay-1 { animation-delay: 0.2s; }
@@ -500,65 +322,77 @@ layout: default
     
     /* Responsive */
     @media (max-width: 768px) {
-      .hero-title {
-        font-size: 3rem;
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 0;
       }
       
-      .hero-subtitle {
-        font-size: 1.2rem;
+      .hero-content, .hero-image {
+        flex: 0 0 100%;
       }
       
-      .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      .hero-image {
+        margin-top: 2rem;
       }
       
-      .media-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      .projects-grid, .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
       
       .map-container {
-        height: 400px;
-      }
-      
-      .map-stats {
-        bottom: 20px;
-        right: 20px;
-        padding: 1rem;
+        height: 350px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Main content starts here - Jekyll will handle header/footer -->
-  
-  <!-- Hero Section with 3D Animation -->
-  <section class="hero">
-    <div id="hero-canvas"></div>
-    <div class="container">
-      <div class="hero-content" id="hero-content">
-        <h1 class="hero-title">Ziqi Chen</h1>
-        <p class="hero-subtitle">Software Developer & Creative Explorer</p>
-        <p>I transform complex ideas into elegant solutions. Passionate about technology, books, games, music, and discovering new places around the world.</p>
-      </div>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="site-title">
+        <img src="/api/placeholder/40/40" alt="Logo" class="site-logo">
+        Ziqi Chen's Site
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="scroll-indicator">
-      <i class="fas fa-chevron-down"></i>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">Hello, I'm Ziqi Chen</h1>
+        <p class="hero-subtitle">Software developer, book lover, and world explorer</p>
+        <p>I'm passionate about creating elegant solutions to complex problems. When I'm not coding, you can find me reading, gaming, or planning my next travel adventure.</p>
+      </div>
+      <div class="hero-image fade-in delay-2">
+        <img src="/api/placeholder/500/300" alt="Ziqi Chen">
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title animate fade-in">My Projects</h2>
+      <h2 class="section-title fade-in">Projects</h2>
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card animate fade-in delay-1">
+        <div class="project-card fade-in delay-1">
           <div class="project-image">
-            <img src="/api/placeholder/500/350" alt="Data Visualization Project">
+            <img src="/api/placeholder/400/250" alt="Project 1">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Interactive Data Explorer</h3>
-            <p>A powerful tool for visualizing and analyzing complex datasets with real-time filtering and custom views.</p>
+            <h3 class="project-title">Data Visualization Tool</h3>
+            <p>An interactive web-based tool for visualizing complex datasets.</p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">D3.js</span>
@@ -568,33 +402,33 @@ layout: default
         </div>
         
         <!-- Project 2 -->
-        <div class="project-card animate fade-in delay-2">
+        <div class="project-card fade-in delay-2">
           <div class="project-image">
-            <img src="/api/placeholder/500/350" alt="AI Project">
+            <img src="/api/placeholder/400/250" alt="Project 2">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Neural Network Framework</h3>
-            <p>A flexible and intuitive framework for designing, training and deploying custom neural network architectures.</p>
+            <h3 class="project-title">Machine Learning Framework</h3>
+            <p>A lightweight framework for implementing and testing ML algorithms.</p>
             <div class="project-tags">
               <span class="project-tag">Python</span>
               <span class="project-tag">TensorFlow</span>
-              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">AI</span>
             </div>
           </div>
         </div>
         
         <!-- Project 3 -->
-        <div class="project-card animate fade-in delay-3">
+        <div class="project-card fade-in delay-3">
           <div class="project-image">
-            <img src="/api/placeholder/500/350" alt="Mobile App Project">
+            <img src="/api/placeholder/400/250" alt="Project 3">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Wellness Companion</h3>
-            <p>A cross-platform mobile application for tracking fitness, nutrition, and mental wellbeing with personalized insights.</p>
+            <h3 class="project-title">Mobile Fitness App</h3>
+            <p>A cross-platform app for tracking workouts and nutrition.</p>
             <div class="project-tags">
               <span class="project-tag">React Native</span>
               <span class="project-tag">Firebase</span>
-              <span class="project-tag">Health Tech</span>
+              <span class="project-tag">Health</span>
             </div>
           </div>
         </div>
@@ -602,189 +436,162 @@ layout: default
     </div>
   </section>
 
-  <!-- Media Tabs Section (Books, Games, Music) -->
-  <section id="media" class="media-section">
-    <div class="container media-container">
-      <h2 class="section-title animate fade-in">My Media Collection</h2>
-      
-      <div class="media-tabs animate zoom-in">
-        <button class="media-tab active" data-target="books">Books</button>
-        <button class="media-tab" data-target="games">Games</button>
-        <button class="media-tab" data-target="music">Music</button>
-      </div>
-      
-      <!-- Books Panel -->
-      <div id="books" class="media-panel active">
-        <div class="media-grid">
-          <!-- Book 1 -->
-          <div class="media-item animate fade-in delay-1">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Thinking Fast and Slow">
-            </div>
-            <h3 class="media-title">Thinking, Fast and Slow</h3>
-            <p class="media-subtitle">Daniel Kahneman</p>
-          </div>
-          
-          <!-- Book 2 -->
-          <div class="media-item animate fade-in delay-2">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Clean Code">
-            </div>
-            <h3 class="media-title">Clean Code</h3>
-            <p class="media-subtitle">Robert C. Martin</p>
-          </div>
-          
-          <!-- Book 3 -->
-          <div class="media-item animate fade-in delay-3">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Dune">
-            </div>
-            <h3 class="media-title">Dune</h3>
-            <p class="media-subtitle">Frank Herbert</p>
-          </div>
-          
-          <!-- Book 4 -->
-          <div class="media-item animate fade-in delay-4">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Sapiens">
-            </div>
-            <h3 class="media-title">Sapiens</h3>
-            <p class="media-subtitle">Yuval Noah Harari</p>
-          </div>
-          
-          <!-- Book 5 -->
-          <div class="media-item animate fade-in delay-1">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: The Pragmatic Programmer">
-            </div>
-            <h3 class="media-title">The Pragmatic Programmer</h3>
-            <p class="media-subtitle">David Thomas & Andrew Hunt</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Games Panel -->
-      <div id="games" class="media-panel">
-        <div class="media-grid">
-          <!-- Game 1 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: The Witcher 3">
-            </div>
-            <h3 class="media-title">The Witcher 3</h3>
-            <p class="media-subtitle">RPG</p>
-          </div>
-          
-          <!-- Game 2 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: Civilization VI">
-            </div>
-            <h3 class="media-title">Civilization VI</h3>
-            <p class="media-subtitle">Strategy</p>
-          </div>
-          
-          <!-- Game 3 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: Portal 2">
-            </div>
-            <h3 class="media-title">Portal 2</h3>
-            <p class="media-subtitle">Puzzle</p>
-          </div>
-          
-          <!-- Game 4 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: Hades">
-            </div>
-            <h3 class="media-title">Hades</h3>
-            <p class="media-subtitle">Action Roguelike</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Music Panel -->
-      <div id="music" class="media-panel">
-        <div class="media-grid">
-          <!-- Artist 1 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Radiohead">
-            </div>
-            <h3 class="media-title">Radiohead</h3>
-            <p class="media-subtitle">Alternative Rock</p>
-          </div>
-          
-          <!-- Artist 2 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Daft Punk">
-            </div>
-            <h3 class="media-title">Daft Punk</h3>
-            <p class="media-subtitle">Electronic</p>
-          </div>
-          
-          <!-- Artist 3 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Hans Zimmer">
-            </div>
-            <h3 class="media-title">Hans Zimmer</h3>
-            <p class="media-subtitle">Film Score</p>
-          </div>
-          
-          <!-- Artist 4 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Kendrick Lamar">
-            </div>
-            <h3 class="media-title">Kendrick Lamar</h3>
-            <p class="media-subtitle">Hip Hop</p>
-          </div>
-          
-          <!-- Artist 5 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Ludovico Einaudi">
-            </div>
-            <h3 class="media-title">Ludovico Einaudi</h3>
-            <p class="media-subtitle">Contemporary Classical</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Travel Map Section -->
-  <section id="travel" class="travel-section">
+  <!-- Books -->
+  <section id="books">
     <div class="container">
-      <h2 class="section-title animate fade-in">Places I've Explored</h2>
-      <div class="map-container animate zoom-in delay-2" id="world-map">
-        <div class="map-overlay"></div>
-        <div class="map-stats">
-          <div class="stat-item">
-            <div class="stat-value">26</div>
-            <div class="stat-label">Countries Visited</div>
+      <h2 class="section-title fade-in">Books I've Read</h2>
+      <div class="media-grid">
+        <!-- Book 1 -->
+        <div class="media-item fade-in delay-1">
+          <div class="media-image">
+            <img src="/api/placeholder/160/220" alt="Book 1">
           </div>
-          <div class="stat-item">
-            <div class="stat-value">42</div>
-            <div class="stat-label">Cities Explored</div>
+          <h3 class="media-title">Thinking, Fast and Slow</h3>
+          <p class="media-subtitle">Daniel Kahneman</p>
+        </div>
+        
+        <!-- Book 2 -->
+        <div class="media-item fade-in delay-2">
+          <div class="media-image">
+            <img src="/api/placeholder/160/220" alt="Book 2">
           </div>
-          <div class="stat-item">
-            <div class="stat-value">4</div>
-            <div class="stat-label">Continents</div>
+          <h3 class="media-title">Clean Code</h3>
+          <p class="media-subtitle">Robert C. Martin</p>
+        </div>
+        
+        <!-- Book 3 -->
+        <div class="media-item fade-in delay-3">
+          <div class="media-image">
+            <img src="/api/placeholder/160/220" alt="Book 3">
           </div>
+          <h3 class="media-title">Dune</h3>
+          <p class="media-subtitle">Frank Herbert</p>
+        </div>
+        
+        <!-- Book 4 -->
+        <div class="media-item fade-in delay-4">
+          <div class="media-image">
+            <img src="/api/placeholder/160/220" alt="Book 4">
+          </div>
+          <h3 class="media-title">Sapiens</h3>
+          <p class="media-subtitle">Yuval Noah Harari</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Games -->
+  <section id="games">
+    <div class="container">
+      <h2 class="section-title fade-in">Games I've Played</h2>
+      <div class="media-grid">
+        <!-- Game 1 -->
+        <div class="media-item fade-in delay-1">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Game 1">
+          </div>
+          <h3 class="media-title">The Witcher 3</h3>
+          <p class="media-subtitle">RPG</p>
+        </div>
+        
+        <!-- Game 2 -->
+        <div class="media-item fade-in delay-2">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Game 2">
+          </div>
+          <h3 class="media-title">Civilization VI</h3>
+          <p class="media-subtitle">Strategy</p>
+        </div>
+        
+        <!-- Game 3 -->
+        <div class="media-item fade-in delay-3">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Game 3">
+          </div>
+          <h3 class="media-title">Portal 2</h3>
+          <p class="media-subtitle">Puzzle</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music -->
+  <section id="music">
+    <div class="container">
+      <h2 class="section-title fade-in">Music I Listen To</h2>
+      <div class="media-grid">
+        <!-- Artist 1 -->
+        <div class="media-item fade-in delay-1">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Artist 1">
+          </div>
+          <h3 class="media-title">Radiohead</h3>
+          <p class="media-subtitle">Alternative Rock</p>
+        </div>
+        
+        <!-- Artist 2 -->
+        <div class="media-item fade-in delay-2">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Artist 2">
+          </div>
+          <h3 class="media-title">Daft Punk</h3>
+          <p class="media-subtitle">Electronic</p>
+        </div>
+        
+        <!-- Artist 3 -->
+        <div class="media-item fade-in delay-3">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Artist 3">
+          </div>
+          <h3 class="media-title">Hans Zimmer</h3>
+          <p class="media-subtitle">Film Score</p>
+        </div>
+        
+        <!-- Artist 4 -->
+        <div class="media-item fade-in delay-4">
+          <div class="media-image">
+            <img src="/api/placeholder/200/200" alt="Artist 4">
+          </div>
+          <h3 class="media-title">Kendrick Lamar</h3>
+          <p class="media-subtitle">Hip Hop</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Map -->
+  <section id="travel">
+    <div class="container">
+      <h2 class="section-title fade-in">Places I've Visited</h2>
+      <div class="map-container fade-in delay-2" id="world-map"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#" class="footer-link">
+          <i class="fas fa-user"></i> ABOUT ME
+        </a>
+        <a href="#" class="footer-link">
+          <i class="fab fa-github"></i> GITHUB
+        </a>
+        <a href="#" class="footer-link">
+          <i class="fab fa-linkedin"></i> LINKEDIN
+        </a>
+        <a href="#" class="footer-link">
+          <i class="fas fa-rss"></i> FEED
+        </a>
+      </div>
+      <p class="footer-text">&copy; 2025 Ziqi Chen's Site. Powered by Jekyll & Minimal Mistakes.</p>
+    </div>
+  </footer>
 
   <script>
     // Intersection Observer for animations
     document.addEventListener('DOMContentLoaded', function() {
-      // Animation on scroll
-      const animatedElements = document.querySelectorAll('.animate');
+      const fadeElements = document.querySelectorAll('.fade-in');
       
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -797,64 +604,26 @@ layout: default
         threshold: 0.1
       });
       
-      animatedElements.forEach(element => {
+      fadeElements.forEach(element => {
         element.style.animationPlayState = 'paused';
         observer.observe(element);
       });
       
-      // Initialize hero content animation
-      const heroContent = document.getElementById('hero-content');
-      setTimeout(() => {
-        heroContent.style.opacity = '1';
-        heroContent.style.transform = 'translateY(0)';
-        heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
-      }, 500);
-      
-      // Media tabs functionality
-      const mediaTabs = document.querySelectorAll('.media-tab');
-      const mediaPanels = document.querySelectorAll('.media-panel');
-      
-      mediaTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Remove active class from all tabs and panels
-          mediaTabs.forEach(t => t.classList.remove('active'));
-          mediaPanels.forEach(p => p.classList.remove('active'));
-          
-          // Add active class to current tab
-          tab.classList.add('active');
-          
-          // Show corresponding panel
-          const targetPanel = document.getElementById(tab.dataset.target);
-          targetPanel.classList.add('active');
-        });
-      });
-      
-      // World Map with D3
+      // World Map
       const width = document.getElementById('world-map').clientWidth;
-      const height = 600;
+      const height = 500;
       
       const svg = d3.select('#world-map')
         .append('svg')
         .attr('width', width)
         .attr('height', height);
       
-      const projection = d3.geoOrthographic()
-        .scale(width / 4)
-        .translate([width / 2, height / 2])
-        .clipAngle(90);
+      const projection = d3.geoNaturalEarth1()
+        .scale(width / 5)
+        .translate([width / 2, height / 2]);
       
       const path = d3.geoPath()
         .projection(projection);
-      
-      const g = svg.append("g");
-      
-      // Create a globe
-      g.append("path")
-        .attr("class", "globe")
-        .attr("d", path({type: "Sphere"}))
-        .attr("fill", "#e6f5f8")
-        .attr("stroke", "#52adc8")
-        .attr("stroke-width", 0.5);
       
       // Sample visited locations (longitude, latitude)
       const visitedPlaces = [
@@ -863,7 +632,7 @@ layout: default
         { name: "Paris", coords: [2.3522, 48.8566], size: 8 },
         { name: "Sydney", coords: [151.2093, -33.8688], size: 8 },
         { name: "Cape Town", coords: [18.4241, -33.9249], size: 8 },
-        { name: "Rio de Janeiro", coords: [-43.1729, -22.9068], size: 8 },
+        { name: "Rio de Janeiro", coords: [-43.1729, -22.9068], size: 8 }
       ];
       
       // Load world map data
