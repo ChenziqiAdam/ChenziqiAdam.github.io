@@ -2,9 +2,6 @@
 layout: default
 ---
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ziqi Chen's Site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
   <style>
@@ -44,52 +41,6 @@ layout: default
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-    }
-    
-    /* Header */
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-    
-    .site-title {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--mm-primary);
-    }
-    
-    .site-logo {
-      max-height: 40px;
-      margin-right: 10px;
-    }
-    
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-    
-    nav li {
-      margin-left: 1.5rem;
-    }
-    
-    nav a {
-      color: var(--mm-primary);
-      font-weight: 500;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
     
     /* Hero */
@@ -133,7 +84,8 @@ layout: default
     
     /* Section */
     section {
-      padding: 5rem 0;
+      padding: 7rem 0;
+      position: relative;
     }
     
     section:nth-child(even) {
@@ -141,9 +93,9 @@ layout: default
     }
     
     .section-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       text-align: center;
       color: var(--mm-primary);
       position: relative;
@@ -152,119 +104,266 @@ layout: default
     .section-title::after {
       content: "";
       position: absolute;
-      bottom: -10px;
+      bottom: -15px;
       left: 50%;
-      width: 60px;
-      height: 3px;
-      background-color: var(--mm-link);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--mm-link), #3b7b8f);
       transform: translateX(-50%);
+      border-radius: 2px;
     }
     
     /* Projects */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 3rem;
     }
     
     .project-card {
+      position: relative;
       background: #fff;
-      border-radius: 8px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+      transform-origin: center bottom;
     }
     
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
     
     .project-image {
-      height: 180px;
+      height: 250px;
       overflow: hidden;
+      position: relative;
+    }
+    
+    .project-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%);
+      z-index: 1;
+      pointer-events: none;
     }
     
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.8s ease;
     }
     
     .project-card:hover .project-image img {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
     
     .project-content {
-      padding: 1.5rem;
+      padding: 2rem;
+      position: relative;
     }
     
     .project-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      transition: color 0.3s ease;
+    }
+    
+    .project-card:hover .project-title {
+      color: var(--mm-link);
     }
     
     .project-tags {
       display: flex;
       flex-wrap: wrap;
-      margin: 0.5rem 0;
+      margin: 1rem 0;
+      gap: 0.5rem;
     }
     
     .project-tag {
-      background-color: var(--mm-background);
+      background: linear-gradient(135deg, var(--mm-link) 0%, #3b7b8f 100%);
+      color: white;
       font-size: 0.75rem;
-      padding: 0.3rem 0.6rem;
-      border-radius: 20px;
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project-card:hover .project-tag {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(59, 123, 143, 0.2);
     }
     
     /* Books, Games, Music */
+    .media-section {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .media-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/api/placeholder/1000/800') center/cover no-repeat fixed;
+      opacity: 0.08;
+      z-index: 0;
+    }
+    
+    .media-container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .media-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    
+    .media-tab {
+      padding: 1rem 2rem;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--mm-accent);
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .media-tab::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: var(--mm-link);
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    .media-tab.active {
+      color: var(--mm-primary);
+    }
+    
+    .media-tab.active::after {
+      width: 80%;
+      left: 10%;
+    }
+    
+    .media-panel {
+      display: none;
+    }
+    
+    .media-panel.active {
+      display: block;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    
     .media-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2.5rem;
     }
     
     .media-item {
+      position: relative;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
     
     .media-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px) rotateY(5deg);
     }
     
     .media-image {
-      height: 250px;
+      height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .media-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(82, 173, 200, 0.2) 0%, rgba(59, 123, 143, 0.2) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+    
+    .media-item:hover .media-image::before {
+      opacity: 1;
     }
     
     .media-image img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    
+    .media-item:hover .media-image img {
+      transform: scale(1.05);
     }
     
     .media-title {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      transition: color 0.3s ease;
+    }
+    
+    .media-item:hover .media-title {
+      color: var(--mm-link);
     }
     
     .media-subtitle {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--mm-accent);
+      position: relative;
+      display: inline-block;
     }
     
+    .media-subtitle::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--mm-link);
+      transition: width 0.3s ease;
+    }
+    
+    .media-item:hover .media-subtitle::after {
+      width: 100%;
+    }
+
     /* Travel Map */
     .map-container {
       height: 500px;
@@ -273,46 +372,45 @@ layout: default
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
-    /* Footer */
-    footer {
-      background-color: #fff;
-      padding: 2rem 0;
-      border-top: 1px solid var(--mm-border);
-    }
-    
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    
-    .footer-link {
-      display: flex;
-      align-items: center;
-      margin: 0 1rem;
-      font-size: 0.9rem;
-      color: var(--mm-primary);
-    }
-    
-    .footer-link i {
-      margin-right: 0.5rem;
-    }
-    
-    .footer-text {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--mm-accent);
-    }
-    
     /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
-    .fade-in {
-      animation: fadeIn 0.8s ease forwards;
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    .animate {
       opacity: 0;
+    }
+    
+    .animate.fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    
+    .animate.slide-left {
+      animation: slideInLeft 0.8s ease forwards;
+    }
+    
+    .animate.slide-right {
+      animation: slideInRight 0.8s ease forwards;
+    }
+    
+    .animate.zoom-in {
+      animation: zoomIn 0.8s ease forwards;
     }
     
     .delay-1 { animation-delay: 0.2s; }
@@ -322,22 +420,20 @@ layout: default
     
     /* Responsive */
     @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 3rem 0;
+      .hero-title {
+        font-size: 3rem;
       }
       
-      .hero-content, .hero-image {
-        flex: 0 0 100%;
+      .hero-subtitle {
+        font-size: 1.2rem;
       }
       
-      .hero-image {
-        margin-top: 2rem;
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       }
       
-      .projects-grid, .media-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       }
       
       .map-container {
@@ -347,24 +443,6 @@ layout: default
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container header-container">
-      <a href="#" class="site-title">
-        <img src="/api/placeholder/40/40" alt="Logo" class="site-logo">
-        Ziqi Chen's Site
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Posts</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#"><i class="fas fa-search"></i></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
   <!-- Hero -->
   <section class="hero">
@@ -380,19 +458,19 @@ layout: default
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title fade-in">Projects</h2>
+      <h2 class="section-title animate fade-in">My Projects</h2>
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card fade-in delay-1">
+        <div class="project-card animate fade-in delay-1">
           <div class="project-image">
-            <img src="/api/placeholder/400/250" alt="Project 1">
+            <img src="/api/placeholder/500/350" alt="Data Visualization Project">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Data Visualization Tool</h3>
-            <p>An interactive web-based tool for visualizing complex datasets.</p>
+            <h3 class="project-title">Interactive Data Explorer</h3>
+            <p>A powerful tool for visualizing and analyzing complex datasets with real-time filtering and custom views.</p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">D3.js</span>
@@ -402,33 +480,33 @@ layout: default
         </div>
         
         <!-- Project 2 -->
-        <div class="project-card fade-in delay-2">
+        <div class="project-card animate fade-in delay-2">
           <div class="project-image">
-            <img src="/api/placeholder/400/250" alt="Project 2">
+            <img src="/api/placeholder/500/350" alt="AI Project">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Machine Learning Framework</h3>
-            <p>A lightweight framework for implementing and testing ML algorithms.</p>
+            <h3 class="project-title">Neural Network Framework</h3>
+            <p>A flexible and intuitive framework for designing, training and deploying custom neural network architectures.</p>
             <div class="project-tags">
               <span class="project-tag">Python</span>
               <span class="project-tag">TensorFlow</span>
-              <span class="project-tag">AI</span>
+              <span class="project-tag">Machine Learning</span>
             </div>
           </div>
         </div>
         
         <!-- Project 3 -->
-        <div class="project-card fade-in delay-3">
+        <div class="project-card animate fade-in delay-3">
           <div class="project-image">
-            <img src="/api/placeholder/400/250" alt="Project 3">
+            <img src="/api/placeholder/500/350" alt="Mobile App Project">
           </div>
           <div class="project-content">
-            <h3 class="project-title">Mobile Fitness App</h3>
-            <p>A cross-platform app for tracking workouts and nutrition.</p>
+            <h3 class="project-title">Wellness Companion</h3>
+            <p>A cross-platform mobile application for tracking fitness, nutrition, and mental wellbeing with personalized insights.</p>
             <div class="project-tags">
               <span class="project-tag">React Native</span>
               <span class="project-tag">Firebase</span>
-              <span class="project-tag">Health</span>
+              <span class="project-tag">Health Tech</span>
             </div>
           </div>
         </div>
@@ -436,124 +514,155 @@ layout: default
     </div>
   </section>
 
-  <!-- Books -->
-  <section id="books">
-    <div class="container">
-      <h2 class="section-title fade-in">Books I've Read</h2>
-      <div class="media-grid">
-        <!-- Book 1 -->
-        <div class="media-item fade-in delay-1">
-          <div class="media-image">
-            <img src="/api/placeholder/160/220" alt="Book 1">
+  <!-- Media Tabs Section (Books, Games, Music) -->
+  <section id="media" class="media-section">
+    <div class="container media-container">
+      <h2 class="section-title animate fade-in">My Media Collection</h2>
+      
+      <div class="media-tabs animate zoom-in">
+        <button class="media-tab active" data-target="books">Books</button>
+        <button class="media-tab" data-target="games">Games</button>
+        <button class="media-tab" data-target="music">Music</button>
+      </div>
+      
+      <!-- Books Panel -->
+      <div id="books" class="media-panel active">
+        <div class="media-grid">
+          <!-- Book 1 -->
+          <div class="media-item animate fade-in delay-1">
+            <div class="media-image">
+              <img src="/api/placeholder/180/250" alt="Book: Thinking Fast and Slow">
+            </div>
+            <h3 class="media-title">Thinking, Fast and Slow</h3>
+            <p class="media-subtitle">Daniel Kahneman</p>
           </div>
-          <h3 class="media-title">Thinking, Fast and Slow</h3>
-          <p class="media-subtitle">Daniel Kahneman</p>
-        </div>
-        
-        <!-- Book 2 -->
-        <div class="media-item fade-in delay-2">
-          <div class="media-image">
-            <img src="/api/placeholder/160/220" alt="Book 2">
+          
+          <!-- Book 2 -->
+          <div class="media-item animate fade-in delay-2">
+            <div class="media-image">
+              <img src="/api/placeholder/180/250" alt="Book: Clean Code">
+            </div>
+            <h3 class="media-title">Clean Code</h3>
+            <p class="media-subtitle">Robert C. Martin</p>
           </div>
-          <h3 class="media-title">Clean Code</h3>
-          <p class="media-subtitle">Robert C. Martin</p>
-        </div>
-        
-        <!-- Book 3 -->
-        <div class="media-item fade-in delay-3">
-          <div class="media-image">
-            <img src="/api/placeholder/160/220" alt="Book 3">
+          
+          <!-- Book 3 -->
+          <div class="media-item animate fade-in delay-3">
+            <div class="media-image">
+              <img src="/api/placeholder/180/250" alt="Book: Dune">
+            </div>
+            <h3 class="media-title">Dune</h3>
+            <p class="media-subtitle">Frank Herbert</p>
           </div>
-          <h3 class="media-title">Dune</h3>
-          <p class="media-subtitle">Frank Herbert</p>
-        </div>
-        
-        <!-- Book 4 -->
-        <div class="media-item fade-in delay-4">
-          <div class="media-image">
-            <img src="/api/placeholder/160/220" alt="Book 4">
+          
+          <!-- Book 4 -->
+          <div class="media-item animate fade-in delay-4">
+            <div class="media-image">
+              <img src="/api/placeholder/180/250" alt="Book: Sapiens">
+            </div>
+            <h3 class="media-title">Sapiens</h3>
+            <p class="media-subtitle">Yuval Noah Harari</p>
           </div>
-          <h3 class="media-title">Sapiens</h3>
-          <p class="media-subtitle">Yuval Noah Harari</p>
+          
+          <!-- Book 5 -->
+          <div class="media-item animate fade-in delay-1">
+            <div class="media-image">
+              <img src="/api/placeholder/180/250" alt="Book: The Pragmatic Programmer">
+            </div>
+            <h3 class="media-title">The Pragmatic Programmer</h3>
+            <p class="media-subtitle">David Thomas & Andrew Hunt</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Games -->
-  <section id="games">
-    <div class="container">
-      <h2 class="section-title fade-in">Games I've Played</h2>
-      <div class="media-grid">
-        <!-- Game 1 -->
-        <div class="media-item fade-in delay-1">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Game 1">
+      
+      <!-- Games Panel -->
+      <div id="games" class="media-panel">
+        <div class="media-grid">
+          <!-- Game 1 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Game: The Witcher 3">
+            </div>
+            <h3 class="media-title">The Witcher 3</h3>
+            <p class="media-subtitle">RPG</p>
           </div>
-          <h3 class="media-title">The Witcher 3</h3>
-          <p class="media-subtitle">RPG</p>
-        </div>
-        
-        <!-- Game 2 -->
-        <div class="media-item fade-in delay-2">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Game 2">
+          
+          <!-- Game 2 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Game: Civilization VI">
+            </div>
+            <h3 class="media-title">Civilization VI</h3>
+            <p class="media-subtitle">Strategy</p>
           </div>
-          <h3 class="media-title">Civilization VI</h3>
-          <p class="media-subtitle">Strategy</p>
-        </div>
-        
-        <!-- Game 3 -->
-        <div class="media-item fade-in delay-3">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Game 3">
+          
+          <!-- Game 3 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Game: Portal 2">
+            </div>
+            <h3 class="media-title">Portal 2</h3>
+            <p class="media-subtitle">Puzzle</p>
           </div>
-          <h3 class="media-title">Portal 2</h3>
-          <p class="media-subtitle">Puzzle</p>
+          
+          <!-- Game 4 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Game: Hades">
+            </div>
+            <h3 class="media-title">Hades</h3>
+            <p class="media-subtitle">Action Roguelike</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Music -->
-  <section id="music">
-    <div class="container">
-      <h2 class="section-title fade-in">Music I Listen To</h2>
-      <div class="media-grid">
-        <!-- Artist 1 -->
-        <div class="media-item fade-in delay-1">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Artist 1">
+      
+      <!-- Music Panel -->
+      <div id="music" class="media-panel">
+        <div class="media-grid">
+          <!-- Artist 1 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Artist: Radiohead">
+            </div>
+            <h3 class="media-title">Radiohead</h3>
+            <p class="media-subtitle">Alternative Rock</p>
           </div>
-          <h3 class="media-title">Radiohead</h3>
-          <p class="media-subtitle">Alternative Rock</p>
-        </div>
-        
-        <!-- Artist 2 -->
-        <div class="media-item fade-in delay-2">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Artist 2">
+          
+          <!-- Artist 2 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Artist: Daft Punk">
+            </div>
+            <h3 class="media-title">Daft Punk</h3>
+            <p class="media-subtitle">Electronic</p>
           </div>
-          <h3 class="media-title">Daft Punk</h3>
-          <p class="media-subtitle">Electronic</p>
-        </div>
-        
-        <!-- Artist 3 -->
-        <div class="media-item fade-in delay-3">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Artist 3">
+          
+          <!-- Artist 3 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Artist: Hans Zimmer">
+            </div>
+            <h3 class="media-title">Hans Zimmer</h3>
+            <p class="media-subtitle">Film Score</p>
           </div>
-          <h3 class="media-title">Hans Zimmer</h3>
-          <p class="media-subtitle">Film Score</p>
-        </div>
-        
-        <!-- Artist 4 -->
-        <div class="media-item fade-in delay-4">
-          <div class="media-image">
-            <img src="/api/placeholder/200/200" alt="Artist 4">
+          
+          <!-- Artist 4 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Artist: Kendrick Lamar">
+            </div>
+            <h3 class="media-title">Kendrick Lamar</h3>
+            <p class="media-subtitle">Hip Hop</p>
           </div>
-          <h3 class="media-title">Kendrick Lamar</h3>
-          <p class="media-subtitle">Hip Hop</p>
+          
+          <!-- Artist 5 -->
+          <div class="media-item">
+            <div class="media-image">
+              <img src="/api/placeholder/250/250" alt="Artist: Ludovico Einaudi">
+            </div>
+            <h3 class="media-title">Ludovico Einaudi</h3>
+            <p class="media-subtitle">Contemporary Classical</p>
+          </div>
         </div>
       </div>
     </div>
@@ -566,27 +675,6 @@ layout: default
       <div class="map-container fade-in delay-2" id="world-map"></div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="#" class="footer-link">
-          <i class="fas fa-user"></i> ABOUT ME
-        </a>
-        <a href="#" class="footer-link">
-          <i class="fab fa-github"></i> GITHUB
-        </a>
-        <a href="#" class="footer-link">
-          <i class="fab fa-linkedin"></i> LINKEDIN
-        </a>
-        <a href="#" class="footer-link">
-          <i class="fas fa-rss"></i> FEED
-        </a>
-      </div>
-      <p class="footer-text">&copy; 2025 Ziqi Chen's Site. Powered by Jekyll & Minimal Mistakes.</p>
-    </div>
-  </footer>
 
   <script>
     // Intersection Observer for animations
