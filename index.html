@@ -113,95 +113,6 @@ layout: default
       border-radius: 2px;
     }
     
-    /* Projects */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 3rem;
-    }
-    
-    .project-card {
-      position: relative;
-      background: #fff;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
-      transform-origin: center bottom;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-15px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .project-image {
-      height: 250px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .project-image::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%);
-      z-index: 1;
-      pointer-events: none;
-    }
-    
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-    }
-    
-    .project-card:hover .project-image img {
-      transform: scale(1.1);
-    }
-    
-    .project-content {
-      padding: 2rem;
-      position: relative;
-    }
-    
-    .project-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      transition: color 0.3s ease;
-    }
-    
-    .project-card:hover .project-title {
-      color: var(--mm-link);
-    }
-    
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 1rem 0;
-      gap: 0.5rem;
-    }
-    
-    .project-tag {
-      background: linear-gradient(135deg, var(--mm-link) 0%, #3b7b8f 100%);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.4rem 0.8rem;
-      border-radius: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card:hover .project-tag {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 10px rgba(59, 123, 143, 0.2);
-    }
-    
     /* Books, Games, Music */
     .media-section {
       position: relative;
@@ -458,62 +369,6 @@ layout: default
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title animate fade-in">My Projects</h2>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card animate fade-in delay-1">
-          <div class="project-image">
-            <img src="/api/placeholder/500/350" alt="Data Visualization Project">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Interactive Data Explorer</h3>
-            <p>A powerful tool for visualizing and analyzing complex datasets with real-time filtering and custom views.</p>
-            <div class="project-tags">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">D3.js</span>
-              <span class="project-tag">Data Science</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project-card animate fade-in delay-2">
-          <div class="project-image">
-            <img src="/api/placeholder/500/350" alt="AI Project">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Neural Network Framework</h3>
-            <p>A flexible and intuitive framework for designing, training and deploying custom neural network architectures.</p>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">TensorFlow</span>
-              <span class="project-tag">Machine Learning</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="project-card animate fade-in delay-3">
-          <div class="project-image">
-            <img src="/api/placeholder/500/350" alt="Mobile App Project">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Wellness Companion</h3>
-            <p>A cross-platform mobile application for tracking fitness, nutrition, and mental wellbeing with personalized insights.</p>
-            <div class="project-tags">
-              <span class="project-tag">React Native</span>
-              <span class="project-tag">Firebase</span>
-              <span class="project-tag">Health Tech</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Media Tabs Section (Books, Games, Music) -->
   <section id="media" class="media-section">
     <div class="container media-container">
@@ -695,6 +550,25 @@ layout: default
       fadeElements.forEach(element => {
         element.style.animationPlayState = 'paused';
         observer.observe(element);
+      });
+
+      // Media tabs functionality
+      const mediaTabs = document.querySelectorAll('.media-tab');
+      const mediaPanels = document.querySelectorAll('.media-panel');
+      
+      mediaTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs and panels
+          mediaTabs.forEach(t => t.classList.remove('active'));
+          mediaPanels.forEach(p => p.classList.remove('active'));
+          
+          // Add active class to current tab
+          tab.classList.add('active');
+          
+          // Show corresponding panel
+          const targetPanel = document.getElementById(tab.dataset.target);
+          targetPanel.classList.add('active');
+        });
       });
       
       // World Map
