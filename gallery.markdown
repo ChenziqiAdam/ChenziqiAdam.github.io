@@ -8,7 +8,7 @@ header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
 excerpt: "Welcome to my gallery. Enjoy my works!"
 feature_row1:
-  - image_path: /images/wlop-night.jpg
+  - image_path: /images/time-guardian.png
     alt: "Time Guardian"
     title: "Chrome Extension: Time Guardian"
     excerpt: '**Time Guardian** is one Chrome Extension that combines **Gemini** with smart time remind functions.'
