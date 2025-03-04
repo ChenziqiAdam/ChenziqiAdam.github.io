@@ -16,7 +16,7 @@ feature_row1:
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row2:
-  - image_path: /images/wlop-Fengling-reading.jpg
+  - image_path: /images/agent-demo.png
     alt: "Agent"
     title: "LLM Agent"
     excerpt: 'This is how I design and implement one **LLM Agent** in labor dispute.'

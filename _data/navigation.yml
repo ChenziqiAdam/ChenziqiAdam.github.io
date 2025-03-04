@@ -1,9 +1,11 @@
 main:
   - title: "Home"
     url: /home/
-  - title: "Posts"
+  - title: "Tags"
     url: /tags/
+  - title: "Categories"
+    url: /categories/
   - title: "Gallery"
     url: /gallery/
-  - title: "About me"
+  - title: "About Me"
     url: /about-me/

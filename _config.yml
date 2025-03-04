@@ -89,8 +89,11 @@ footer:
       url: "https://github.com/Ghost04718"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "www.linkedin.com/in/adam-chen-a2a5b42a6
-"         
+      url: "www.linkedin.com/in/adam-chen-a2a5b42a6"
+
+# include _pages folder
+include: ["_pages"]
+         
 # Code block copy button
 enable_copy_code_button: true
 
