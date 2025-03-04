@@ -45,17 +45,35 @@ layout: default
     
     /* Hero */
     .hero {
+      position: relative;
+      min-height: 80vh;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 6rem 0;
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://via.placeholder.com/1600x900');
-      background-size: cover;
-      background-position: center;
+      overflow: hidden;
+      background: none;
+    }
+    
+    .particles-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
     }
     
     .hero-content {
-      flex: 0 0 50%;
+      position: relative;
+      z-index: 2;
+      flex: 0 0 100%;
+      max-width: 600px;
+    }
+    
+    .hero .container {
+      position: relative;
+      z-index: 1;
     }
     
     .hero-title {
@@ -71,15 +89,20 @@ layout: default
       margin-bottom: 2rem;
     }
     
-    .hero-image {
-      flex: 0 0 40%;
-      position: relative;
+    /* Typewriter effect styles */
+    #name {
+      border-right: .15em solid var(--mm-link);
+      white-space: nowrap;
+      display: inline-block;
     }
     
-    .hero-image img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    .typewriter-done {
+      animation: blink-caret .75s step-end infinite;
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--mm-link) }
     }
     
     /* Section */
@@ -189,28 +212,43 @@ layout: default
       gap: 2.5rem;
     }
     
+    /* Flip Card Styles */
     .media-item {
       position: relative;
       text-align: center;
-      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 350px;
+      transition: transform 0.5s;
       transform-style: preserve-3d;
       perspective: 1000px;
     }
     
-    .media-item:hover {
-      transform: translateY(-10px) rotateY(5deg);
+    .media-item-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    
+    .media-item:hover .media-item-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .media-image, .media-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
     
     .media-image {
-      height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5rem;
-      position: relative;
       z-index: 1;
     }
     
@@ -238,8 +276,31 @@ layout: default
       transition: transform 0.8s ease;
     }
     
-    .media-item:hover .media-image img {
-      transform: scale(1.05);
+    .media-back {
+      background-color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: var(--mm-text);
+    }
+    
+    .media-back h3 {
+      margin-bottom: 10px;
+      color: var(--mm-primary);
+    }
+    
+    .media-back p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    
+    .media-rating {
+      margin-top: 10px;
+      color: #ffb400;
     }
     
     .media-title {
@@ -247,10 +308,6 @@ layout: default
       font-size: 1.2rem;
       margin-bottom: 0.4rem;
       transition: color 0.3s ease;
-    }
-    
-    .media-item:hover .media-title {
-      color: var(--mm-link);
     }
     
     .media-subtitle {
@@ -271,10 +328,6 @@ layout: default
       transition: width 0.3s ease;
     }
     
-    .media-item:hover .media-subtitle::after {
-      width: 100%;
-    }
-
     /* Travel Map */
     .map-container {
       height: 500px;
@@ -338,10 +391,7 @@ layout: default
       .hero-subtitle {
         font-size: 1.2rem;
       }
-      
-      .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      }
+    
       
       .media-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -355,16 +405,14 @@ layout: default
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- Hero with Particles -->
   <section class="hero">
+    <div id="particles-js" class="particles-container"></div>
     <div class="container">
       <div class="hero-content fade-in">
-        <h1 class="hero-title">Hello, I'm Ziqi Chen</h1>
+        <h1 class="hero-title">Hello, I'm <span id="name">Ziqi Chen</span></h1>
         <p class="hero-subtitle">Software developer, book lover, and world explorer</p>
         <p>I'm passionate about creating elegant solutions to complex problems. When I'm not coding, you can find me reading, gaming, or planning my next travel adventure.</p>
-      </div>
-      <div class="hero-image fade-in delay-2">
-        <img src="/api/placeholder/500/300" alt="Ziqi Chen">
       </div>
     </div>
   </section>
@@ -380,143 +428,101 @@ layout: default
         <button class="media-tab" data-target="music">Music</button>
       </div>
       
-      <!-- Books Panel -->
+      <!-- Books Panel with Flip Cards -->
       <div id="books" class="media-panel active">
         <div class="media-grid">
           <!-- Book 1 -->
           <div class="media-item animate fade-in delay-1">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Thinking Fast and Slow">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/api/placeholder/180/250" alt="Book: Thinking Fast and Slow">
+              </div>
+              <div class="media-back">
+                <h3>Thinking, Fast and Slow</h3>
+                <p class="media-subtitle">Daniel Kahneman</p>
+                <p>A fascinating exploration of the two systems that drive the way we think: System 1 (fast, intuitive) and System 2 (slow, deliberate).</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
             </div>
-            <h3 class="media-title">Thinking, Fast and Slow</h3>
-            <p class="media-subtitle">Daniel Kahneman</p>
           </div>
           
           <!-- Book 2 -->
           <div class="media-item animate fade-in delay-2">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Clean Code">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/api/placeholder/180/250" alt="Book: Clean Code">
+              </div>
+              <div class="media-back">
+                <h3>Clean Code</h3>
+                <p class="media-subtitle">Robert C. Martin</p>
+                <p>A handbook of agile software craftsmanship that has helped countless programmers write better, more maintainable code.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
             </div>
-            <h3 class="media-title">Clean Code</h3>
-            <p class="media-subtitle">Robert C. Martin</p>
-          </div>
-          
-          <!-- Book 3 -->
-          <div class="media-item animate fade-in delay-3">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Dune">
-            </div>
-            <h3 class="media-title">Dune</h3>
-            <p class="media-subtitle">Frank Herbert</p>
-          </div>
-          
-          <!-- Book 4 -->
-          <div class="media-item animate fade-in delay-4">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: Sapiens">
-            </div>
-            <h3 class="media-title">Sapiens</h3>
-            <p class="media-subtitle">Yuval Noah Harari</p>
-          </div>
-          
-          <!-- Book 5 -->
-          <div class="media-item animate fade-in delay-1">
-            <div class="media-image">
-              <img src="/api/placeholder/180/250" alt="Book: The Pragmatic Programmer">
-            </div>
-            <h3 class="media-title">The Pragmatic Programmer</h3>
-            <p class="media-subtitle">David Thomas & Andrew Hunt</p>
           </div>
         </div>
       </div>
       
-      <!-- Games Panel -->
+      <!-- Games Panel with Flip Cards -->
       <div id="games" class="media-panel">
         <div class="media-grid">
           <!-- Game 1 -->
           <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: The Witcher 3">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/api/placeholder/250/250" alt="Game: The Witcher 3">
+              </div>
+              <div class="media-back">
+                <h3>The Witcher 3</h3>
+                <p class="media-subtitle">RPG</p>
+                <p>An epic open-world adventure with a compelling story, complex characters, and breathtaking landscapes.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
             </div>
-            <h3 class="media-title">The Witcher 3</h3>
-            <p class="media-subtitle">RPG</p>
-          </div>
-          
-          <!-- Game 2 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: Civilization VI">
-            </div>
-            <h3 class="media-title">Civilization VI</h3>
-            <p class="media-subtitle">Strategy</p>
-          </div>
-          
-          <!-- Game 3 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: Portal 2">
-            </div>
-            <h3 class="media-title">Portal 2</h3>
-            <p class="media-subtitle">Puzzle</p>
-          </div>
-          
-          <!-- Game 4 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Game: Hades">
-            </div>
-            <h3 class="media-title">Hades</h3>
-            <p class="media-subtitle">Action Roguelike</p>
           </div>
         </div>
       </div>
       
-      <!-- Music Panel -->
+      <!-- Music Panel with Flip Cards -->
       <div id="music" class="media-panel">
         <div class="media-grid">
           <!-- Artist 1 -->
           <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Radiohead">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/api/placeholder/250/250" alt="Artist: Radiohead">
+              </div>
+              <div class="media-back">
+                <h3>Radiohead</h3>
+                <p class="media-subtitle">Alternative Rock</p>
+                <p>Known for their experimental approach to rock music, creating atmospheric soundscapes and thought-provoking lyrics.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
             </div>
-            <h3 class="media-title">Radiohead</h3>
-            <p class="media-subtitle">Alternative Rock</p>
-          </div>
-          
-          <!-- Artist 2 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Daft Punk">
-            </div>
-            <h3 class="media-title">Daft Punk</h3>
-            <p class="media-subtitle">Electronic</p>
-          </div>
-          
-          <!-- Artist 3 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Hans Zimmer">
-            </div>
-            <h3 class="media-title">Hans Zimmer</h3>
-            <p class="media-subtitle">Film Score</p>
-          </div>
-          
-          <!-- Artist 4 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Kendrick Lamar">
-            </div>
-            <h3 class="media-title">Kendrick Lamar</h3>
-            <p class="media-subtitle">Hip Hop</p>
-          </div>
-          
-          <!-- Artist 5 -->
-          <div class="media-item">
-            <div class="media-image">
-              <img src="/api/placeholder/250/250" alt="Artist: Ludovico Einaudi">
-            </div>
-            <h3 class="media-title">Ludovico Einaudi</h3>
-            <p class="media-subtitle">Contemporary Classical</p>
           </div>
         </div>
       </div>
@@ -570,6 +576,144 @@ layout: default
           targetPanel.classList.add('active');
         });
       });
+      
+      // Typewriter Effect
+      const nameElement = document.getElementById('name');
+      const nameText = nameElement.textContent;
+      nameElement.textContent = '';
+      
+      function typeWriter(text, element, i = 0) {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          setTimeout(function() {
+            typeWriter(text, element, i + 1);
+          }, 100); // Adjust typing speed here
+        } else {
+          // After completing, wait and then add blinking cursor effect
+          setTimeout(function() {
+            element.classList.add('typewriter-done');
+          }, 500);
+        }
+      }
+      
+      // Start typewriter effect after a short delay
+      setTimeout(function() {
+        typeWriter(nameText, nameElement);
+      }, 1000);
+      
+      // Particles.js Configuration
+      // Load particles.js
+      const particlesScript = document.createElement('script');
+      particlesScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js';
+      document.body.appendChild(particlesScript);
+      
+      particlesScript.onload = function() {
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 80,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#52adc8"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#52adc8",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 3,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 140,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+      };
       
       // World Map
       const width = document.getElementById('world-map').clientWidth;
