@@ -94,9 +94,6 @@ footer:
 # Code block copy button
 enable_copy_code_button: true
 
-# include _pages/ folder
-includes: ["_pages"]
-
 # jekyll-archives config
 category_archive:
   type: liquid
