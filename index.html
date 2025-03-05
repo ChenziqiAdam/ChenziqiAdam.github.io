@@ -417,16 +417,15 @@ layout: default
     </div>
   </section>
 
-  <!-- Media Tabs Section (Books, Games, Music) -->
+  <!-- Media Tabs Section (Books, Music, Digitals) -->
   <section id="media" class="media-section">
     <div class="container media-container">
       <h2 class="section-title animate fade-in">My Media Collection</h2>
       
       <div class="media-tabs animate zoom-in">
         <button class="media-tab active" data-target="books">Books</button>
-        <button class="media-tab" data-target="games">Games</button>
         <button class="media-tab" data-target="music">Music</button>
-        <button class="media-tab" data-target="movies">Movies</button>
+        <button class="media-tab" data-target="digitals">Digitals</button>
       </div>
       
       <!-- Books Panel with Flip Cards -->
@@ -476,32 +475,6 @@ layout: default
         </div>
       </div>
       
-      <!-- Games Panel with Flip Cards -->
-      <div id="games" class="media-panel">
-        <div class="media-grid">
-          <!-- Game 1 -->
-          <div class="media-item">
-            <div class="media-item-inner">
-              <div class="media-image">
-                <img src="/images/HOI-4.png" alt="Game: Heart of Iron IV">
-              </div>
-              <div class="media-back">
-                <h3>Heart of Iron IV</h3>
-                <p class="media-subtitle">Paradox</p>
-                <p>Success consists of going from failure to failure without loss of enthusiasm. - Winston Churchill</p>
-                <div class="media-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
       <!-- Music Panel with Flip Cards -->
       <div id="music" class="media-panel">
         <div class="media-grid">
@@ -528,14 +501,14 @@ layout: default
         </div>
       </div>
 
-      <!-- Movies Panel with Flip Cards -->
-      <div id="movies" class="media-panel">
+      <!-- Digitals Panel with Flip Cards -->
+      <div id="digitals" class="media-panel">
         <div class="media-grid">
-          <!-- Movie 1 -->
+          <!-- Anime 1 -->
           <div class="media-item">
             <div class="media-item-inner">
               <div class="media-image">
-                <img src="/images/cyberpunk-edgerunners.jpeg" alt="Movie: Cyberpunk Edgerunners">
+                <img src="/images/cyberpunk-edgerunners.jpg" alt="Anime: Cyberpunk Edgerunners">
               </div>
               <div class="media-back">
                 <h3>Cyberpunk Edgerunners</h3>
@@ -551,7 +524,68 @@ layout: default
               </div>
             </div>
           </div>
+          <!-- Anime 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/attack-on-titan.jpeg" alt="Anime: Attack on Titan">
+              </div>
+              <div class="media-back">
+                <h3>Attack on Titan</h3>
+                <p class="media-subtitle">Hajime Isayama</p>
+                <p>Tatakae, Tatakae, TATAKAE!</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Anime 3 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/ghost-in-the-shell.jpg" alt="Anime: Ghost in the Shell">
+              </div>
+              <div class="media-back">
+                <h3>Ghost in the Shell</h3>
+                <p class="media-subtitle">Masamune Shirow</p>
+                <p>Man is an individual only because of his intangible memory. But memory cannot be defined, yet it defines mankind</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Game 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/HOI-4.png" alt="Game: Heart of Iron IV">
+              </div>
+              <div class="media-back">
+                <h3>Heart of Iron IV</h3>
+                <p class="media-subtitle">Paradox</p>
+                <p>Success consists of going from failure to failure without loss of enthusiasm. - Winston Churchill</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
@@ -764,8 +798,8 @@ layout: default
         { name: "Kyoto", coords: [135.7, 35.0], size: 6 },
         { name: "Osaka", coords: [135.5, 34.7], size: 6 },
         { name: "Hong Kong", coords: [114.2, 22.3], size: 6},
-        { name: "Suzhou", coords: [120.6, 31.2], size: 6},
-        { name: "Shenzhen", coords: [114.1, 22.5], size: 8},
+        { name: "Suzhou", coords: [120.6, 31.2], size: 4},
+        { name: "Shenzhen", coords: [114.1, 22.5], size: 6},
         { name: "Changsha", coords: [112.9, 28.2], size: 6}
       ];
       
