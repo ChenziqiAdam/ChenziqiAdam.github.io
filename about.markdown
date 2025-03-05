@@ -6,10 +6,10 @@ author_profile: true
 categories: Others
 ---
 # Ziqi Chen
-*Last Update: 2025.2.14*
+*Last Update: 2025.3.5*
 
 ### Background
-- **School**: Chinese University of Hong Kong, Shenzhen
+- **School**: The Chinese University of Hong Kong, Shenzhen
 - **Major**: Computer Science and Engineering
 - **Email**: <ziqichen1@link.cuhk.edu.cn>
 
