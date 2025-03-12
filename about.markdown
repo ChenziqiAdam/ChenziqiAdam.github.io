@@ -31,8 +31,10 @@ categories: Others
     - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb): AI-powered customized time reminder
     - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof): AI-powered extension that can analyze users' browsing history
     - [Minimal Site Blocker](https://chromewebstore.google.com/detail/minimal-site-blocker/mfofjdhlkoelfhjlhahbbpplaodabadk): A blocker that blocks distracting websites by categories
+    - [Gemini News Brief](https://chromewebstore.google.com/detail/gemini-news-brief/hficggpiebfkkdcodpknjdhhlinieddk): AI-Powered entension that can summarize daily news for users by keywords
 - [GitHub Page](https://ghost04718.github.io/)
 - [Personal Blog Website](https://adamchen.tech)
 - [React App Kingdom Region](https://github.com/Ghost04718/Kingdom-Regin): AI-powered RPG word game
 - Poe Bots
     - [Mikaramu](https://poe.com/Mikaramu): Murakami-style AI writer
+    - [WG-Artist](https://poe.com/WG-Artist): WG AI Writer
