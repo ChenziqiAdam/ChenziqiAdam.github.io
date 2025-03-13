@@ -37,7 +37,7 @@ paginate_path: /recent/page:num
 # Site default teaser image
 teaser: "/images/wlop-Xiaolv-landscape.jpg"
 # Site Masthead logo
-logo: "/images/wlop-Xiaolv-landscape.jpg"
+logo: "/images/wlop-Xiaolv-portrait.jpg"
 
 # Site search
 search: true
@@ -64,7 +64,7 @@ defaults:
 # Site author
 author:
   name     : "Ziqi Chen"
-  avatar   : "images/wlop-Xiaolv-portrait.jpg"
+  avatar   : "images/photo.jpg"
   bio      : "If you are going through hell, keep going."
   location : "Hong Kong"
   links:
