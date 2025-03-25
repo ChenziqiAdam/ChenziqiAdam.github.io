@@ -2,7 +2,8 @@
 layout: single
 title:  "How to backup Obsidian"
 date:   2024-07-01 23:08:10 +0800
-categories: Obsidian
+categories: 
+  - Skills
 tags:
   - Obsidian
   - Git

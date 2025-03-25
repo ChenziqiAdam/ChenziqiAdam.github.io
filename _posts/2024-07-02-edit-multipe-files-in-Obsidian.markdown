@@ -3,8 +3,8 @@ layout: single
 title:  "How to edit multiple files in Obsidian"
 date:   2024-07-02 17:51:25 +0800
 categories: 
-  - Obsidian
   - Skills
+  - CS
 tags:
   - Git
   - Obsidian

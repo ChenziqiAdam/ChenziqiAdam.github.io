@@ -5,6 +5,7 @@ date:   2024-09-08 15:41:20 +0800
 categories:
   - CS
   - RA
+  - AI
 tags:
   - OpenAI
   - Zilliz

@@ -5,6 +5,7 @@ date:   2024-11-18 19:20:50 +0800
 categories:
   - CS
   - Skills
+  - AI
 tags:
   - Google
   - Gemini

@@ -4,7 +4,6 @@ title:  "How to sync Obsidian on iPad with PC"
 date:   2024-09-05 18:43:30 +0800
 categories:
   - Skills
-  - Obsidian
 tags:
   - Obsidian
   - Git
