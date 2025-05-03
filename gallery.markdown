@@ -12,7 +12,7 @@ feature_row1:
     alt: "Time Guardian"
     title: "Chrome Extension: Time Guardian"
     excerpt: '**Time Guardian** is one Chrome Extension that combines **Gemini** with smart time remind functions.'
-    url: "/cs/skills/2024/11/20/Time-Guardian"
+    url: "/cs/skills/ai/2024/11/20/Time-Guardian.html"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row2:
@@ -20,7 +20,7 @@ feature_row2:
     alt: "Agent"
     title: "LLM Agent"
     excerpt: 'This is how I design and implement one **LLM Agent** in labor dispute.'
-    url: "/cs/ra/2024/09/08/how-to-implement-an-agent"
+    url: "/cs/ra/ai/2024/09/08/how-to-implement-an-agent.html"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row:
@@ -28,7 +28,7 @@ feature_row:
     alt: "Homepage"
     title: "My homepage"
     excerpt: "See my homepage!"
-    url: "/home/"
+    url: "/"
     btn_class: "btn--primary"
     btn_label: "Homepage"
   - image_path: /images/wlop-Fengling-reading.jpg
