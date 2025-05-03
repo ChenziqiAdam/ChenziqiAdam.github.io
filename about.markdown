@@ -16,7 +16,7 @@ categories: Others
     - *2020.09 - 2023.06*
 
 ### Research Projects
-- [TwinMarket](https://arxiv.org/abs/2502.01506) *2025.2-present* **Research Assistant**
+- [TwinMarket](https://arxiv.org/abs/2502.01506) *2025.2-Present* **Research Assistant**
     - **Situation**: Participated in Professor Wang Benyou 's Agent Scaling Law project, simulating the stock market by using agents to model individual investors
     - **Task**: Optimized the RAG system by integrating [CAMEL agent framework](https://github.com/camel-ai/camel), FAISS vector database and prompt engineering and addressed the challenge of long-text vector retrieval in the agent's memory module
     - **Result**: Reduced token consumption by 5.1% and improved the accuracy of agent memory by 14.7%
