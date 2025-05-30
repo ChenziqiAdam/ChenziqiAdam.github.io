@@ -16,17 +16,11 @@ categories: Others
     - *2020.09 - 2023.06*
 
 ### Internship
-- **Lalamove** *2025.06-2025.08* **AI Software Developer**
+- **Lalamove**  *2025.06-2025.08*  **AI Software Developer**
 
 ### Research Projects
-- [TwinMarket](https://arxiv.org/abs/2502.01506) *2025.02-2025.05* **Research Assistant**
-    - **Situation**: Participated in Professor Wang Benyou 's Agent Scaling Law project, simulating the stock market by using agents to model individual investors
-    - **Task**: Optimized the RAG system by integrating [CAMEL agent framework](https://github.com/camel-ai/camel), FAISS vector database and prompt engineering and addressed the challenge of long-text vector retrieval in the agent's memory module
-    - **Result**: Reduced token consumption by 5.1% and improved the accuracy of agent memory by 14.7%
-- [Hexlaw Agent](https://hexlaw.hexai.tech) *2024.04-2024.12* **Research Assistant**
-    - **Situation**: Participated in Professor Sun Ruoyu's legal large language model project, developing a legal intelligent agent to simulate lawyer consultations
-    - **Task**: Designed the agent framework for legal disputes using the Zilliz vector database and prompt engineering and addressed potential hallucinations of the large model regarding specific laws and regulations
-    - **Result**: Improved the accuracy of legal consultations by 19.4% and implemented a simulated legal consultation scenario
+- [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
+- [Hexlaw Agent](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
@@ -42,13 +36,13 @@ categories: Others
 - [Personal Blog Website](https://adamchen.tech)
 - [Personal GitHub Page](https://ghost04718.github.io/)
 - Chrome Extension
-    - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb): AI-powered customized time reminder
-    - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof): AI-powered extension that can analyze users' browsing history
-    - [Minimal Site Blocker](https://chromewebstore.google.com/detail/minimal-site-blocker/mfofjdhlkoelfhjlhahbbpplaodabadk): A blocker that blocks distracting websites by categories
-    - [Gemini News Brief](https://chromewebstore.google.com/detail/gemini-news-brief/hficggpiebfkkdcodpknjdhhlinieddk): AI-Powered entension that can summarize daily news for users by keywords
-    - [Grok OCR](https://chromewebstore.google.com/detail/grok-ocr/hcflmjbogncfihbaeppgophciaahgald): Grok-powered OCR extension
+    - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
+    - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof)
+    - [Minimal Site Blocker](https://chromewebstore.google.com/detail/minimal-site-blocker/mfofjdhlkoelfhjlhahbbpplaodabadk)
+    - [Gemini News Brief](https://chromewebstore.google.com/detail/gemini-news-brief/hficggpiebfkkdcodpknjdhhlinieddk)
+    - [Grok OCR](https://chromewebstore.google.com/detail/grok-ocr/hcflmjbogncfihbaeppgophciaahgald)
 - Obsidian Plugin
-    - [Daily News Briefing](https://github.com/Ghost04718/Daily-News-Briefing): AI-powered daily news summarization plugin
+    - [Daily News Briefing](https://github.com/Ghost04718/Daily-News-Briefing)
 - Poe Bots
-    - [Mikaramu](https://poe.com/Mikaramu): Murakami-style AI writer
-    - [WG-Artist](https://poe.com/WG-Artist): WG AI Writer
+    - [Mikaramu](https://poe.com/Mikaramu)
+    - [WG-Artist](https://poe.com/WG-Artist)
