@@ -5,7 +5,7 @@ permalink: /about-me/
 author_profile: true
 categories: Others
 ---
-# Ziqi Chen
+## Ziqi Chen
 *Last Update: 2025.05.31*
 
 ### Education Background

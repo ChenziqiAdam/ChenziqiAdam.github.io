@@ -19,32 +19,32 @@ feature_row2:
   - image_path: /images/agent-demo.png
     alt: "Agent"
     title: "LLM Agent"
-    excerpt: 'This is how I design and implement one **LLM Agent** in labor dispute.'
+    excerpt: 'How I design and implement the framework **LLM Agent** in Hexlaw.'
     url: "/cs/ra/ai/2024/09/08/how-to-implement-an-agent.html"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row:
-  - image_path: /images/wlop-night.jpg
-    alt: "Homepage"
-    title: "My homepage"
-    excerpt: "See my homepage!"
-    url: "/"
+  - image_path: /images/obsidian-homepage-dark.png
+    alt: "Obsidian Homepage"
+    title: "Obsidian Homepage"
+    excerpt: "How I create and customize my Obsidian homepage"
+    url: "/skills/2024/08/14/Obsidian-homepage.html"
     btn_class: "btn--primary"
-    btn_label: "Homepage"
-  - image_path: /images/wlop-Fengling-reading.jpg
-    alt: "Posts"
-    title: "My posts"
-    excerpt: "See my posts!"
-    url: "/tags/"
+    btn_label: "Read More"
+  - image_path: /images/2025-internship-statistic.png
+    alt: "First Internship"
+    title: "My First Internship"
+    excerpt: "My tips for the first internship"
+    url: "https://ghost04718.github.io/cs/skills/2025/06/02/how-to-get-first-internship.html"
     btn_class: "btn--primary"
-    btn_label: "Posts"
+    btn_label: "Read More"
   - image_path: /images/wlop-Haiqinyan-reflection.jpg
     alt: "About me"
     title: "About me"
-    excerpt: "Learn more about me!"
+    excerpt: "My Resume"
     url: "/about-me/"
     btn_class: "btn--primary"
-    btn_label: "About me" 
+    btn_label: "Read More" 
 ---
 
 {% include feature_row id="feature_row1" type="left" %}
