@@ -24,8 +24,8 @@ description:
   This is my personal site!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: Adam Chen
+github_username:  Ghost04718
 
 # Skin
 minimal_mistakes_skin: "default"
@@ -68,7 +68,7 @@ author:
   bio      : "If you are going through hell, keep going."
   location : "Hong Kong"
   links:
-    - label: "About me"
+    - label: "About Me"
       icon: "fas fa-fw fa-user"
       url: "https://ghost04718.github.io/about-me/"
     - label: "Email"
@@ -84,7 +84,7 @@ author:
 # Site footer 
 footer:
   links:
-    - label: "About me"
+    - label: "About Me"
       icon: "fas fa-fw fa-user"
       url: "https://ghost04718.github.io/about-me/"
     - label: "GitHub"
