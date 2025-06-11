@@ -1,11 +1,10 @@
 ---
 layout: single
-title: About me
+title: Ziqi CHEN 陈子琦
 permalink: /about-me/
 author_profile: true
 categories: Others
 ---
-## Ziqi Chen
 *Last Update: 2025.05.31*
 
 ### Education Background
