@@ -1,12 +1,12 @@
 ---
-title: "My Gallery"
+title: "My Profolio"
 layout: splash
 permalink: /gallery/
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-excerpt: "Welcome to my gallery. Enjoy my works!"
+excerpt: "Welcome to my profolio. Enjoy my works!"
 feature_row1:
   - image_path: /images/time-guardian.png
     alt: "Time Guardian"
@@ -31,11 +31,11 @@ feature_row:
     url: "/skills/2024/08/14/Obsidian-homepage.html"
     btn_class: "btn--primary"
     btn_label: "Read More"
-  - image_path: /images/2025-internship-statistic.png
-    alt: "First Internship"
-    title: "My First Internship"
-    excerpt: "My tips for the first internship"
-    url: "https://ghost04718.github.io/cs/skills/2025/06/02/how-to-get-first-internship.html"
+  - image_path: /images/wlop-Xiaolv-landscape.jpg.png
+    alt: "Chinese Personal Website"
+    title: "My Chinese Personal Website"
+    excerpt: "Deployed by Vercel"
+    url: "https://www.adamchen.tech/"
     btn_class: "btn--primary"
     btn_label: "Read More"
   - image_path: /images/wlop-Haiqinyan-reflection.jpg

@@ -3,6 +3,7 @@ layout: single
 title: Ziqi Chen 陈子琦
 permalink: /about-me/
 author_profile: true
+toc: true
 categories: Others
 ---
 *Last Update: 2025.05.31*
