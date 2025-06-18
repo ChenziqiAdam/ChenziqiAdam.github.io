@@ -6,21 +6,21 @@ author_profile: true
 toc: true
 categories: Others
 ---
-*Last Update: 2025.05.31*
+*Last Update: 2025.06.18*
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
     - *2023.09 - Present*
-    - **Major**: Computer Science and Engineering (GPA top 10%)
+    - **Major**: Computer Science and Engineering (GPA top 20%)
 - **The Suzhou High School of Jiangsu Province**
     - *2020.09 - 2023.06*
 
 ### Internship
-- **Lalamove**  *2025.06-2025.08*  **AI Software Developer**
+- **Lalamove**  *2025.05-2025.08*  **AI Software Developer**
 
 ### Research Projects
 - [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
-- [Hexlaw Agent](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
+- [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
@@ -33,7 +33,7 @@ categories: Others
     - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12*
 
 ### Projects
-- [Personal Blog Website](https://adamchen.tech)
+- [Personal Blog Website](https://www.adamchen.tech)
 - [Personal GitHub Page](https://ghost04718.github.io/)
 - Chrome Extension
     - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
