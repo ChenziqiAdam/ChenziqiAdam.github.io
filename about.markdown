@@ -1,12 +1,17 @@
 ---
-layout: single
+layout: splash
 title: Ziqi Chen 陈子琦
 permalink: /about-me/
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /images/wlop-Xiaolv-portrait.jpg
+excerpt: "About Me"
 author_profile: true
 toc: true
 categories: Others
 ---
-*Last Update: 2025.06.18*
+*Last Update: 2025.06.27*
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
@@ -16,7 +21,7 @@ categories: Others
     - *2020.09 - 2023.06*
 
 ### Internship
-- **Lalamove**  *2025.05-2025.08*  **AI Software Developer**
+- **Lalamove**  *2025.05-2025.08*  **NLP Engineer**
 
 ### Research Projects
 - [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
@@ -33,8 +38,8 @@ categories: Others
     - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12*
 
 ### Projects
-- [Personal Blog Website](https://www.adamchen.tech)
 - [Personal GitHub Page](https://ghost04718.github.io/)
+- [Chinese Personal Website](https://www.adamchen.tech)
 - Chrome Extension
     - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
     - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof)

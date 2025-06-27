@@ -58,7 +58,7 @@ defaults:
       show_date: true
       author_profile: true
       toc: true
-      toc_label: "My Table of Contents"
+      toc_label: "On this page"
       toc_icon: "cog"
 
 # Site author
@@ -79,7 +79,7 @@ author:
       url: "https://github.com/Ghost04718"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/ziqi-chen-a2a5b42a6/"
+      url: "https://www.linkedin.com/in/ziqi-chen-adam"
 
 # Site footer 
 footer:
@@ -92,7 +92,7 @@ footer:
       url: "https://github.com/Ghost04718"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/ziqi-chen-a2a5b42a6/"
+      url: "https://www.linkedin.com/in/ziqi-chen-adam"
          
 # Code block copy button
 enable_copy_code_button: true
