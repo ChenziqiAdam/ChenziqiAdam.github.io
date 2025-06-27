@@ -1,17 +1,13 @@
 ---
-layout: splash
+layout: single
 title: Ziqi Chen 陈子琦
 permalink: /about-me/
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /images/wlop-Xiaolv-portrait.jpg
 excerpt: "About Me"
 author_profile: true
 toc: true
 categories: Others
 ---
-*Last Update: 2025.06.27*
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.06.27" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
