@@ -31,7 +31,7 @@ feature_row:
     url: "/skills/2024/08/14/Obsidian-homepage.html"
     btn_class: "btn--primary"
     btn_label: "Read More"
-  - image_path: /images/wlop-Xiaolv-landscape.jpg
+  - image_path: /images/wlop-night.jpg
     alt: "Chinese Personal Website"
     title: "My Chinese Personal Website"
     excerpt: "Deployed by Vercel"
