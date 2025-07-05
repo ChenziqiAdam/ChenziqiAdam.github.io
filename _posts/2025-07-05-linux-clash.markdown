@@ -13,7 +13,7 @@ tags:
 ---
 
 ### 如何在国内Linux服务器科学上网
-> **Note**: This blog is for **Chinese users** to set up **Clash** on Linux servers.
+> **Note**: This blog is for **Chinese users** to set up **Clash** on Linux servers **in China**.
 
 在**国内**使用服务器时，常常需要连接到外网下载文件或者调用API，由于国内**网络限制**导致往往只能从先下载到本地再上传到服务器。本文通过**proxychain4**和**clash**实现直接在服务器上切换代理。
 
@@ -53,7 +53,6 @@ curl baidu.com
 
 ```
 Clash
-├── Country.mmdb
 ├── clash
 ├── config.yaml
 ```
@@ -81,8 +80,8 @@ external-controller: '127.0.0.1:9091'
 #### 2. 配置Proxychains4
 
 - ProxyChains是Linux系统上网络流量的代理工具。
-- 如果你是拥有sudo权限的用户，那么可以简单使用命令：`sudo apt-get install proxychains` 安装Proxychains4。
-- 如果不是root用户，则按照以下方法可以手动安装。
+- 如果你是**sudo**权限的用户，那么可以简单使用命令：`sudo apt-get install proxychains` 安装Proxychains4。
+- 如果不是，则按照以下方法可以手动安装。
 
 ##### 2.1 安装
 
@@ -105,7 +104,7 @@ make install && make install-config
 
 ##### 2.2 配置环境变量
 
-- 将安装的`~/.local/bin`加入到用户PATH里：
+- 将安装的`~/.local/bin`加入到自己的用户PATH里：
 
 ```bash
 export PATH="/home/username/.local/bin:$PATH"
@@ -117,7 +116,7 @@ export PATH="/home/username/.local/bin:$PATH"
 vim /home/username/.config/etc/proxychains.conf
 ```
 
-- 修改位于该文件末尾的[ProxyList]选项，将端口号设置为我们上一步设置的`7892`：
+- 修改位于该文件末尾的[ProxyList]选项，将端口号设置为上一步设置的`7892`：
 
 ```txt
 [ProxyList]
