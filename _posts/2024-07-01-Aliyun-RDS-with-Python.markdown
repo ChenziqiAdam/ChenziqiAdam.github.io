@@ -7,7 +7,7 @@ categories:
   - RA
   - Skills
 tags:
-  - Aibaba Cloud
+  - Alibaba Cloud
 ---
 ### How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python
 
