@@ -7,7 +7,7 @@ categories:
   - Skills
 ---
 ### How to clean Chinese network novel data?
-It is important for **ML** (machine learning) to prepare qualified data. After crawling on the internet, it is a must to clean the crawled data to improve the quality of data. This blog is an example for cleaning **Chinese network novels**. More about **crawling** see [my previous blog](https://ghost04718.github.io/cs/skills/2024/08/01/selenium-crawl.html).
+It is important for **ML** (machine learning) to prepare qualified data. After crawling on the internet, it is a must to clean the crawled data to improve the quality of data. This blog is an example for cleaning **Chinese network novels**. More about **crawling** see [my previous blog](/cs/skills/2024/08/01/selenium-crawl.html).
 
 {% highlight python %}
 import re

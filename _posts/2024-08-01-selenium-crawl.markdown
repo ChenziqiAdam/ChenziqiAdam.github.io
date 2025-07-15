@@ -9,7 +9,7 @@ tags:
   - Selenium
 ---
 ### How to crawl network novels with Python Selenium
-It is important for **ML** (machine learning) to prepare qulified data. It is common to crawl on the internet to retrive the target data. This blog is an example for crawling **Chinese network novels**. More about **data cleaning** see [my next blog](https://ghost04718.github.io/cs/skills/2024/08/10/chinese-data-cleaning.html).
+It is important for **ML** (machine learning) to prepare qulified data. It is common to crawl on the internet to retrive the target data. This blog is an example for crawling **Chinese network novels**. More about **data cleaning** see [my next blog](/cs/skills/2024/08/10/chinese-data-cleaning.html).
 
 **Conponents**: Selenium, Beautiful Soup
 1. Install `selenium` and `bs4`

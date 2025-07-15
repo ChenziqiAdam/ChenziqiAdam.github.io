@@ -45,6 +45,7 @@ curl baidu.com
 ##### 1.1 安装Clash
 
 - 由于GitHub上的Clash仓库已经被删除，所以建议从自己本地将Clash上传到服务器你的文件夹下。
+> 可以参考[Windows中文版Clash仓库](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)。
 
 ##### 1.2 设置配置文件
 

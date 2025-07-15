@@ -20,7 +20,7 @@ For researches focusing on LLM Memory, it is critical to set up multi document d
 ```shell
 curl https://www.wikipedia.org/
 ```
-- If fail, [another blog](https://ghost04718.github.io/cs/ra/skills/2025/07/05/linux-clash.html) might help you set up **Clash** on your server.
+- If fail, [another blog](/cs/ra/skills/2025/07/05/linux-clash.html) might help you set up **Clash** on your server.
 
 #### 1. Dataset Creation Pipeline
 
@@ -30,6 +30,6 @@ curl https://www.wikipedia.org/
 > If the pdf dowoloaded is not complete or is corrupted, try the following:
 > - Add header disguise
 > - Wait for complete loading: `page.wait_for_load_state("networkidle")`
-> - Set up [Clash](https://ghost04718.github.io/cs/ra/skills/2025/07/05/linux-clash.html) for better connection
+> - Set up [Clash](/cs/ra/skills/2025/07/05/linux-clash.html) for better connection
 
 Now it is done!

@@ -20,7 +20,7 @@ However, there are always some cases when you cannot find a satisfactory plugin.
 
 #### Build Your Plugin
 
-The [official developer document](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) is clear and well-written. With advance AI like Cursor, you can easily develop your own plugin. You can read my blog about [how to leverage Cursor](https://ghost04718.github.io/cs/skills/2024/12/14/Cursor-tip.html). Remember to test it yourself!
+The [official developer document](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) is clear and well-written. With advance AI like Cursor, you can easily develop your own plugin. You can read my blog about [how to leverage Cursor](/cs/skills/2024/12/14/Cursor-tip.html). Remember to test it yourself!
 
 ### Submit Your Plugin
 
@@ -35,7 +35,7 @@ Here are the [official guidelines](https://docs.obsidian.md/Plugins/Releasing/Pl
 
 ### My first plugin: Daily News Briefing
 
-This is my first plugin: [Daily News Briefing](https://github.com/Ghost04718/Daily-News-Briefing). Try it out!
+This is my first plugin: [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing). Try it out!
 
 
 Now it is done. Try out yourself!

@@ -10,7 +10,7 @@ tags:
 ### How to DIY your Obsidian homepage from scratch?
 Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. 
 As for me, a good homepage works as a **dashboard** and facilitate my workflow. 
-Here is my version of Obsidian homepage, you can also download the **template vault** from [my GitHub repository](https://github.com/Ghost04718/Obsidian-Homepage) and play around.
+Here is my version of Obsidian homepage, you can also download the **template vault** from [my GitHub repository](https://github.com/ChenziqiAdam/Obsidian-Homepage) and play around.
 
 #### Screenshots
 ![screenshot](/images/obsidian-homepage-dark.png)
@@ -41,7 +41,7 @@ Here is my version of Obsidian homepage, you can also download the **template va
     - Style Settings
     - Tracker
 - **CSS Snippets**
-    - You can download the CSS snippets from [my github repository](https://github.com/Ghost04718/Obsidian-Homepage/tree/main/snippets) and drag them into your `vault/.obsidian/snippets` (if the folder does not exist you can create one yourself) .
+    - You can download the CSS snippets from [my github repository](https://github.com/ChenziqiAdam/Obsidian-Homepage/tree/main/snippets) and drag them into your `vault/.obsidian/snippets` (if the folder does not exist you can create one yourself) .
 
 #### Start From Scratch
 ##### 1. Create the banner image

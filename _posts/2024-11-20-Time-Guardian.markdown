@@ -40,6 +40,6 @@ The extension comes with the following default settings:
 - **Max Snooze Minutes**: `180 minutes`
 - **Default Snooze Options**: `10 minutes, 30 minutes`
 - **API Key**: `null`
-More see my [GitHub repository](https://github.com/Ghost04718/Time-Guardian).
+More see my [GitHub repository](https://github.com/ChenziqiAdam/Time-Guardian).
 
 Download now and try it out!

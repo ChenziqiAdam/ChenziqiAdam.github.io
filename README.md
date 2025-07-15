@@ -1,5 +1,3 @@
-This is my repository for GitHub Page.
+Ziqi Chen's Site
 
-GitHub Page + Jekyll + Minimal Mistakes
-
-Check it out [here](https://ghost04718.github.io/).
+![image](/images/wlop-Xiaolv-portrait.jpg)

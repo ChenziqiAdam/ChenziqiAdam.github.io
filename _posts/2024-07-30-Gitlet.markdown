@@ -112,6 +112,6 @@ Gitlet
 ├── Commit.java
 └── Utils.java
 ```
-More see [my implementation](https://github.com/Ghost04718/cs61b-Gitlet).
+More see [my implementation](https://github.com/ChenziqiAdam/cs61b-Gitlet).
 
 Now it is done!

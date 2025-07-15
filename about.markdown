@@ -34,7 +34,7 @@ categories: Others
     - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12*
 
 ### Projects
-- [Personal GitHub Page](https://ghost04718.github.io/)
+- [Personal GitHub Page](/)
 - [Chinese Personal Website](https://www.adamchen.tech)
 - Chrome Extension
     - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
@@ -43,7 +43,7 @@ categories: Others
     - [Gemini News Brief](https://chromewebstore.google.com/detail/gemini-news-brief/hficggpiebfkkdcodpknjdhhlinieddk)
     - [Grok OCR](https://chromewebstore.google.com/detail/grok-ocr/hcflmjbogncfihbaeppgophciaahgald)
 - Obsidian Plugin
-    - [Daily News Briefing](https://github.com/Ghost04718/Daily-News-Briefing)
+    - [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
 - Poe Bots
     - [Mikaramu](https://poe.com/Mikaramu)
     - [WG-Artist](https://poe.com/WG-Artist)

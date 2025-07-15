@@ -25,7 +25,7 @@ description:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Adam Chen
-github_username:  Ghost04718
+github_username:  ChenziqiAdam
 
 # Skin
 minimal_mistakes_skin: "default"
@@ -70,13 +70,13 @@ author:
   links:
     - label: "About Me"
       icon: "fas fa-fw fa-user"
-      url: "https://ghost04718.github.io/about-me/"
+      url: "https://chenziqiadam.github.io/about-me/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:ziqichen1@link.cuhk.edu.cn"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/Ghost04718"
+      url: "https://github.com/ChenziqiAdam"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/ziqi-chen-adam"
@@ -86,10 +86,10 @@ footer:
   links:
     - label: "About Me"
       icon: "fas fa-fw fa-user"
-      url: "https://ghost04718.github.io/about-me/"
+      url: "https://chenziqiadam.github.io/about-me/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/Ghost04718"
+      url: "https://github.com/ChenziqiAdam"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/ziqi-chen-adam"

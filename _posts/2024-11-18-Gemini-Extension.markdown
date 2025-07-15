@@ -12,7 +12,7 @@ tags:
 ---
 
 ### How to integrate Gemini into your extension?
-Chrome Extensions do not support direct `import` in your **javascript** code. And its official [Gemini API samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/ai.gemini-in-the-cloud) are confusing I think. So here is how I figure out how to make it. Your can also see my [Chrome Extension Time Guardian](https://github.com/Ghost04718/Time-Guardian).
+Chrome Extensions do not support direct `import` in your **javascript** code. And its official [Gemini API samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/ai.gemini-in-the-cloud) are confusing I think. So here is how I figure out how to make it. Your can also see my [Chrome Extension Time Guardian](https://github.com/ChenziqiAdam/Time-Guardian).
 
 #### Use webpack or bundle to build your project
 1. Include this code script in your `package.json`.

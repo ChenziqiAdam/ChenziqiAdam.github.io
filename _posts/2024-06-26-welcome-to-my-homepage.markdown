@@ -11,4 +11,4 @@ I will post my CS experience here for recording my progress.
 
 Feel free to play around.
 
-If you would like to learn more about me, see [About me](https://ghost04718.github.io/about-me/).
+If you would like to learn more about me, see [About me](/about-me/).
