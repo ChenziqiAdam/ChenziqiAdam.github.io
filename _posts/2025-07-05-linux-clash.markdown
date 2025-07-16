@@ -47,7 +47,15 @@ curl baidu.com
 - 由于GitHub上的Clash仓库已经被删除，所以建议从自己本地将Clash上传到服务器你的文件夹下。
 > 可以参考[Windows中文版Clash仓库](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)。
 
-##### 1.2 设置配置文件
+##### 1.2 下载Country.db
+
+Country.mmdb为全球IP库。
+
+```
+wget https://github.com/Dreamacro/maxmind-geoip/releases/download/20220812/Country.mmdb
+```
+
+##### 1.3 设置配置文件
 
 - 将科学上网的配置文件保存为config.yaml，并保存到Clash文件夹下。以Mac系统下的Clash为例，选择“配置”—“打开配置文件夹”，将配置文件复制上传到服务器，并命名为config.yaml。
 - 完成上述文件后，Clash文件夹下是如下结构：
@@ -61,18 +69,32 @@ Clash
 - 接下来需要配置config.yaml文件（主要是设置端口，防止占用），前几行的配置如下：
 
 ```yaml
-mixed-port: 7892
+mixed-port: 10001
 allow-lan: true
 bind-address: '*'
 mode: rule
 log-level: info
-external-controller: '127.0.0.1:9091'
+external-controller: '127.0.0.1:10002'
 ```
 
-##### 1.3 启动
+##### 1.3 运行Clash
+
+- 给文件可执行权限
+
+```
+chmod +x clash
+```
+
+- 启动
 
 ```
 ./clash -d .
+```
+
+- 如果想一直保持Clash运行
+
+```
+nohup ./clash -d .
 ```
 
 > 注：如果没有报错，那么Clash配置成功。如果报错端口错误，那么需要回上一步重新设置端口。
@@ -117,14 +139,14 @@ export PATH="/home/username/.local/bin:$PATH"
 vim /home/username/.config/etc/proxychains.conf
 ```
 
-- 修改位于该文件末尾的[ProxyList]选项，将端口号设置为上一步设置的`7892`：
+- 修改位于该文件末尾的[ProxyList]选项，将端口号设置为上一步设置的`10001`：
 
 ```txt
 [ProxyList]
 
-socks4	127.0.0.1 7892
-socks5	127.0.0.1 7892
-http	127.0.0.1 7892
+socks4	127.0.0.1 10001
+socks5	127.0.0.1 10001
+http	127.0.0.1 10001
 ```
 
 #### 3. 测试
