@@ -37,5 +37,8 @@ Here are the [official guidelines](https://docs.obsidian.md/Plugins/Releasing/Pl
 
 This is my first plugin: [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing). Try it out!
 
+#### Demo
+{% include video id="nbbisoqsZDc" provider="youtube" %}
+
 
 Now it is done. Try out yourself!

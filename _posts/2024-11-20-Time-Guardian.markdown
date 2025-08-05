@@ -42,4 +42,8 @@ The extension comes with the following default settings:
 - **API Key**: `null`
 More see my [GitHub repository](https://github.com/ChenziqiAdam/Time-Guardian).
 
+## Demo
+{% include video id="MoMGoXhGNy8" provider="youtube" %}
+
+
 Download now and try it out!
