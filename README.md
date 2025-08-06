@@ -1,3 +1,3 @@
-Ziqi Chen's Site
+# Ziqi Chen's Site
 
-![image](/images/wlop-Xiaolv-portrait.jpg)
+![image](https://github.com/ChenziqiAdam/images/blob/1e430b687e45da3e8dd253f4d69ac074535cf5c6/wlop-Xiaolv-portrait.jpg)

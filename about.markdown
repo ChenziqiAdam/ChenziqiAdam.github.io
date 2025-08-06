@@ -44,6 +44,8 @@ categories: Others
     - [Grok OCR](https://chromewebstore.google.com/detail/grok-ocr/hcflmjbogncfihbaeppgophciaahgald)
 - Obsidian Plugin
     - [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
+    - [SANE](https://github.com/ChenziqiAdam/SANE)
+    - [Synapse](https://github.com/ChenziqiAdam/Synapse)
 - Poe Bots
     - [Mikaramu](https://poe.com/Mikaramu)
     - [WG-Artist](https://poe.com/WG-Artist)
