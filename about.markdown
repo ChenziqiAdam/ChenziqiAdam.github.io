@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 categories: Others
 ---
-{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.06.27" %}
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.08.18" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
@@ -22,6 +22,12 @@ categories: Others
 ### Research Projects
 - [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
 - [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
+
+### Active Communities
+- [Obsidian Plugin](https://github.com/obsidianmd/obsidian-releases) Developer
+- [Chrome Extension](https://chromewebstore.google.com) Developer
+- [CAMEL AI](https://www.camel-ai.org/) Contributer
+- [Sentient AI](https://sentient.foundation/) Builder
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
