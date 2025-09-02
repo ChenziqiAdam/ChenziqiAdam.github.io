@@ -9,21 +9,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
 excerpt: "Welcome to my profolio. Enjoy my works!"
-sidebar:
-  - title: "Role"
-    image: images/wlop-Xiaolv-portrait.jpg
-    image_alt: "logo"
-    text: "AI Enthusiast, Book Lover, and World Explorer"
-gallery:
-  - url: /images/wlop-Haiqinyan-reflection.jpg
-    image_path: images/wlop-Haiqinyan-reflection.jpg
-    alt: "reflect"
-  - url: /images/wlop-night.jpg
-    image_path: images/wlop-night.jpg
-    alt: "fly"
 ---
-
-{% include gallery caption="Last Update: 2025.09.02" %}
 
 ## Obsidian Plugins
 
