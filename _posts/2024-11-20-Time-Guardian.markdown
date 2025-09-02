@@ -14,10 +14,11 @@ tags:
 ## Guard Your Time
 Time Guardian is a **Chrome extension** designed to help you manage your time effectively. It provides smart time reminders using the **Gemini AI model**, ensuring you stay on track with your tasks and avoid distractions. [Download](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb) now!
 
-## Screenshots
+## Demo
+### Screenshot
 ![screenshot](/images/time-guardian.png)
 
-## Video Demo
+### Video
 {% include video id="MoMGoXhGNy8" provider="youtube" %}
 
 ## Features

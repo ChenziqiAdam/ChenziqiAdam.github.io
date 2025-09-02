@@ -35,9 +35,6 @@ Here are the [official guidelines](https://docs.obsidian.md/Plugins/Releasing/Pl
 
 ### My first plugin: Daily News Briefing
 
-#### Video Demo
-{% include video id="nbbisoqsZDc" provider="youtube" %}
-
 This is my first plugin: [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing). Try it out!
 
 #### Demo
