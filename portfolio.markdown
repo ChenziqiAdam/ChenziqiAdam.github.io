@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: single
 title: "Portfolio"
 permalink: /portfolio/
 toc: true
@@ -28,6 +28,11 @@ sidebar:
     - [Gemini News Brief](https://chromewebstore.google.com/detail/gemini-news-brief/hficggpiebfkkdcodpknjdhhlinieddk)\n
     - [Grok OCR](https://chromewebstore.google.com/detail/grok-ocr/hcflmjbogncfihbaeppgophciaahgald)\n
     "
+  - title: "Others"
+    text: "
+    - [Gitlet](https://github.com/ChenziqiAdam/cs61b-Gitlet)\n
+    - [Obsidian Homepage](https://github.com/ChenziqiAdam/Obsidian-Homepage)\n
+    "
 gallery:
   - url: /images/wlop-Haiqinyan-reflection.jpg
     image_path: images/wlop-Haiqinyan-reflection.jpg
@@ -37,8 +42,38 @@ gallery:
     alt: "fly"
 ---
 
-Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
-
 {% include gallery caption="Last Update: 2025.09.02" %}
 
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+## Obsidian Plugins
+
+### [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
+
+#### Demo
+{% include video id="nbbisoqsZDc" provider="youtube" %}
+
+
+### [Synapse](https://github.com/ChenziqiAdam/Synapse)
+
+#### Video Demo
+{% include video id="W-NgTHmh8RY" provider="youtube" %}
+
+---
+
+## Chrome Extensions
+
+### [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
+
+#### Screenshot
+![screenshot](/images/time-guardian.png)
+
+#### Video
+{% include video id="MoMGoXhGNy8" provider="youtube" %}
+
+---
+
+## Others
+
+### Obsidian Homepage
+
+#### Screenshot
+![screenshot](/images/obsidian-homepage-dark.png)
