@@ -48,7 +48,7 @@ gallery:
 
 ### [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
 
-#### Demo
+#### Video Demo
 {% include video id="nbbisoqsZDc" provider="youtube" %}
 
 
@@ -66,7 +66,7 @@ gallery:
 #### Screenshot
 ![screenshot](/images/time-guardian.png)
 
-#### Video
+#### Video Demo
 {% include video id="MoMGoXhGNy8" provider="youtube" %}
 
 ---
