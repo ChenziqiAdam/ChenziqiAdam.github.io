@@ -1,5 +1,4 @@
 ---
-layout: single
 title: "Portfolio"
 permalink: /portfolio/
 toc: true
