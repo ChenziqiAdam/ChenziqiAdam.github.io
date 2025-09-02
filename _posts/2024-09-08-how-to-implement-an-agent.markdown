@@ -6,7 +6,7 @@ categories:
   - CS
   - RA
   - AI
-  - portfolio
+  - Portfolio
 tags:
   - OpenAI
   - Zilliz

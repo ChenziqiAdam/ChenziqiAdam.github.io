@@ -4,7 +4,7 @@ title:  "How to implement your own Git"
 date:   2024-07-30 16:16:15 +0800
 categories:
   - CS
-  - portfolio
+  - Portfolio
 tags:
   - Git
 ---
