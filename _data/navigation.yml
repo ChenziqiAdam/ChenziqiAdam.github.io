@@ -4,6 +4,6 @@ main:
   - title: "Posts"
     url: /categories/
   - title: "Profolio"
-    url: /profolio/
+    url: /portfolio/
   - title: "About Me"
     url: /about-me/
