@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 categories: Others
 ---
-{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.08.18" %}
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.09.02" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
@@ -19,7 +19,7 @@ categories: Others
 ### Internship
 - **Lalamove**  *2025.05-2025.08*  **NLP Engineer**
 
-### Research Projects
+### Research
 - [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
 - [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
@@ -28,16 +28,21 @@ categories: Others
 - [Chrome Extension](https://chromewebstore.google.com) Developer
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
 - [Sentient AI](https://sentient.foundation/) Builder
+- [ShanHaiWoo](https://www.shanhaiwoo.com/) Builder
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
 - **GBA International Programming Contest First Prize** *2025.04*
 - **Dean's List** *2024.09*
 
+### Test Scores
+- **GRE** 329
+- **CET-6** 598
+
 ### Teaching Experience
 - **USTF** (Undergraduate Student Teaching Fellows) 
     - CSC1004: Computational Laboratory Using Java *2025.02 - 2025.05*
-    - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12*
+    - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12* & *2025.09 - 2025.12*
 
 ### Projects
 - [Personal GitHub Page](/)
