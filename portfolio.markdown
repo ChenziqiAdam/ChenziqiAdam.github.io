@@ -1,7 +1,6 @@
 ---
 title: "Portfolio"
 permalink: /portfolio/
-toc: true
 categories: Others
 header:
   overlay_color: "#000"
