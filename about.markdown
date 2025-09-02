@@ -60,3 +60,6 @@ categories: Others
 - Poe Bots
     - [Mikaramu](https://poe.com/Mikaramu)
     - [WG-Artist](https://poe.com/WG-Artist)
+- Others
+    - [Gitlet](https://github.com/ChenziqiAdam/cs61b-Gitlet)
+    - [Obsidian Homepage](https://github.com/ChenziqiAdam/Obsidian-Homepage)

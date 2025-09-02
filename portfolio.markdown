@@ -14,25 +14,6 @@ sidebar:
     image: images/wlop-Xiaolv-portrait.jpg
     image_alt: "logo"
     text: "AI Enthusiast, Book Lover, and World Explorer"
-  - title: "Obsidian Plugins"
-    text: "
-        - [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)\n
-        - [SANE](https://github.com/ChenziqiAdam/SANE)\n
-        - [Synapse](https://github.com/ChenziqiAdam/Synapse)\n
-        "
-  - title: "Chrome Extensions"
-    text: "
-    - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)\n
-    - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof)\n
-    - [Minimal Site Blocker](https://chromewebstore.google.com/detail/minimal-site-blocker/mfofjdhlkoelfhjlhahbbpplaodabadk)\n
-    - [Gemini News Brief](https://chromewebstore.google.com/detail/gemini-news-brief/hficggpiebfkkdcodpknjdhhlinieddk)\n
-    - [Grok OCR](https://chromewebstore.google.com/detail/grok-ocr/hcflmjbogncfihbaeppgophciaahgald)\n
-    "
-  - title: "Others"
-    text: "
-    - [Gitlet](https://github.com/ChenziqiAdam/cs61b-Gitlet)\n
-    - [Obsidian Homepage](https://github.com/ChenziqiAdam/Obsidian-Homepage)\n
-    "
 gallery:
   - url: /images/wlop-Haiqinyan-reflection.jpg
     image_path: images/wlop-Haiqinyan-reflection.jpg
