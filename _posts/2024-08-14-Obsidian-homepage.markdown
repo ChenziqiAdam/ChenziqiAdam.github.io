@@ -4,6 +4,7 @@ title:  "How to DIY Obsidian homepage"
 date:   2024-08-14 14:14:15 +0800
 categories:
   - Skills
+  - portfolio
 tags:
   - Obsidian
 ---
