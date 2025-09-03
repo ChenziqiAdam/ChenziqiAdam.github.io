@@ -60,6 +60,7 @@ defaults:
       toc: true
       toc_label: "On this page"
       toc_icon: "cog"
+      toc_sticky: ture
 
 # Site author
 author:

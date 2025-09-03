@@ -5,6 +5,7 @@ permalink: /about-me/
 excerpt: "About Me"
 author_profile: true
 toc: true
+toc_sticky: ture
 categories: Others
 ---
 {% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.09.02" %}
