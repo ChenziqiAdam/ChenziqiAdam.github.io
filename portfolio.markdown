@@ -7,6 +7,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
 excerpt: "Welcome to my profolio. Enjoy my works!"
+toc: true
 ---
 
 ## Obsidian Plugins
