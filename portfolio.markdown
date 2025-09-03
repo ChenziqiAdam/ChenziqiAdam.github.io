@@ -1,11 +1,10 @@
 ---
-layout: splash
+layout: single
 title: "Portfolio"
 permalink: /portfolio/
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /images/wlop-Xiaolv-landscape.jpg
+  image: /images/wlop-Xiaolv-landscape.jpg
+  caption: "Last Update: 2025.09.02"
 excerpt: "Welcome to my profolio. Enjoy my works!"
 toc: true
 ---
