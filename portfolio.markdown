@@ -6,8 +6,12 @@ header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
   caption: "Last Update: 2025.09.02"
 excerpt: "Welcome to my profolio. Enjoy my works!"
-author_profile: true
 toc: true
+sidebar:
+  - title: "Belief"
+    image: images/wlop-night.jpg
+    image_alt: "Belief"
+    text: "Life begins at the edge of your comfort zone."
 ---
 
 ## Obsidian Plugins
