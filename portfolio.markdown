@@ -6,6 +6,7 @@ header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
   caption: "Last Update: 2025.09.02"
 excerpt: "Welcome to my profolio. Enjoy my works!"
+author_profile: true
 toc: true
 ---
 
