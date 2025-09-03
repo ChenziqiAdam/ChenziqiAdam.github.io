@@ -3,7 +3,7 @@ layout: single
 title: "Portfolio"
 permalink: /portfolio/
 header:
-  image: /images/wlop-Xiaolv-landscape.jpg
+  overlay_image: /images/wlop-Xiaolv-landscape.jpg
   caption: "Last Update: 2025.09.02"
 excerpt: "Welcome to my profolio. Enjoy my works!"
 toc: true
