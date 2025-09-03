@@ -7,7 +7,7 @@ header:
   caption: "Last Update: 2025.09.02"
 excerpt: "Welcome to my profolio. Enjoy my works!"
 toc: true
-toc_sticky: false
+toc_sticky: ture
 sidebar:
   - title: "Belief"
     image: images/wlop-night.jpg
