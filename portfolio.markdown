@@ -5,7 +5,7 @@ permalink: /portfolio/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
   caption: "Last Update: 2025.09.02"
-excerpt: "Welcome to my profolio. Enjoy my works!"
+excerpt: "Welcome to my portfolio. Enjoy my works!"
 toc: true
 toc_sticky: ture
 sidebar:
