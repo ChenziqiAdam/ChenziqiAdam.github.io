@@ -29,7 +29,7 @@ categories: Others
 - [Chrome Extension](https://chromewebstore.google.com) Developer
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
 - [Sentient AI](https://sentient.foundation/) Builder
-- [ShanHaiWoo](https://www.shanhaiwoo.com/) Builder
+- [ShanHaiWoo](https://www.shanhaiwoo.com/) Wooer
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
