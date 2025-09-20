@@ -45,7 +45,7 @@ categories: Others
     - CSC1004: Computational Laboratory Using Java *2025.02 - 2025.05*
     - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12* & *2025.09 - 2025.12*
 
-### [Portfolio](./portfolio/)
+### [Portfolio](/portfolio/)
 - Chrome Extension
     - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
     - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof)
