@@ -81,6 +81,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/ziqi-chen-adam"
+    - label: "X"
+      icon: "fab fa-square-x-twitter"
+      url: "https://x.com/Ghost04718"
 
 # Site footer 
 footer:
@@ -94,6 +97,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/ziqi-chen-adam"
+    - label: "X"
+      icon: "fab fa-square-x-twitter"
+      url: "https://x.com/Ghost04718"
          
 # Code block copy button
 enable_copy_code_button: true
