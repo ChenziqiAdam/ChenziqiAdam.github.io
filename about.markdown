@@ -8,7 +8,7 @@ toc: true
 toc_sticky: ture
 categories: Others
 ---
-{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.09.02" %}
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.09.26" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
@@ -28,13 +28,13 @@ categories: Others
 - [Obsidian Plugin](https://github.com/obsidianmd/obsidian-releases) Developer
 - [Chrome Extension](https://chromewebstore.google.com) Developer
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
-- [Sentient AI](https://sentient.foundation/) Builder
-- [ShanHaiWoo](https://www.shanhaiwoo.com/) Wooer
+- [Sentient AI](https://sentient.foundation/) Builder & Ambassador
+- [ShanHaiWoo](https://www.shanhaiwoo.com/) 2025 Scholarship
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
 - **GBA International Programming Contest First Prize** *2025.04*
-- **Dean's List** *2024.09*
+- **Dean's List** *2024 & 2025*
 
 ### Test Scores
 - **GRE** 329
@@ -42,8 +42,8 @@ categories: Others
 
 ### Teaching Experience
 - **USTF** (Undergraduate Student Teaching Fellows) 
-    - CSC1004: Computational Laboratory Using Java *2025.02 - 2025.05*
-    - CSC1003: Introduction to Computer Science and Java *2024.09 - 2024.12* & *2025.09 - 2025.12*
+    - CSC1004: Computational Laboratory Using Java *2025 Spring*
+    - CSC1003: Introduction to Computer Science and Java *2024 Fall & 2025 Fall*
 
 ### [Portfolio](/portfolio/)
 - Chrome Extension
@@ -56,9 +56,6 @@ categories: Others
     - [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
     - [SANE](https://github.com/ChenziqiAdam/SANE)
     - [Synapse](https://github.com/ChenziqiAdam/Synapse)
-- Poe Bots
-    - [Mikaramu](https://poe.com/Mikaramu)
-    - [WG-Artist](https://poe.com/WG-Artist)
 - Others
     - [Gitlet](https://github.com/ChenziqiAdam/cs61b-Gitlet)
     - [Obsidian Homepage](https://github.com/ChenziqiAdam/Obsidian-Homepage)
