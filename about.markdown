@@ -28,7 +28,7 @@ categories: Others
 - [Obsidian Plugin](https://github.com/obsidianmd/obsidian-releases) Developer
 - [Chrome Extension](https://chromewebstore.google.com) Developer
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
-- [Sentient AI](https://sentient.foundation/) Builder & Ambassador
+- [Sentient AI](https://sentient.foundation/) Student Ambassador
 - [ShanHaiWoo](https://www.shanhaiwoo.com/) 2025 Scholarship
 
 ### Competitions & Rewards
