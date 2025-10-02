@@ -25,8 +25,6 @@ categories: Others
 - [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
 ### Active Communities
-- [Obsidian Plugin](https://github.com/obsidianmd/obsidian-releases) Developer
-- [Chrome Extension](https://chromewebstore.google.com) Developer
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
 - [Sentient AI](https://sentient.foundation/) Student Ambassador
 - [ShanHaiWoo](https://www.shanhaiwoo.com/) 2025 Scholarship
