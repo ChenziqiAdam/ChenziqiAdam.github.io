@@ -31,6 +31,7 @@ categories: Others
 
 ### Competitions & Rewards
 - **ICM/MCM Honorable Mention** *2025.05*
+- **CUMCM Third Price** *2025.09*
 - **GBA International Programming Contest First Prize** *2025.04*
 - **Dean's List** *2024 & 2025*
 
