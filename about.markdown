@@ -8,7 +8,7 @@ toc: true
 toc_sticky: ture
 categories: Others
 ---
-{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.09.26" %}
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.10.22" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
@@ -26,7 +26,7 @@ categories: Others
 
 ### Active Communities
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
-- [Sentient AI](https://sentient.foundation/) Student Ambassador
+- [Sentient](https://www.sentient.xyz/) Student Ambassador
 - [ShanHaiWoo](https://www.shanhaiwoo.com/) 2025 Scholarship
 
 ### Competitions & Rewards
