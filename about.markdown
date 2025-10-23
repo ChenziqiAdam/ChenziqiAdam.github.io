@@ -18,6 +18,7 @@ categories: Others
     - *2020.09 - 2023.06*
 
 ### Internship
+- **Sentient**  *2025.09-Present* **Student Ambassador**
 - **Lalamove**  *2025.05-2025.08*  **NLP Engineer**
 
 ### Research
@@ -26,7 +27,7 @@ categories: Others
 
 ### Active Communities
 - [CAMEL AI](https://www.camel-ai.org/) Contributer
-- [Sentient](https://www.sentient.xyz/) Student Ambassador
+- [Sentient](https://www.sentient.xyz/) Builder
 - [ShanHaiWoo](https://www.shanhaiwoo.com/) 2025 Scholarship
 
 ### Competitions & Rewards
@@ -39,8 +40,9 @@ categories: Others
 - **GRE** 329
 - **CET-6** 598
 
-### Teaching Experience
-- **USTF** (Undergraduate Student Teaching Fellows) 
+### Teaching
+- **USTF** (Undergraduate Student Teaching Fellows)
+    - AIE1901: AI Exploration *2025 Fall*
     - CSC1004: Computational Laboratory Using Java *2025 Spring*
     - CSC1003: Introduction to Computer Science and Java *2024 Fall & 2025 Fall*
 
