@@ -8,7 +8,7 @@ toc: true
 toc_sticky: ture
 categories: Others
 ---
-{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.10.22" %}
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.11.01" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
@@ -48,6 +48,7 @@ categories: Others
 
 ### [Portfolio](/portfolio/)
 - Chrome Extension
+    - [Page Distill](https://chromewebstore.google.com/detail/ai-page-summarizer/dljebhllfjmeidaafhdlidpdhdhkfgph)
     - [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
     - [History Analyst](https://chromewebstore.google.com/detail/history-analyst/jajeniihjddcaaohplihdjjokefpgaof)
     - [Minimal Site Blocker](https://chromewebstore.google.com/detail/minimal-site-blocker/mfofjdhlkoelfhjlhahbbpplaodabadk)

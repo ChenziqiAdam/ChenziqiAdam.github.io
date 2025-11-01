@@ -4,7 +4,7 @@ title: "Portfolio"
 permalink: /portfolio/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2025.09.02"
+  caption: "Last Update: 2025.11.01"
 excerpt: "Welcome to my portfolio. Enjoy my works!"
 toc: true
 toc_sticky: ture
@@ -35,6 +35,11 @@ sidebar:
 ---
 
 ## Chrome Extensions
+
+### [Page Distill](https://chromewebstore.google.com/detail/ai-page-summarizer/dljebhllfjmeidaafhdlidpdhdhkfgph)
+
+#### Video Demo
+{% include video id="_SP4KHIsvY4" provider="youtube" %}
 
 ### [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
 
