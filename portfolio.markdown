@@ -22,12 +22,14 @@ sidebar:
 ## Obsidian Plugins
 
 ### [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
+Get AI-powered daily news summaries directly in your Obsidian vault. Stay informed about your topics of interest with smart, automated news collection and summarization.
 
 #### Video Demo
 {% include video id="nbbisoqsZDc" provider="youtube" %}
 
 
 ### [Synapse](https://github.com/ChenziqiAdam/Synapse)
+Transform your learning from passive consumption to active knowledge building with local AI integration.
 
 #### Video Demo
 {% include video id="W-NgTHmh8RY" provider="youtube" %}
@@ -37,11 +39,13 @@ sidebar:
 ## Chrome Extensions
 
 ### [Page Distill](https://chromewebstore.google.com/detail/ai-page-summarizer/dljebhllfjmeidaafhdlidpdhdhkfgph)
+A modern Chrome extension that leverages Chrome's built-in Summarizer API to intelligently summarize web pages. This extension works entirely on-device, ensuring your data stays private while providing powerful AI-powered content summarization.
 
 #### Video Demo
 {% include video id="_SP4KHIsvY4" provider="youtube" %}
 
 ### [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
+Time Guardian is a Chrome extension designed to help you manage your time effectively. It provides smart time reminders using the Gemini AI model, ensuring you stay on track with your tasks and avoid distractions.
 
 #### Screenshot
 ![screenshot](/images/time-guardian.png)
@@ -52,6 +56,12 @@ sidebar:
 ---
 
 ## Others
+
+### [TwinHospital](https://github.com/ChenziqiAdam/TwinHospital)
+Digital twin simulator for hospital operations, designed to simulate the various processes and resource scheduling of a real hospital.
+
+#### Video Demo
+{% include video id="I3LzZKzMB1I" provider="youtube" %}
 
 ### Obsidian Homepage
 
