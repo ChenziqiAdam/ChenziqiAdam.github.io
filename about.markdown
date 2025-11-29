@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Ziqi Chen 陈子琦
+title: Ziqi Chen
 permalink: /about-me/
 excerpt: "About Me"
 author_profile: true

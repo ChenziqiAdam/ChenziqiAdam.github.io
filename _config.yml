@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ziqi Chen's Site
-email: ziqichen1@link.cuhk.edu.cn
+title: Adam Chen's Site
+email: adamchen04718@gmail.com
 description: 
   This is my personal site!
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -64,7 +64,7 @@ defaults:
 
 # Site author
 author:
-  name     : "Ziqi Chen"
+  name     : "Adam Chen"
   avatar   : "images/photo.jpg"
   bio      : "Expand the edge of my life."
   location : "Hong Kong"
@@ -74,7 +74,7 @@ author:
       url: "https://chenziqiadam.github.io/about-me/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:ziqichen1@link.cuhk.edu.cn"
+      url: "mailto:adamchen04718@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ChenziqiAdam"
