@@ -45,7 +45,7 @@ lunr:
   search_within_pages: true
 
 # Site masthead title
-masthead_title: "Ziqi Chen's Site"
+masthead_title: "Adam Chen's Site"
 
 # Post dates
 defaults:
