@@ -19,6 +19,13 @@ sidebar:
     text: "Jobs fill your pocket, but adventures fill your soul."
 ---
 
+## Research
+
+### [GRPO-Designer]
+Cost-efficient adaptive multi-agent topology generation by GRPO
+
+{% include figure popup=true image_path="/images/grpo-designer.png" alt="GRPO-Designer" caption="GRPO-Designer Workflow" %}
+
 ## Obsidian Plugins
 
 ### [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
