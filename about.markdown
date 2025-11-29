@@ -8,11 +8,11 @@ toc: true
 toc_sticky: ture
 categories: Others
 ---
-{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.11.01" %}
+{% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.11.30" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
-    - *2023.09 - Present*
+    - *2023.09 - 2027.05(Expected)*
     - **Major**: Computer Science and Engineering (GPA top 20%)
 - **The Suzhou High School of Jiangsu Province**
     - *2020.09 - 2023.06*
@@ -22,6 +22,7 @@ categories: Others
 - **Lalamove**  *2025.05-2025.08*  **NLP Engineer**
 
 ### Research
+- [GRPO-Designer](https://chenziqiadam.github.io/portfolio/#grpo-designer) *2025.10-Present* **Research Assistant**
 - [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
 - [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
