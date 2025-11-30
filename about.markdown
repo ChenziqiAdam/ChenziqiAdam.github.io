@@ -15,8 +15,8 @@ categories: Others
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
-    - *2023.09 - 2027.05(Expected)*
-    - **Major**: Computer Science and Engineering (GPA: 3.7 top 20%)
+    - *2023.09 - 2027.05 (Expected)*
+    - **Major**: Computer Science and Engineering (GPA 3.7 top 20%)
 - **The Suzhou High School of Jiangsu Province**
     - *2020.09 - 2023.06*
 
