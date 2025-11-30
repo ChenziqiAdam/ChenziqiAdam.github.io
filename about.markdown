@@ -8,12 +8,15 @@ toc: true
 toc_sticky: ture
 categories: Others
 ---
+
+> I'm currently looking for **PhD positions starting from Fall 2027**. Please feel free to [reach out to me](mailto:adamchen04718@gmail.com) if you have any opportunities or suggestions!
+
 {% include figure popup=true image_path="/images/wlop-Xiaolv-portrait.jpg" alt="About Me" caption="Last Update: 2025.11.30" %}
 
 ### Education Background
 - **The Chinese University of Hong Kong, Shenzhen**
     - *2023.09 - 2027.05(Expected)*
-    - **Major**: Computer Science and Engineering (GPA top 20%)
+    - **Major**: Computer Science and Engineering (GPA: 3.7 top 20%)
 - **The Suzhou High School of Jiangsu Province**
     - *2020.09 - 2023.06*
 
