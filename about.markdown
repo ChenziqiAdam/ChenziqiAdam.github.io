@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Ziqi Chen
+title: Adam Chen
 permalink: /about-me/
 excerpt: "About Me"
 author_profile: true
