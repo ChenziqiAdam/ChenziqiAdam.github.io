@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Adam Chen's Site
+title: Adam's Site
 email: adamchen04718@gmail.com
 description: 
   This is my personal site!
@@ -45,7 +45,7 @@ lunr:
   search_within_pages: true
 
 # Site masthead title
-masthead_title: "Adam Chen's Site"
+masthead_title: "Adam's Site"
 
 # Post dates
 defaults:
