@@ -19,9 +19,15 @@ Cost-efficient adaptive multi-agent topology generation by GRPO
 
 ---
 
+## [Daily Muse](../Daily-Muse/)
+
+Blend your mood, the weather, and a touch of luck to generate meaningful art and literature. A moment of pause in a busy world. 
+
+{% include figure popup=true image_path="/images/daily-muse.png" alt="Daily Muse" caption="Daily Muse" %}
+
 ## Obsidian Plugins
 
-### [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing)
+### [Daily News Briefing](https://www.obsidianstats.com/plugins/daily-news-briefing)
 Get AI-powered daily news summaries directly in your Obsidian vault. Stay informed about your topics of interest with smart, automated news collection and summarization.
 
 {% include video id="nbbisoqsZDc" provider="youtube" %}
