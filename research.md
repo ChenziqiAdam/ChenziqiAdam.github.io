@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Portfolio"
-permalink: /portfolio/
+permalink: /research/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
   caption: "Last Update: 2025.12.21"
