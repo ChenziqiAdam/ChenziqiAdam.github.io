@@ -4,19 +4,10 @@ title: "Portfolio"
 permalink: /portfolio/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2025.11.30"
+  caption: "Last Update: 2025.12.21"
 excerpt: "Welcome to my portfolio. Enjoy my works!"
 toc: true
 toc_sticky: ture
----
-
-## Research
-
-### [GRPO-Designer](./)
-Cost-efficient adaptive multi-agent topology generation by GRPO
-
-{% include figure popup=true image_path="/images/grpo-designer.png" alt="GRPO-Designer" caption="GRPO-Designer Workflow" %}
-
 ---
 
 ## [Daily Muse](../Daily-Muse/)
@@ -49,7 +40,7 @@ A modern Chrome extension that leverages Chrome's built-in Summarizer API to int
 ### [Time Guardian](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb)
 Time Guardian is a Chrome extension designed to help you manage your time effectively. It provides smart time reminders using the Gemini AI model, ensuring you stay on track with your tasks and avoid distractions.
 
-![screenshot](/images/time-guardian.png)
+{% include figure popup=true image_path="/images/time-guardian.png" alt="Time Guardian" caption="Time Guardian" %}
 
 {% include video id="MoMGoXhGNy8" provider="youtube" %}
 
@@ -64,4 +55,4 @@ Digital twin simulator for hospital operations, designed to simulate the various
 
 ### Obsidian Homepage
 
-![screenshot](/images/obsidian-homepage-dark.png)
+{% include figure popup=true image_path="/images/obsidian-homepage-dark.png" alt="Obsidian Homepage" caption="Obsidian Homepage" %}

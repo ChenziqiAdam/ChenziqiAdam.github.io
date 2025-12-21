@@ -22,11 +22,11 @@ categories: Others
     - *2020.09 - 2023.06*
 
 ### Internship
-- **Sentient**  *2025.09-Present* **Student Ambassador**
-- **Lalamove**  *2025.05-2025.08*  **NLP Engineer**
+- **[Sentient](https://www.sentient.xyz/)**  *2025.09-Present* **Student Ambassador**
+- **[Lalamove](https://www.lalamove.com/)**  *2025.05-2025.08*  **NLP Engineer**
 
 ### Research
-- [GRPO-Designer](https://chenziqiadam.github.io/portfolio/#grpo-designer) *2025.10-Present* **Research Assistant**
+- [GRPO-Designer](https://chenziqiadam.github.io/research/#grpo-designer) *2025.10-Present*  **Research Assistant**
 - [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
 - [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
@@ -64,6 +64,7 @@ categories: Others
     - [SANE](https://github.com/ChenziqiAdam/SANE)
     - [Synapse](https://github.com/ChenziqiAdam/Synapse)
 - Others
+    - [Daily Muse](../Daily-Muse/)
     - [TwinHospital](https://github.com/ChenziqiAdam/TwinHospital)
     - [Gitlet](https://github.com/ChenziqiAdam/cs61b-Gitlet)
     - [Obsidian Homepage](https://github.com/ChenziqiAdam/Obsidian-Homepage)

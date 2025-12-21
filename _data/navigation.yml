@@ -5,5 +5,7 @@ main:
     url: /categories/
   - title: "Portfolio"
     url: /portfolio/
+  - title: "Research"
+    url: /research/
   - title: "About Me"
     url: /about-me/
