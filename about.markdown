@@ -26,8 +26,8 @@ categories: Others
 - **[Lalamove](https://www.lalamove.com/)**  *2025.05-2025.08*  **NLP Engineer**
 
 ### Research
+- [ICLR 2026 Workshop RSI](https://recursive-workshop.github.io/) *2026.01-Present* **Reviewer**
 - [GRPO-Designer](https://chenziqiadam.github.io/research/#grpo-designer) *2025.10-Present*  **Research Assistant**
-- [TwinMarket](https://arxiv.org/abs/2502.01506)  *2025.02-2025.05*  **Research Assistant**
 - [Hexlaw LLM](https://hexlaw.hexai.tech)  *2024.04-2024.12*  **Research Assistant**
 
 ### Active Communities
@@ -47,9 +47,9 @@ categories: Others
 
 ### Teaching
 - **USTF** (Undergraduate Student Teaching Fellows)
-    - AIE1901: AI Exploration *2025 Fall*
-    - CSC1004: Computational Laboratory Using Java *2025 Spring*
-    - CSC1003: Introduction to Computer Science and Java *2024 Fall & 2025 Fall*
+    - AIE1901: AI Exploration *2025*
+    - CSC1004: Computational Laboratory Using Java *2025-2026*
+    - CSC1003: Introduction to Computer Science and Java *2024-2025*
 
 ### [Portfolio](/portfolio/)
 - Chrome Extension
