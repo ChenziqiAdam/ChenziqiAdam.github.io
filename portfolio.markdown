@@ -18,7 +18,7 @@ Blend your mood, the weather, and a touch of luck to generate meaningful art and
 
 ## Obsidian Plugins
 
-### [Daily News Briefing](https://www.obsidianstats.com/plugins/daily-news-briefing)
+### [Daily News Briefing](../Daily-News-Briefing/)
 Get AI-powered daily news summaries directly in your Obsidian vault. Stay informed about your topics of interest with smart, automated news collection and summarization.
 
 {% include video id="nbbisoqsZDc" provider="youtube" %}
