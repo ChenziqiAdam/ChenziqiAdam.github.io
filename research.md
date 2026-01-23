@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Portfolio"
+title: "Research"
 permalink: /research/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
