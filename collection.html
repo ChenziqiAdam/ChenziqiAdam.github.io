@@ -1,0 +1,1229 @@
+---
+layout: default
+permalink: /collection/
+---
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --mm-primary: #494e52;
+      --mm-accent: #6f777d;
+      --mm-background: #f3f6f6;
+      --mm-text: #3d4144;
+      --mm-link: #52adc8;
+      --mm-border: #eaeaea;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+      color: var(--mm-text);
+      line-height: 1.6;
+      background-color: var(--mm-background);
+    }
+
+    a {
+      color: var(--mm-link);
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+      color: #3b7b8f;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--mm-primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .page-title::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--mm-link), #3b7b8f);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* Media Section */
+    .media-section {
+      padding: 3rem 0 5rem;
+    }
+
+    .media-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .media-tab {
+      padding: 1rem 2rem;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--mm-accent);
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .media-tab {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .media-tab {
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .media-tab::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: var(--mm-link);
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .media-tab.active {
+      color: var(--mm-primary);
+    }
+
+    .media-tab.active::after {
+      width: 80%;
+      left: 10%;
+    }
+
+    .media-panel {
+      display: none;
+    }
+
+    .media-panel.active {
+      display: block;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2.5rem;
+      min-height: 400px;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        min-height: 250px;
+      }
+    }
+
+    /* Flip Card Styles */
+    .media-item {
+      position: relative;
+      text-align: center;
+      height: 350px;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    @media (max-width: 768px) {
+      .media-item {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .media-item {
+        height: 320px;
+      }
+    }
+
+    .media-item-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .media-item:hover .media-item-inner {
+      transform: rotateY(180deg);
+    }
+
+    .media-image, .media-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .media-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .media-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(82, 173, 200, 0.2) 0%, rgba(59, 123, 143, 0.2) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+
+    .media-item:hover .media-image::before {
+      opacity: 1;
+    }
+
+    .media-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .media-back {
+      background-color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: var(--mm-text);
+    }
+
+    .media-back h3 {
+      margin-bottom: 10px;
+      color: var(--mm-primary);
+      font-size: 1.1rem;
+    }
+
+    .media-back p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .media-rating {
+      margin-top: 10px;
+      color: #ffb400;
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3rem;
+      gap: 0.5rem;
+    }
+
+    .pagination-button {
+      background-color: #fff;
+      color: var(--mm-text);
+      border: 2px solid var(--mm-border);
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .pagination-button:hover:not(.disabled) {
+      background-color: var(--mm-link);
+      color: white;
+      border-color: var(--mm-link);
+    }
+
+    .pagination-button.active {
+      background-color: var(--mm-link);
+      color: white;
+      border-color: var(--mm-link);
+    }
+
+    .pagination-button.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .pagination-info {
+      margin: 0 1rem;
+      color: var(--mm-accent);
+      font-weight: 600;
+    }
+
+    .media-item {
+      display: none;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .media-item.visible {
+      display: block;
+      position: relative;
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeIn 0.5s ease forwards;
+      pointer-events: auto;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">My Collection</h1>
+    </div>
+  </div>
+
+  <section class="media-section">
+    <div class="container">
+
+      <div class="media-tabs">
+        <button class="media-tab active" data-target="books">Books</button>
+        <button class="media-tab" data-target="music">Artists</button>
+        <button class="media-tab" data-target="drama">Drama</button>
+        <button class="media-tab" data-target="movie">Movie</button>
+        <button class="media-tab" data-target="anime">Anime</button>
+        <button class="media-tab" data-target="game">Game</button>
+      </div>
+
+      <!-- Books Panel -->
+      <div id="books" class="media-panel active">
+        <div class="media-grid">
+
+          <!-- Book 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/norwegian-wood.jpeg" alt="Book: Norwegian Wood">
+              </div>
+              <div class="media-back">
+                <h3>Norwegian Wood</h3>
+                <p class="media-subtitle">Murakami Haruki</p>
+                <p>I want you always to remember me. Will you remember that I existed, and that I stood next to you here like this?</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/a-song-of-ice-and-fire.jpeg" alt="Book: A Song of Ice and Fire">
+              </div>
+              <div class="media-back">
+                <h3>A Song of Ice and Fire</h3>
+                <p class="media-subtitle">George R. R. Martin</p>
+                <p>A mind needs books as a sword needs a whetstone, if it is to keep its edge.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 3 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/izu-dancer.jpg" alt="Book: The Izu Dancer">
+              </div>
+              <div class="media-back">
+                <h3>The Izu Dancer</h3>
+                <p class="media-subtitle">Kawabata Yasunari</p>
+                <p>I gave myself up to my tears. It was as though my head had turned to clear water, it was falling pleasantly away drop by drop; soon nothing would remain.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 4 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/musong.jpeg" alt="Book: 目送">
+              </div>
+              <div class="media-back">
+                <h3>目送</h3>
+                <p class="media-subtitle">龙应台</p>
+                <p>我慢慢地、慢慢地了解到，所谓父女母子一场，只不过意味着，你和他的缘分就是今生今世不断地在目送他的背影渐行渐远。</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 5 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/qingchengzhilian.jpg" alt="Book: 倾城之恋">
+              </div>
+              <div class="media-back">
+                <h3>倾城之恋</h3>
+                <p class="media-subtitle">张爱玲</p>
+                <p>花落自会又花开，花开自有落花来，醒也迟，梦也迟，一朝风雨满秋池，却是一片疏雨轻烟。</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 6 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/taibeiren.jpg" alt="Book: 台北人">
+              </div>
+              <div class="media-back">
+                <h3>台北人</h3>
+                <p class="media-subtitle">白先勇</p>
+                <p>人生是虚无。一场梦。一个记忆。</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 7 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/send-you-a-bullet.jpg" alt="Book: 送你一颗子弹">
+              </div>
+              <div class="media-back">
+                <h3>送你一颗子弹</h3>
+                <p class="media-subtitle">刘瑜</p>
+                <p>可求的只有你自己，你要俯下身去，朝着幽暗深处的自己伸出手去。</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="pagination books-pagination">
+          <button class="pagination-button prev-page" data-panel="books">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="books">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Artists Panel -->
+      <div id="music" class="media-panel">
+        <div class="media-grid">
+
+          <!-- Artist 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/haruki-murakami.jpg" alt="Artist: Haruki Murakami">
+              </div>
+              <div class="media-back">
+                <h3>Haruki Murakami</h3>
+                <p class="media-subtitle">Japanese Writer</p>
+                <p>I want you always to remember me. Will you remember that I existed, and that I stood next to you like this?</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/billie-eilish.jpeg" alt="Artist: Billie Eilish">
+              </div>
+              <div class="media-back">
+                <h3>Billie Eilish</h3>
+                <p class="media-subtitle">American Singer-songwriter and Musician</p>
+                <p>I hope someday I'll make it out of here. Even if it takes all night or a hundred years.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 3 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/sawano.jpeg" alt="Artist: Sawano Hiroyuki">
+              </div>
+              <div class="media-back">
+                <h3>Sawano Hiroyuki</h3>
+                <p class="media-subtitle">Japanese Composer and Music Producer</p>
+                <p>I don't have the power. On my side forever.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 4 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/yasunari-kawabata.jpg" alt="Artist: Yasunari Kawabata">
+              </div>
+              <div class="media-back">
+                <h3>Yasunari Kawabata</h3>
+                <p class="media-subtitle">Japanese novelist and short story writer</p>
+                <p>Time flows in the same way for all human beings; every human being flows through time in a different way.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 5 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/hans-zimmer.jpeg" alt="Artist: Hans Zimmer">
+              </div>
+              <div class="media-back">
+                <h3>Hans Zimmer</h3>
+                <p class="media-subtitle">German Composer and Music Producer</p>
+                <p>If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 6 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/kana-wakareno.jpg" alt="Artist: Kana Wakareno">
+              </div>
+              <div class="media-back">
+                <h3>Kana Wakareno</h3>
+                <p class="media-subtitle">Japanese Composer, Pianist and Singer</p>
+                <p>Death has light.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 7 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/eason-chan.jpeg" alt="Artist: Eason Chan">
+              </div>
+              <div class="media-back">
+                <h3>Eason Chan</h3>
+                <p class="media-subtitle">Hong Kong Singer and Actor</p>
+                <p>Sorrow Is Meaningless.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="pagination music-pagination">
+          <button class="pagination-button prev-page" data-panel="music">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="music">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Drama Panel -->
+      <div id="drama" class="media-panel">
+        <div class="media-grid">
+
+          <!-- Drama 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/dark.jpg" alt="Drama: Dark">
+              </div>
+              <div class="media-back">
+                <h3>Dark</h3>
+                <p class="media-subtitle">Netflix</p>
+                <p>What We Know Is A Drop. What We Don't Know Is an Ocean.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drama 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/mandalorian.jpg" alt="Drama: The Mandalorian">
+              </div>
+              <div class="media-back">
+                <h3>The Mandalorian</h3>
+                <p class="media-subtitle">Disney</p>
+                <p>This is the Way.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drama 3 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/stranger-things.jpg" alt="Drama: Stranger Things">
+              </div>
+              <div class="media-back">
+                <h3>Stranger Things</h3>
+                <p class="media-subtitle">Netflix</p>
+                <p>Make mistakes, learn from them, and when life hurts you—because it will—remember the hurt. The hurt is good. It means you're out of that cave.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drama 4 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/severance.jpeg" alt="Drama: Severance">
+              </div>
+              <div class="media-back">
+                <h3>Severance</h3>
+                <p class="media-subtitle">Apple TV</p>
+                <p>The surest way to tame a prisoner is to let him believe he's free.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-empty"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drama 5 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/shogun.jpg" alt="Drama: Shogun">
+              </div>
+              <div class="media-back">
+                <h3>Shogun</h3>
+                <p class="media-subtitle">FX Productions</p>
+                <p>Fate is like a sword. Useful only to those who can wield it.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drama 6 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/slow-horses.jpeg" alt="Drama: Slow Horses">
+              </div>
+              <div class="media-back">
+                <h3>Slow Horses</h3>
+                <p class="media-subtitle">Apple TV</p>
+                <p>Someone always pays. Make sure it isn't you</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="pagination drama-pagination">
+          <button class="pagination-button prev-page" data-panel="drama">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="drama">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Movie Panel -->
+      <div id="movie" class="media-panel">
+        <div class="media-grid">
+
+          <!-- Movie 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/ghost-in-the-shell.jpg" alt="Movie: Ghost in the Shell">
+              </div>
+              <div class="media-back">
+                <h3>Ghost in the Shell</h3>
+                <p class="media-subtitle">Masamune Shirow</p>
+                <p>Man is an individual only because of his intangible memory. But memory cannot be defined, yet it defines mankind.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-empty"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/dark-knight-trilogy.jpeg" alt="Movie: The Dark Knight Trilogy">
+              </div>
+              <div class="media-back">
+                <h3>The Dark Knight Trilogy</h3>
+                <p class="media-subtitle">Christopher Nolan</p>
+                <p>Why do we fall, Bruce? So that we can learn to pick ourselves up again.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie 3 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/godfather.jpg" alt="Movie: The Godfather Trilogy">
+              </div>
+              <div class="media-back">
+                <h3>The Godfather Trilogy</h3>
+                <p class="media-subtitle">Francis Ford Coppola</p>
+                <p>Great men are not born great, they grow great.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movie 4 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/dune.png" alt="Movie: Dune">
+              </div>
+              <div class="media-back">
+                <h3>Dune</h3>
+                <p class="media-subtitle">Frank Herbert</p>
+                <p>Where the fear has gone there will be nothing. Only I will remain.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="pagination movie-pagination">
+          <button class="pagination-button prev-page" data-panel="movie">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="movie">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Anime Panel -->
+      <div id="anime" class="media-panel">
+        <div class="media-grid">
+
+          <!-- Anime 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/cyberpunk-edgerunners.jpg" alt="Anime: Cyberpunk Edgerunners">
+              </div>
+              <div class="media-back">
+                <h3>Cyberpunk Edgerunners</h3>
+                <p class="media-subtitle">Netflix</p>
+                <p>I'm Gonna Take You There Myself, Fly You To The Moon. That's A Promise.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anime 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/attack-on-titan.jpeg" alt="Anime: Attack on Titan">
+              </div>
+              <div class="media-back">
+                <h3>Attack on Titan</h3>
+                <p class="media-subtitle">Hajime Isayama</p>
+                <p>A person who cannot give up anything, can change nothing.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anime 3 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/your-name.jpeg" alt="Anime: Your Name">
+              </div>
+              <div class="media-back">
+                <h3>Your Name</h3>
+                <p class="media-subtitle">Makoto Shinkai</p>
+                <p>I feel like I'm always searching for someone, or something.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anime 4 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/tunnel.jpeg" alt="Anime: The Tunnel to Summer">
+              </div>
+              <div class="media-back">
+                <h3>The Tunnel to Summer, the Exit of Goodbyes</h3>
+                <p class="media-subtitle">Mei Hachimoku</p>
+                <p>All we can do is pick whatever path suits us best, then run down it as fast as we can to see how far we can get in what little time we have.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anime 5 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/chainsaw-man.jpg" alt="Anime: Chainsaw Man">
+              </div>
+              <div class="media-back">
+                <h3>Chainsaw Man</h3>
+                <p class="media-subtitle">Tatsuki Fujimoto</p>
+                <p>We're all carrying things we can't let go of. But it's those very things that make us who we are.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anime 6 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/frieren.jpg" alt="Anime: Frieren">
+              </div>
+              <div class="media-back">
+                <h3>Frieren: Beyond Journey's End</h3>
+                <p class="media-subtitle">Kanehito Yamada</p>
+                <p>I'll tell you the secret to fighting strong enemies. It's easy, keep getting up and attack them with your moves continuously.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="pagination anime-pagination">
+          <button class="pagination-button prev-page" data-panel="anime">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="anime">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game Panel -->
+      <div id="game" class="media-panel">
+        <div class="media-grid">
+
+          <!-- Game 1 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/arknights.jpg" alt="Game: Arknights">
+              </div>
+              <div class="media-back">
+                <h3>Arknights</h3>
+                <p class="media-subtitle">Hypergryph</p>
+                <p>At the far end of our civilization, once adorned by darkness and the brilliance of the stars up above, we will meet once again.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 2 -->
+          <div class="media-item">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="/images/rusty-lake.png" alt="Game: Rusty Lake">
+              </div>
+              <div class="media-back">
+                <h3>Rusty Lake</h3>
+                <p class="media-subtitle">Rusty Lake</p>
+                <p>The past is never dead, it's not even past.</p>
+                <div class="media-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="pagination game-pagination">
+          <button class="pagination-button prev-page" data-panel="game">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="game">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Media tabs functionality
+      const mediaTabs = document.querySelectorAll('.media-tab');
+      const mediaPanels = document.querySelectorAll('.media-panel');
+
+      mediaTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          mediaTabs.forEach(t => t.classList.remove('active'));
+          mediaPanels.forEach(p => p.classList.remove('active'));
+
+          tab.classList.add('active');
+          const targetPanel = document.getElementById(tab.dataset.target);
+          targetPanel.classList.add('active');
+
+          // Update pagination for the active panel
+          updatePage(tab.dataset.target, currentPages[tab.dataset.target]);
+        });
+      });
+
+      // Pagination functionality
+      const itemsPerPage = 12;
+      const currentPages = {
+        books: 1,
+        music: 1,
+        drama: 1,
+        movie: 1,
+        anime: 1,
+        game: 1
+      };
+
+      function initPagination() {
+        const panels = ['books', 'music', 'drama', 'movie', 'anime', 'game'];
+
+        panels.forEach(panelId => {
+          updatePage(panelId, 1);
+        });
+      }
+
+      function updatePage(panelId, page) {
+        const panel = document.getElementById(panelId);
+        const items = Array.from(panel.querySelectorAll('.media-item'));
+
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        currentPages[panelId] = page;
+
+        panel.querySelector('.total-pages').textContent = totalPages;
+        panel.querySelector('.current-page').textContent = page;
+
+        // Hide all items first
+        items.forEach(item => {
+          item.classList.remove('visible');
+        });
+
+        // Show items for current page
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+
+        for (let i = startIndex; i < endIndex && i < items.length; i++) {
+          setTimeout(() => {
+            items[i].classList.add('visible');
+          }, 0);
+        }
+
+        // Update button states
+        const prevButton = panel.querySelector('.prev-page');
+        const nextButton = panel.querySelector('.next-page');
+
+        prevButton.classList.toggle('disabled', page === 1);
+        nextButton.classList.toggle('disabled', page === totalPages);
+      }
+
+      // Pagination button events
+      document.querySelectorAll('.prev-page').forEach(button => {
+        button.addEventListener('click', function() {
+          const panelId = this.dataset.panel;
+          const currentPage = currentPages[panelId];
+
+          if (currentPage > 1) {
+            updatePage(panelId, currentPage - 1);
+          }
+        });
+      });
+
+      document.querySelectorAll('.next-page').forEach(button => {
+        button.addEventListener('click', function() {
+          const panelId = this.dataset.panel;
+          const panel = document.getElementById(panelId);
+          const items = Array.from(panel.querySelectorAll('.media-item'));
+          const totalPages = Math.ceil(items.length / itemsPerPage);
+          const currentPage = currentPages[panelId];
+
+          if (currentPage < totalPages) {
+            updatePage(panelId, currentPage + 1);
+          }
+        });
+      });
+
+      // Initialize
+      initPagination();
+    });
+  </script>
+</body>
