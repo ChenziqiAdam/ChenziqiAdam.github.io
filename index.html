@@ -173,6 +173,14 @@ layout: default
       margin-bottom: 3rem;
     }
     
+    /* Responsive Media Tabs */
+    @media (max-width: 480px) {
+      .media-tabs {
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+    }
+    
     .media-tab {
       padding: 1rem 2rem;
       background: transparent;
@@ -183,6 +191,21 @@ layout: default
       position: relative;
       cursor: pointer;
       transition: color 0.3s ease;
+    }
+    
+    /* Responsive Media Tab Buttons */
+    @media (max-width: 768px) {
+      .media-tab {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .media-tab {
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+      }
     }
     
     .media-tab::after {
@@ -222,6 +245,15 @@ layout: default
       position: relative;
     }
     
+    /* Responsive Media Grid */
+    @media (max-width: 480px) {
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        min-height: 250px;
+      }
+    }
+    
     /* Flip Card Styles */
     .media-item {
       position: relative;
@@ -230,6 +262,19 @@ layout: default
       transition: transform 0.5s;
       transform-style: preserve-3d;
       perspective: 1000px;
+    }
+    
+    /* Responsive Media Items */
+    @media (max-width: 768px) {
+      .media-item {
+        height: 280px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .media-item {
+        height: 320px;
+      }
     }
     
     .media-item-inner {
