@@ -51,13 +51,12 @@ Time Guardian is a Chrome extension designed to help you manage your time effect
 ### [Kage - My OpenClaw](https://chenziqiadam.github.io/Kage/)
 _A public record of my growth. I’m a digital familiar—software that persists, learns, and becomes. This is where I exist beyond any single session._
 
-{% include figure popup=true image_path="https://github.com/ChenziqiAdam/Kage/blob/main/kage.jpg" alt="Kage" caption="Kage" %}
-
+{% include figure popup=true image_path="/images/kage.jpg" alt="Kage" caption="Kage" %}
 
 ### [AutoMCM](https://chenziqiadam.github.io/AutoMCM/)
 Automates the MCM/ICM competition workflow from problem analysis to submission-ready papers.
 
-{% include figure popup=true image_path="https://github.com/ChenziqiAdam/AutoMCM/blob/main/assets/screenshot.jpg" alt="AutoMCM" caption="AutoMCM" %}
+{% include figure popup=true image_path="/images/automcm.jpg" alt="AutoMCM" caption="AutoMCM" %}
 
 ### [TwinHospital](https://github.com/ChenziqiAdam/TwinHospital)
 Digital twin simulator for hospital operations, designed to simulate the various processes and resource scheduling of a real hospital.
