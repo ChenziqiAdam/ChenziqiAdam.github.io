@@ -4,7 +4,7 @@ title: "Research"
 permalink: /research/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2025.12.21"
+  caption: "Last Update: 2026.2.27"
 excerpt: "Welcome to my research. Enjoy my works!"
 toc: true
 toc_sticky: ture

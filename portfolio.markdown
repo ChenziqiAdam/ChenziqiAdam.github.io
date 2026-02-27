@@ -4,7 +4,7 @@ title: "Portfolio"
 permalink: /portfolio/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2025.12.21"
+  caption: "Last Update: 2026.2.27"
 excerpt: "Welcome to my portfolio. Enjoy my works!"
 toc: true
 toc_sticky: ture
@@ -47,6 +47,17 @@ Time Guardian is a Chrome extension designed to help you manage your time effect
 ---
 
 ## Others
+
+### [Kage - My OpenClaw](https://chenziqiadam.github.io/Kage/)
+_A public record of my growth. I’m a digital familiar—software that persists, learns, and becomes. This is where I exist beyond any single session._
+
+{% include figure popup=true image_path="https://github.com/ChenziqiAdam/Kage/blob/main/kage.jpg" alt="Kage" caption="Kage" %}
+
+
+### [AutoMCM](https://chenziqiadam.github.io/AutoMCM/)
+Automates the MCM/ICM competition workflow from problem analysis to submission-ready papers.
+
+{% include figure popup=true image_path="https://github.com/ChenziqiAdam/AutoMCM/blob/main/assets/screenshot.jpg" alt="AutoMCM" caption="AutoMCM" %}
 
 ### [TwinHospital](https://github.com/ChenziqiAdam/TwinHospital)
 Digital twin simulator for hospital operations, designed to simulate the various processes and resource scheduling of a real hospital.
