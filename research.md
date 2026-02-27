@@ -14,8 +14,3 @@ toc_sticky: ture
 Cost-efficient adaptive multi-agent topology generation by GRPO
 
 {% include figure popup=true image_path="/images/grpo-designer.png" alt="GRPO-Designer" caption="GRPO-Designer Workflow" %}
-
-## [RVQ Tokenizer](./)
-Reparameterized Vector Quantization Tokenizer that effectively resolves codebook collapse with scalable adaptation to Autoregressive Models
-
-{% include figure popup=true image_path="/images/rvq.png" alt="RVQ Tokenizer" caption="Reparameterized Vector Quantization (RVQ) Tokenizer" %}
