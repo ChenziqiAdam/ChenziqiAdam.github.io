@@ -72,7 +72,7 @@ defaults:
 # Site author
 author:
   name     : "Adam Chen"
-  avatar   : "images/photo.jpg"
+  avatar   : "images/photo.jpeg"
   bio      : "Expand the edge of my life."
   location : "Hong Kong"
   links:
