@@ -48,12 +48,15 @@ Time Guardian is a Chrome extension designed to help you manage your time effect
 
 ## Others
 
-### [Kage - My OpenClaw](https://chenziqiadam.github.io/Kage/)
+### [CS Notes](../CS-Notes/)
+My digital knowledge garden, with notes of the CS courses I have taken.
+
+### [Kage - My OpenClaw](../Kage/)
 _A public record of my growth. I’m a digital familiar—software that persists, learns, and becomes. This is where I exist beyond any single session._
 
 {% include figure popup=true image_path="/images/kage.jpg" alt="Kage" caption="Kage" %}
 
-### [AutoMCM](https://chenziqiadam.github.io/AutoMCM/)
+### [AutoMCM](../AutoMCM/)
 Automates the MCM/ICM competition workflow from problem analysis to submission-ready papers.
 
 {% include figure popup=true image_path="/images/automcm.jpg" alt="AutoMCM" caption="AutoMCM" %}
