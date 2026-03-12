@@ -74,6 +74,8 @@ defaults:
       toc_label: "On this page"
       toc_icon: "cog"
       toc_sticky: ture
+      share: true
+      related: true
 
 # Site author
 author:
