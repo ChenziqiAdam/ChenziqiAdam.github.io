@@ -46,6 +46,10 @@ teaser: "/images/wlop-Xiaolv-landscape.jpg"
 # Site Masthead logo
 logo: "/images/wlop-Xiaolv-landscape.jpg"
 
+# Disable Feed Icons
+atom_feed:
+  hide: true
+
 # Site search
 search: true
 lunr:
@@ -53,6 +57,8 @@ lunr:
 
 # Site masthead title
 masthead_title: "Adam's Site"
+
+google_site_verification: "UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"
 
 # Post dates
 defaults:
