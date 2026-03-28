@@ -10,7 +10,8 @@ toc: true
 toc_sticky: ture
 ---
 
-## [GRPO-Designer](./)
-Cost-efficient adaptive multi-agent topology generation by GRPO
+## [MAS-Designer: Optimizing Multi-Agent Communication Topologies via GRPO](./)
+
+Formulated multi-agent communication topology optimization as a graph pruning problem and solved it via Group Relative Policy Optimization with multi-sample averaged rewards.
 
 {% include figure popup=true image_path="/images/grpo-designer.png" alt="GRPO-Designer" caption="GRPO-Designer Workflow" %}
