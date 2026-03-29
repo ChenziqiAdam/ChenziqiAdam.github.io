@@ -4,13 +4,13 @@ title: "Research"
 permalink: /research/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2026.2.27"
+  caption: "Last Update: 2026.3.29"
 excerpt: "Welcome to my research. Enjoy my works!"
 toc: true
 toc_sticky: ture
 ---
 
-## [DocMaster: A Hierarchical Structure-Aware System for Document Analysis](./)
+## [DocMaster: A Hierarchical Structure-Aware System for Document Analysis](https://doc-master.github.io/)
 
 DocMaster parses documents into hierarchical document trees preserving original layouts and constructs a structure-aware semantic index that enables accurate document filtering and in-depth analysis.
 
