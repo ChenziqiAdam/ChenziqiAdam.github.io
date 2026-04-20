@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Adam's Site
+title: Ziqi's Homepage
 email: 
 description: 
-  This is my personal site!
+  Welcome to Ziqi's homepage!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Adam Chen
+# twitter_username: Adam Chen
 github_username:  ChenziqiAdam
 
 # Analytics
@@ -56,7 +56,7 @@ lunr:
   search_within_pages: true
 
 # Site masthead title
-masthead_title: "Adam's Site"
+masthead_title: "Ziqi's Homepage"
 
 google_site_verification: "UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"
 
@@ -79,7 +79,7 @@ defaults:
 
 # Site author
 author:
-  name     : "Adam Chen"
+  name     : "Ziqi CHEN"
   avatar   : "images/photo.JPG"
   bio      : "Expand the edge of my life."
   location : "Hong Kong"
