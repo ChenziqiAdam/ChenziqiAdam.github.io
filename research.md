@@ -4,7 +4,7 @@ title: "Research"
 permalink: /research/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2026.3.29"
+  caption: "Last Update: 2026.5.9"
 excerpt: "Welcome to my research. Enjoy my works!"
 toc: true
 toc_sticky: ture
@@ -21,3 +21,7 @@ DocMaster parses documents into hierarchical document trees preserving original 
 Formulated multi-agent communication topology optimization as a graph pruning problem and solved it via Group Relative Policy Optimization with multi-sample averaged rewards.
 
 {% include figure popup=true image_path="/images/mas-designer.png" alt="MAS-Designer" caption="MAS-Designer Workflow" %}
+
+## [Character-Consistent Dialogue Generation with Fine-Tuning and RAG](./Genshin-NPC-Dialogue-Generation/)
+
+{% include figure popup=true image_path="/images/zhongli_poster.jpeg" alt="Genshin-NPC" caption="Genshin NPC Dialogue Generation" %}
