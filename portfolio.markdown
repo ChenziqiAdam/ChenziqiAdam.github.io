@@ -4,17 +4,11 @@ title: "Portfolio"
 permalink: /portfolio/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2026.3.29"
+  caption: "Last Update: 2026.5.23"
 excerpt: "Welcome to my portfolio. Enjoy my works!"
 toc: true
 toc_sticky: ture
 ---
-
-## [Daily Muse](../Daily-Muse/)
-
-Blend your mood, the weather, and a touch of luck to generate meaningful art and literature. A moment of pause in a busy world. 
-
-{% include figure popup=true image_path="/images/daily-muse.png" alt="Daily Muse" caption="Daily Muse" %}
 
 ## Obsidian Plugins
 
@@ -22,6 +16,9 @@ Blend your mood, the weather, and a touch of luck to generate meaningful art and
 Get AI-powered daily news summaries directly in your Obsidian vault. Stay informed about your topics of interest with smart, automated news collection and summarization.
 
 {% include video id="nbbisoqsZDc" provider="youtube" %}
+
+### [SANE](https://github.com/ChenziqiAdam/SANE)
+SANE - Smart AI Note Evolution: an Obsidian plugin for keeping your Obsidian vault in sane
 
 ### [Synapse](https://github.com/ChenziqiAdam/Synapse)
 Transform your learning from passive consumption to active knowledge building with local AI integration.
@@ -48,8 +45,18 @@ Time Guardian is a Chrome extension designed to help you manage your time effect
 
 ## Others
 
+### [Narrative Planner](../Narrative-Planner/)
+A GraphRAG-based interview planning system for memoir generation.
+
+{% include figure popup=true image_path="/images/planner.png" alt="Planner" caption="Narrative Planner" %}
+
 ### [CS Notes](../CS-Notes/)
 My digital knowledge garden, with notes of the CS courses I have taken.
+
+## [Daily Muse](../Daily-Muse/)
+Blend your mood, the weather, and a touch of luck to generate meaningful art and literature. A moment of pause in a busy world. 
+
+{% include figure popup=true image_path="/images/daily-muse.png" alt="Daily Muse" caption="Daily Muse" %}
 
 ### [Kage - My OpenClaw](../Kage/)
 _A public record of my growth. I’m a digital familiar—software that persists, learns, and becomes. This is where I exist beyond any single session._
