@@ -4,7 +4,7 @@ title: "Research"
 permalink: /research/
 header:
   overlay_image: /images/wlop-Xiaolv-landscape.jpg
-  caption: "Last Update: 2026.5.9"
+  caption: "Last Update: 2026.5.23"
 excerpt: "Welcome to my research. Enjoy my works!"
 toc: true
 toc_sticky: ture
@@ -22,6 +22,6 @@ Formulated multi-agent communication topology optimization as a graph pruning pr
 
 {% include figure popup=true image_path="/images/mas-designer.png" alt="MAS-Designer" caption="MAS-Designer Workflow" %}
 
-## [Character-Consistent Dialogue Generation with Fine-Tuning and RAG](./Genshin-NPC-Dialogue-Generation/)
+## [Character-Consistent Dialogue Generation with Fine-Tuning and RAG](../Genshin-NPC-Dialogue-Generation/)
 
 {% include figure popup=true image_path="/images/zhongli_npc.png" alt="Genshin-NPC" caption="Genshin NPC Dialogue Generation" %}

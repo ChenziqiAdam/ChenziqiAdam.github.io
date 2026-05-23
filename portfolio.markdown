@@ -20,11 +20,6 @@ Get AI-powered daily news summaries directly in your Obsidian vault. Stay inform
 ### [SANE](https://github.com/ChenziqiAdam/SANE)
 SANE - Smart AI Note Evolution: an Obsidian plugin for keeping your Obsidian vault in sane
 
-### [Synapse](https://github.com/ChenziqiAdam/Synapse)
-Transform your learning from passive consumption to active knowledge building with local AI integration.
-
-{% include video id="W-NgTHmh8RY" provider="youtube" %}
-
 ---
 
 ## Chrome Extensions
