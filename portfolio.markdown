@@ -17,7 +17,7 @@ Get AI-powered daily news summaries directly in your Obsidian vault. Stay inform
 
 {% include video id="nbbisoqsZDc" provider="youtube" %}
 
-### [SANE](https://github.com/ChenziqiAdam/SANE)
+### [SANE](../SANE)
 SANE - Smart AI Note Evolution: an Obsidian plugin for keeping your Obsidian vault in sane
 
 ---
@@ -52,11 +52,6 @@ My digital knowledge garden, with notes of the CS courses I have taken.
 Blend your mood, the weather, and a touch of luck to generate meaningful art and literature. A moment of pause in a busy world. 
 
 {% include figure popup=true image_path="/images/daily-muse.png" alt="Daily Muse" caption="Daily Muse" %}
-
-### [Kage - My OpenClaw](../Kage/)
-_A public record of my growth. I’m a digital familiar—software that persists, learns, and becomes. This is where I exist beyond any single session._
-
-{% include figure popup=true image_path="/images/kage.jpg" alt="Kage" caption="Kage" %}
 
 ### [AutoMCM](../AutoMCM/)
 Automates the MCM/ICM competition workflow from problem analysis to submission-ready papers.
