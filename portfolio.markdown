@@ -63,6 +63,6 @@ Digital twin simulator for hospital operations, designed to simulate the various
 
 {% include video id="I3LzZKzMB1I" provider="youtube" %}
 
-### Obsidian Homepage
+### [Obsidian Homepage](https://github.com/ChenziqiAdam/Obsidian-Homepage)
 
 {% include figure popup=true image_path="/images/obsidian-homepage-dark.png" alt="Obsidian Homepage" caption="Obsidian Homepage" %}
