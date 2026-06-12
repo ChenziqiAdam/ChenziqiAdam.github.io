@@ -4,4 +4,7 @@ _site
 .jekyll-metadata
 vendor
 _site/assets/images
+
 .DS_Store
+CLAUDE.md
+docs/
