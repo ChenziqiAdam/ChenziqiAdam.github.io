@@ -1,0 +1,298 @@
+books:
+  - type: novel
+    title: "Norwegian Wood"
+    subtitle: "Murakami Haruki"
+    image: "/images/norwegian-wood.jpeg"
+    alt: "Book: Norwegian Wood"
+    quote: "I want you always to remember me. Will you remember that I existed, and that I stood next to you here like this?"
+    rating: 5
+
+  - type: novel
+    title: "A Song of Ice and Fire"
+    subtitle: "George R. R. Martin"
+    image: "/images/a-song-of-ice-and-fire.jpeg"
+    alt: "Book: A Song of Ice and Fire"
+    quote: "A mind needs books as a sword needs a whetstone, if it is to keep its edge."
+    rating: 4.5
+
+  - type: novel
+    title: "The Izu Dancer"
+    subtitle: "Kawabata Yasunari"
+    image: "/images/izu-dancer.jpg"
+    alt: "Book: The Izu Dancer"
+    quote: "I gave myself up to my tears. It was as though my head had turned to clear water, it was falling pleasantly away drop by drop; soon nothing would remain."
+    rating: 4.5
+
+  - type: essay
+    title: "目送"
+    subtitle: "龙应台"
+    image: "/images/musong.jpeg"
+    alt: "Book: 目送"
+    quote: "我慢慢地、慢慢地了解到，所谓父女母子一场，只不过意味着，你和他的缘分就是今生今世不断地在目送他的背影渐行渐远。"
+    rating: 5
+
+  - type: novel
+    title: "倾城之恋"
+    subtitle: "张爱玲"
+    image: "/images/qingchengzhilian.jpg"
+    alt: "Book: 倾城之恋"
+    quote: "花落自会又花开，花开自有落花来，醒也迟，梦也迟，一朝风雨满秋池，却是一片疏雨轻烟。"
+    rating: 4.5
+
+  - type: short_story
+    title: "台北人"
+    subtitle: "白先勇"
+    image: "/images/taibeiren.jpg"
+    alt: "Book: 台北人"
+    quote: "人生是虚无。一场梦。一个记忆。"
+    rating: 5
+
+  - type: essay
+    title: "送你一颗子弹"
+    subtitle: "刘瑜"
+    image: "/images/send-you-a-bullet.jpg"
+    alt: "Book: 送你一颗子弹"
+    quote: "可求的只有你自己，你要俯下身去，朝着幽暗深处的自己伸出手去。"
+    rating: 4.5
+
+artists:
+  - type: writer
+    title: "Haruki Murakami"
+    subtitle: "Japanese Writer"
+    image: "/images/haruki-murakami.jpg"
+    alt: "Artist: Haruki Murakami"
+    quote: "I want you always to remember me. Will you remember that I existed, and that I stood next to you like this?"
+    rating: 5
+
+  - type: writer
+    title: "Osamu Dazai"
+    subtitle: "Japanese Writer"
+    image: "/images/osamu-dazai.png"
+    alt: "Artist: Osamu Dazai"
+    quote: "I had intended to die this winter."
+    rating: 4.5
+
+  - type: singer
+    title: "Billie Eilish"
+    subtitle: "American Singer-songwriter and Musician"
+    image: "/images/billie-eilish.jpeg"
+    alt: "Artist: Billie Eilish"
+    quote: "I hope someday I'll make it out of here. Even if it takes all night or a hundred years."
+    rating: 4.5
+
+  - type: composer
+    title: "Sawano Hiroyuki"
+    subtitle: "Japanese Composer and Music Producer"
+    image: "/images/sawano.jpeg"
+    alt: "Artist: Sawano Hiroyuki"
+    quote: "I don't have the power. On my side forever."
+    rating: 4.5
+
+  - type: writer
+    title: "Yasunari Kawabata"
+    subtitle: "Japanese novelist and short story writer"
+    image: "/images/yasunari-kawabata.jpg"
+    alt: "Artist: Yasunari Kawabata"
+    quote: "Time flows in the same way for all human beings; every human being flows through time in a different way."
+    rating: 4.5
+
+  - type: composer
+    title: "Hans Zimmer"
+    subtitle: "German Composer and Music Producer"
+    image: "/images/hans-zimmer.jpeg"
+    alt: "Artist: Hans Zimmer"
+    quote: "If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning."
+    rating: 4.5
+
+  - type: singer
+    title: "Kana Wakareno"
+    subtitle: "Japanese Composer, Pianist and Singer"
+    image: "/images/kana-wakareno.jpg"
+    alt: "Artist: Kana Wakareno"
+    quote: "Death has light."
+    rating: 4.5
+
+  - type: singer
+    title: "Eason Chan"
+    subtitle: "Hong Kong Singer and Actor"
+    image: "/images/eason-chan.jpeg"
+    alt: "Artist: Eason Chan"
+    quote: "Sorrow Is Meaningless."
+    rating: 4.5
+
+digitals:
+  - type: drama
+    title: "Dark"
+    subtitle: "Netflix"
+    image: "/images/dark.jpg"
+    alt: "Drama: Dark"
+    quote: "What We Know Is A Drop. What We Don't Know Is an Ocean."
+    rating: 5
+
+  - type: drama
+    title: "The Mandalorian"
+    subtitle: "Disney"
+    image: "/images/mandalorian.jpg"
+    alt: "Drama: The Mandalorian"
+    quote: "This is the Way."
+    rating: 4.5
+
+  - type: drama
+    title: "Stranger Things"
+    subtitle: "Netflix"
+    image: "/images/stranger-things.jpg"
+    alt: "Drama: Stranger Things"
+    quote: "Make mistakes, learn from them, and when life hurts you—because it will—remember the hurt. The hurt is good. It means you're out of that cave."
+    rating: 4.5
+
+  - type: drama
+    title: "Severance"
+    subtitle: "Apple TV"
+    image: "/images/severance.jpeg"
+    alt: "Drama: Severance"
+    quote: "The surest way to tame a prisoner is to let him believe he's free."
+    rating: 4
+
+  - type: drama
+    title: "Shogun"
+    subtitle: "FX Productions"
+    image: "/images/shogun.jpg"
+    alt: "Drama: Shogun"
+    quote: "Fate is like a sword. Useful only to those who can wield it."
+    rating: 4.5
+
+  - type: drama
+    title: "Slow Horses"
+    subtitle: "Apple TV"
+    image: "/images/slow-horses.jpeg"
+    alt: "Drama: Slow Horses"
+    quote: "Someone always pays. Make sure it isn't you"
+    rating: 4.5
+
+  - type: drama
+    title: "Game of Thrones"
+    subtitle: "HBO"
+    image: "/images/game-of-thrones.jpg"
+    alt: "Drama: Game of Thrones"
+    quote: "Only by admitting what we are can we get what we want."
+    rating: 4.5
+
+  - type: drama
+    title: "Generation War"
+    subtitle: "ZDF"
+    image: "/images/generation-war.jpg"
+    alt: "Drama: Generation War"
+    quote: "War brings out the worst from us."
+    rating: 4.5
+
+  - type: drama
+    title: "True Detective"
+    subtitle: "HBO"
+    image: "/images/true-detective.jpg"
+    alt: "Drama: True Detective"
+    quote: "We are things that labor under the illusion of having a self, that accretion of sensory experience and feelings, programmed with total assurance that we are each somebody, when in fact everybody's nobody"
+    rating: 4.5
+
+  - type: movie
+    title: "The Dark Knight Trilogy"
+    subtitle: "Christopher Nolan"
+    image: "/images/dark-knight-trilogy.jpeg"
+    alt: "Movie: The Dark Knight Trilogy"
+    quote: "Why do we fall, Bruce? So that we can learn to pick ourselves up again."
+    rating: 5
+
+  - type: movie
+    title: "The Godfather Trilogy"
+    subtitle: "Francis Ford Coppola"
+    image: "/images/godfather.jpg"
+    alt: "Movie: The Godfather Trilogy"
+    quote: "Great men are not born great, they grow great."
+    rating: 4.5
+
+  - type: movie
+    title: "Dune"
+    subtitle: "Frank Herbert"
+    image: "/images/dune.png"
+    alt: "Movie: Dune"
+    quote: "Where the fear has gone there will be nothing. Only I will remain."
+    rating: 5
+
+  - type: movie
+    title: "Interstellar"
+    subtitle: "Christopher Nolan"
+    image: "/images/interstellar.jpeg"
+    alt: "Movie: Interstellar"
+    quote: "Perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, that our destiny lies above us."
+    rating: 5
+
+  - type: anime
+    title: "Cyberpunk Edgerunners"
+    subtitle: "Netflix"
+    image: "/images/cyberpunk-edgerunners.jpg"
+    alt: "Anime: Cyberpunk Edgerunners"
+    quote: "I'm Gonna Take You There Myself, Fly You To The Moon. That's A Promise."
+    rating: 5
+
+  - type: anime
+    title: "Attack on Titan"
+    subtitle: "Hajime Isayama"
+    image: "/images/attack-on-titan.jpeg"
+    alt: "Anime: Attack on Titan"
+    quote: "A person who cannot give up anything, can change nothing."
+    rating: 4.5
+
+  - type: anime
+    title: "Your Name"
+    subtitle: "Makoto Shinkai"
+    image: "/images/your-name.jpeg"
+    alt: "Anime: Your Name"
+    quote: "I feel like I'm always searching for someone, or something."
+    rating: 5
+
+  - type: anime
+    title: "The Tunnel to Summer, the Exit of Goodbyes"
+    subtitle: "Mei Hachimoku"
+    image: "/images/tunnel.jpeg"
+    alt: "Anime: The Tunnel to Summer"
+    quote: "All we can do is pick whatever path suits us best, then run down it as fast as we can to see how far we can get in what little time we have."
+    rating: 4.5
+
+  - type: anime
+    title: "Chainsaw Man"
+    subtitle: "Tatsuki Fujimoto"
+    image: "/images/chainsaw-man.jpg"
+    alt: "Anime: Chainsaw Man"
+    quote: "We're all carrying things we can't let go of. But it's those very things that make us who we are."
+    rating: 4.5
+
+  - type: anime
+    title: "Frieren: Beyond Journey's End"
+    subtitle: "Kanehito Yamada"
+    image: "/images/frieren.jpg"
+    alt: "Anime: Frieren"
+    quote: "I'll tell you the secret to fighting strong enemies. It's easy, keep getting up and attack them with your moves continuously."
+    rating: 5
+
+  - type: anime
+    title: "Ghost in the Shell"
+    subtitle: "Masamune Shirow"
+    image: "/images/ghost-in-the-shell.jpeg"
+    alt: "Anime: Ghost in the Shell"
+    quote: "Asking a favor only works when you're standing on higher ground."
+    rating: 4.5
+
+  - type: game
+    title: "Arknights"
+    subtitle: "Hypergryph"
+    image: "/images/arknights.jpg"
+    alt: "Game: Arknights"
+    quote: "At the far end of our civilization, once adorned by darkness and the brilliance of the stars up above, we will meet once again."
+    rating: 4.5
+
+  - type: game
+    title: "Rusty Lake"
+    subtitle: "Rusty Lake"
+    image: "/images/rusty-lake.png"
+    alt: "Game: Rusty Lake"
+    quote: "The past is never dead, it's not even past."
+    rating: 4.5
