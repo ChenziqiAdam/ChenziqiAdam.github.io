@@ -290,6 +290,14 @@ digitals:
     rating: 4.5
 
   - type: game
+    title: "Heart of Iron IV"
+    subtitle: "Paradox Interactive"
+    image: "/images/hoi4.jpg"
+    alt: "Game: Heart of Iron IV"
+    quote: "A good plan, violently executed now, is better than a perfect plan next week."
+    rating: 4.5
+
+  - type: game
     title: "Rusty Lake"
     subtitle: "Rusty Lake"
     image: "/images/rusty-lake.png"
