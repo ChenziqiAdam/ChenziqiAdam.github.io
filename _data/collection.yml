@@ -23,7 +23,7 @@ books:
     quote: "I gave myself up to my tears. It was as though my head had turned to clear water, it was falling pleasantly away drop by drop; soon nothing would remain."
     rating: 4.5
 
-  - type: essay
+  - type: novel
     title: "目送"
     subtitle: "龙应台"
     image: "/images/musong.jpeg"
@@ -39,7 +39,7 @@ books:
     quote: "花落自会又花开，花开自有落花来，醒也迟，梦也迟，一朝风雨满秋池，却是一片疏雨轻烟。"
     rating: 4.5
 
-  - type: short_story
+  - type: novel
     title: "台北人"
     subtitle: "白先勇"
     image: "/images/taibeiren.jpg"
@@ -47,7 +47,7 @@ books:
     quote: "人生是虚无。一场梦。一个记忆。"
     rating: 5
 
-  - type: essay
+  - type: novel
     title: "送你一颗子弹"
     subtitle: "刘瑜"
     image: "/images/send-you-a-bullet.jpg"
@@ -72,7 +72,7 @@ artists:
     quote: "I had intended to die this winter."
     rating: 4.5
 
-  - type: singer
+  - type: musician
     title: "Billie Eilish"
     subtitle: "American Singer-songwriter and Musician"
     image: "/images/billie-eilish.jpeg"
@@ -80,7 +80,7 @@ artists:
     quote: "I hope someday I'll make it out of here. Even if it takes all night or a hundred years."
     rating: 4.5
 
-  - type: composer
+  - type: musician
     title: "Sawano Hiroyuki"
     subtitle: "Japanese Composer and Music Producer"
     image: "/images/sawano.jpeg"
@@ -96,7 +96,7 @@ artists:
     quote: "Time flows in the same way for all human beings; every human being flows through time in a different way."
     rating: 4.5
 
-  - type: composer
+  - type: musician
     title: "Hans Zimmer"
     subtitle: "German Composer and Music Producer"
     image: "/images/hans-zimmer.jpeg"
@@ -104,7 +104,7 @@ artists:
     quote: "If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning."
     rating: 4.5
 
-  - type: singer
+  - type: musician
     title: "Kana Wakareno"
     subtitle: "Japanese Composer, Pianist and Singer"
     image: "/images/kana-wakareno.jpg"
@@ -112,7 +112,7 @@ artists:
     quote: "Death has light."
     rating: 4.5
 
-  - type: singer
+  - type: musician
     title: "Eason Chan"
     subtitle: "Hong Kong Singer and Actor"
     image: "/images/eason-chan.jpeg"

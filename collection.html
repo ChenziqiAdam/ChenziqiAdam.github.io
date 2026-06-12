@@ -1,0 +1,718 @@
+---
+layout: default
+permalink: /collection/
+title: "Collection I Enjoy"
+---
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --mm-primary: #494e52;
+      --mm-accent: #6f777d;
+      --mm-background: #f3f6f6;
+      --mm-text: #3d4144;
+      --mm-link: #52adc8;
+      --mm-border: #eaeaea;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+      color: var(--mm-text);
+      line-height: 1.6;
+      background-color: var(--mm-background);
+    }
+
+    a {
+      color: var(--mm-link);
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+      color: #3b7b8f;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--mm-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--mm-accent);
+    }
+
+    /* Section */
+    section {
+      padding: 7rem 0;
+      position: relative;
+    }
+
+    section:nth-child(even) {
+      background-color: #fff;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+      text-align: center;
+      color: var(--mm-primary);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--mm-link), #3b7b8f);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* Media Section */
+    .media-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .media-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/api/placeholder/1000/800') center/cover no-repeat fixed;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    .media-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Top-level tabs (Books / Artists / Digitals) */
+    .media-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .media-tabs {
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .media-tab {
+      padding: 1rem 2rem;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--mm-accent);
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .media-tab {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .media-tab {
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .media-tab::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: var(--mm-link);
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .media-tab.active {
+      color: var(--mm-primary);
+    }
+
+    .media-tab.active::after {
+      width: 80%;
+      left: 10%;
+    }
+
+    /* Sub-type tabs */
+    .subtype-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .subtype-tab {
+      padding: 0.4rem 1.1rem;
+      background: transparent;
+      border: 1px solid var(--mm-border);
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--mm-accent);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .subtype-tab:hover {
+      border-color: var(--mm-link);
+      color: var(--mm-link);
+    }
+
+    .subtype-tab.active {
+      background: var(--mm-link);
+      border-color: var(--mm-link);
+      color: #fff;
+    }
+
+    /* Panels */
+    .media-panel {
+      display: none;
+    }
+
+    .media-panel.active {
+      display: block;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2.5rem;
+      min-height: 400px;
+      position: relative;
+    }
+
+    @media (max-width: 480px) {
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        min-height: 250px;
+      }
+    }
+
+    /* Flip Card Styles */
+    .media-item {
+      position: relative;
+      text-align: center;
+      height: 350px;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    @media (max-width: 768px) {
+      .media-item {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .media-item {
+        height: 320px;
+      }
+    }
+
+    .media-item-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .media-item:hover .media-item-inner {
+      transform: rotateY(180deg);
+    }
+
+    .media-image, .media-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .media-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .media-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(82, 173, 200, 0.2) 0%, rgba(59, 123, 143, 0.2) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+
+    .media-item:hover .media-image::before {
+      opacity: 1;
+    }
+
+    .media-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .media-back {
+      background-color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: var(--mm-text);
+    }
+
+    .media-back h3 {
+      margin-bottom: 10px;
+      color: var(--mm-primary);
+    }
+
+    .media-back p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .media-rating {
+      margin-top: 10px;
+      color: #ffb400;
+    }
+
+    .media-subtitle {
+      font-size: 0.9rem;
+      color: var(--mm-accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .media-subtitle::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--mm-link);
+      transition: width 0.3s ease;
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .pagination-button {
+      background-color: var(--mm-background);
+      color: var(--mm-text);
+      border: 1px solid var(--mm-border);
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pagination-button:hover {
+      background-color: var(--mm-link);
+      color: white;
+    }
+
+    .pagination-button.active {
+      background-color: var(--mm-link);
+      color: white;
+    }
+
+    .pagination-button.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .pagination-button.disabled:hover {
+      background-color: var(--mm-background);
+      color: var(--mm-text);
+    }
+
+    .pagination-info {
+      margin: 0 1rem;
+      color: var(--mm-accent);
+    }
+
+    .media-item {
+      display: none;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .media-item.visible {
+      display: block;
+      position: relative;
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeIn 0.5s ease forwards;
+      pointer-events: auto;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate { opacity: 0; }
+    .animate.fade-in { animation: fadeIn 0.8s ease forwards; }
+    .animate.zoom-in { animation: zoomIn 0.8s ease forwards; }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="media-section">
+    <div class="container media-container">
+      <h2 class="section-title animate fade-in">Collection I Enjoy</h2>
+
+      <!-- Top-level tabs -->
+      <div class="media-tabs animate zoom-in">
+        <button class="media-tab active" data-target="books">Books</button>
+        <button class="media-tab" data-target="music">Artists</button>
+        <button class="media-tab" data-target="digitals">Digitals</button>
+      </div>
+
+      <!-- Books Panel -->
+      <div id="books" class="media-panel active">
+        <div class="subtype-tabs">
+          <button class="subtype-tab active" data-panel="books" data-type="all">All</button>
+          {% assign book_types = site.data.collection.books | map: "type" | uniq | sort %}
+          {% for t in book_types %}
+          <button class="subtype-tab" data-panel="books" data-type="{{ t }}">{{ t | replace: "_", " " | capitalize }}</button>
+          {% endfor %}
+        </div>
+        <div class="media-grid">
+          {% for item in site.data.collection.books %}
+          <div class="media-item" data-type="{{ item.type }}">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="{{ item.image }}" alt="{{ item.alt }}">
+              </div>
+              <div class="media-back">
+                <h3>{{ item.title }}</h3>
+                <p class="media-subtitle">{{ item.subtitle }}</p>
+                <p>{{ item.quote }}</p>
+                <div class="media-rating">
+                  {% assign full_stars = item.rating | floor %}
+                  {% assign has_half = item.rating | modulo: 1 | times: 10 | round %}
+                  {% for i in (1..5) %}
+                    {% if i <= full_stars %}
+                      <i class="fas fa-star"></i>
+                    {% elsif has_half == 5 and i == full_stars | plus: 1 %}
+                      <i class="fas fa-star-half-alt"></i>
+                    {% else %}
+                      <i class="far fa-star"></i>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="pagination books-pagination">
+          <button class="pagination-button prev-page" data-panel="books">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="books">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Artists Panel -->
+      <div id="music" class="media-panel">
+        <div class="subtype-tabs">
+          <button class="subtype-tab active" data-panel="music" data-type="all">All</button>
+          {% assign artist_types = site.data.collection.artists | map: "type" | uniq | sort %}
+          {% for t in artist_types %}
+          <button class="subtype-tab" data-panel="music" data-type="{{ t }}">{{ t | replace: "_", " " | capitalize }}</button>
+          {% endfor %}
+        </div>
+        <div class="media-grid">
+          {% for item in site.data.collection.artists %}
+          <div class="media-item" data-type="{{ item.type }}">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="{{ item.image }}" alt="{{ item.alt }}">
+              </div>
+              <div class="media-back">
+                <h3>{{ item.title }}</h3>
+                <p class="media-subtitle">{{ item.subtitle }}</p>
+                <p>{{ item.quote }}</p>
+                <div class="media-rating">
+                  {% assign full_stars = item.rating | floor %}
+                  {% assign has_half = item.rating | modulo: 1 | times: 10 | round %}
+                  {% for i in (1..5) %}
+                    {% if i <= full_stars %}
+                      <i class="fas fa-star"></i>
+                    {% elsif has_half == 5 and i == full_stars | plus: 1 %}
+                      <i class="fas fa-star-half-alt"></i>
+                    {% else %}
+                      <i class="far fa-star"></i>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="pagination music-pagination">
+          <button class="pagination-button prev-page" data-panel="music">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="music">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Digitals Panel -->
+      <div id="digitals" class="media-panel">
+        <div class="subtype-tabs">
+          <button class="subtype-tab active" data-panel="digitals" data-type="all">All</button>
+          {% assign digital_types = site.data.collection.digitals | map: "type" | uniq | sort %}
+          {% for t in digital_types %}
+          <button class="subtype-tab" data-panel="digitals" data-type="{{ t }}">{{ t | replace: "_", " " | capitalize }}</button>
+          {% endfor %}
+        </div>
+        <div class="media-grid">
+          {% for item in site.data.collection.digitals %}
+          <div class="media-item" data-type="{{ item.type }}">
+            <div class="media-item-inner">
+              <div class="media-image">
+                <img src="{{ item.image }}" alt="{{ item.alt }}">
+              </div>
+              <div class="media-back">
+                <h3>{{ item.title }}</h3>
+                <p class="media-subtitle">{{ item.subtitle }}</p>
+                <p>{{ item.quote }}</p>
+                <div class="media-rating">
+                  {% assign full_stars = item.rating | floor %}
+                  {% assign has_half = item.rating | modulo: 1 | times: 10 | round %}
+                  {% for i in (1..5) %}
+                    {% if i <= full_stars %}
+                      <i class="fas fa-star"></i>
+                    {% elsif has_half == 5 and i == full_stars | plus: 1 %}
+                      <i class="fas fa-star-half-alt"></i>
+                    {% else %}
+                      <i class="far fa-star"></i>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="pagination digitals-pagination">
+          <button class="pagination-button prev-page" data-panel="digitals">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pagination-info">Page <span class="current-page">1</span> of <span class="total-pages">1</span></span>
+          <button class="pagination-button next-page" data-panel="digitals">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const ITEMS_PER_PAGE = 8;
+
+    // State per panel: current page and active type filter
+    const state = {
+      books:    { page: 1, type: 'all' },
+      music:    { page: 1, type: 'all' },
+      digitals: { page: 1, type: 'all' }
+    };
+
+    function getFilteredItems(panelId) {
+      const panel = document.getElementById(panelId);
+      const { type } = state[panelId];
+      const all = Array.from(panel.querySelectorAll('.media-item'));
+      return type === 'all' ? all : all.filter(el => el.dataset.type === type);
+    }
+
+    function renderPage(panelId) {
+      const panel = document.getElementById(panelId);
+      const { page } = state[panelId];
+      const filtered = getFilteredItems(panelId);
+      const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+
+      // Clamp page if filter reduced total
+      if (state[panelId].page > totalPages) {
+        state[panelId].page = 1;
+      }
+      const currentPage = state[panelId].page;
+
+      // Hide all, show filtered page slice
+      Array.from(panel.querySelectorAll('.media-item')).forEach(el => el.classList.remove('visible'));
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      filtered.slice(start, start + ITEMS_PER_PAGE).forEach(el => {
+        setTimeout(() => el.classList.add('visible'), 0);
+      });
+
+      // Pagination display
+      panel.querySelector('.current-page').textContent = currentPage;
+      panel.querySelector('.total-pages').textContent = totalPages;
+      panel.querySelector('.prev-page').classList.toggle('disabled', currentPage === 1);
+      panel.querySelector('.next-page').classList.toggle('disabled', currentPage === totalPages);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Init all panels
+      ['books', 'music', 'digitals'].forEach(id => renderPage(id));
+
+      // Top-level tab switching
+      document.querySelectorAll('.media-tab').forEach(tab => {
+        tab.addEventListener('click', function () {
+          document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.media-panel').forEach(p => p.classList.remove('active'));
+          this.classList.add('active');
+          const panelId = this.dataset.target;
+          document.getElementById(panelId).classList.add('active');
+          renderPage(panelId);
+        });
+      });
+
+      // Sub-type tab filtering
+      document.querySelectorAll('.subtype-tab').forEach(tab => {
+        tab.addEventListener('click', function () {
+          const panelId = this.dataset.panel;
+          // Deactivate sibling subtype tabs
+          document.querySelectorAll(`.subtype-tab[data-panel="${panelId}"]`).forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          state[panelId].type = this.dataset.type;
+          state[panelId].page = 1;
+          renderPage(panelId);
+        });
+      });
+
+      // Prev/next pagination
+      document.querySelectorAll('.prev-page').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const panelId = this.dataset.panel;
+          if (state[panelId].page > 1) {
+            state[panelId].page--;
+            renderPage(panelId);
+          }
+        });
+      });
+
+      document.querySelectorAll('.next-page').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const panelId = this.dataset.panel;
+          const total = Math.ceil(getFilteredItems(panelId).length / ITEMS_PER_PAGE);
+          if (state[panelId].page < total) {
+            state[panelId].page++;
+            renderPage(panelId);
+          }
+        });
+      });
+
+      // Animate section title on scroll
+      const fadeElements = document.querySelectorAll('.animate');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      fadeElements.forEach(el => {
+        el.style.animationPlayState = 'paused';
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>

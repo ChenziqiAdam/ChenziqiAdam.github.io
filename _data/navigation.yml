@@ -3,6 +3,8 @@ main:
     url: /
   - title: "Posts"
     url: /categories/
+  - title: "Collection"
+    url: /collection/
   - title: "Portfolio"
     url: /portfolio/
   - title: "Research"
