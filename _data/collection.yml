@@ -23,7 +23,7 @@ books:
     quote: "I gave myself up to my tears. It was as though my head had turned to clear water, it was falling pleasantly away drop by drop; soon nothing would remain."
     rating: 4.5
 
-  - type: novel
+  - type: essay
     title: "目送"
     subtitle: "龙应台"
     image: "/images/musong.jpeg"
@@ -47,12 +47,20 @@ books:
     quote: "人生是虚无。一场梦。一个记忆。"
     rating: 5
 
-  - type: novel
+  - type: essay
     title: "送你一颗子弹"
     subtitle: "刘瑜"
     image: "/images/send-you-a-bullet.jpg"
     alt: "Book: 送你一颗子弹"
     quote: "可求的只有你自己，你要俯下身去，朝着幽暗深处的自己伸出手去。"
+    rating: 4.5
+
+  - type: novel
+    title: "The Wind Rises"
+    subtitle: "Tatsuo Hori"
+    image: "/images/the-wind-rises.jpg"
+    alt: "Book: The Wind Rises"
+    quote: "The wind has risen, we must try to live."
     rating: 4.5
 
 artists:
