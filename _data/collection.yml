@@ -2,7 +2,7 @@ books:
   - type: novel
     title: "Norwegian Wood"
     subtitle: "Murakami Haruki"
-    image: "/images/norwegian-wood.jpeg"
+    image: "/images/norwegian-wood.jpg"
     alt: "Book: Norwegian Wood"
     quote: "I want you always to remember me. Will you remember that I existed, and that I stood next to you here like this?"
     rating: 5
