@@ -130,6 +130,14 @@ artists:
 
 digitals:
   - type: drama
+    title: "Silo"
+    subtitle: "Apple TV"
+    image: "/images/silo.jpg"
+    alt: "Drama: Silo"
+    quote: "Who are we, if not the sum of our memories?"
+    rating: 4.5
+
+  - type: drama
     title: "Dark"
     subtitle: "Netflix"
     image: "/images/dark.jpg"
