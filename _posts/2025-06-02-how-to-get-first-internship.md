@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "How to get the first internship?"
-date:   2025-06-02 15:24:30 +0800
-categories:
-  - CS
-  - Skills
+title: "How to get the first internship?"
+date: 2025-06-02 15:24:30 +0800
+description: How I landed my first internship.
 tags:
-  - Internship
+  - internship
+  - career
+categories:
+  - Life
+toc:
+  beginning: true
 ---
 ### 如何找到互联网第一份实习
 > **Note**: This blog is for **Chinese students** to get **the first internship**.

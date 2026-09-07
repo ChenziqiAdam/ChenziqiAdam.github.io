@@ -1,18 +1,17 @@
 ---
 layout: post
-title:  "How to create your own Obsidian plugin?"
-date:   2025-03-25 19:15:20 +0800
-categories:
-  - CS
-  - Skills
-  - AI
-  - Portfolio
+title: "How to create your own Obsidian plugin?"
+date: 2025-03-25 19:15:20 +0800
+description: Writing your first Obsidian plugin.
 tags:
-  - Obsidian
-  - Google
-  - Gemini
+  - obsidian
+  - plugin
+  - typescript
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
-
 ### How to create your own Obsidian plugin?
 
 The unique advantage of **Obsidan** is the sufficiency of its **community plugins**. Almost whenever you want to add some functionality to your Obsidian, you can find someone who has similar needs and have developed a plugin to solve it! The community plugins are helpful and complementary. 

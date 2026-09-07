@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "How to prepare pdf datasets from Wikipedia?"
-date:   2025-07-14 16:00:10 +0800
-categories:
-  - CS
-  - RA
-  - Skills
+title: "How to prepare pdf datasets from Wikipedia?"
+date: 2025-07-14 16:00:10 +0800
+description: Building PDF datasets from Wikipedia.
 tags:
-  - Wikipedia
+  - datasets
+  - pdf
+  - wikipedia
+categories:
+  - Research
+toc:
+  beginning: true
 ---
-
 ### How to prepare pdf datasets from Wikipedia for research purpose?
 
 For researches focusing on LLM Memory, it is critical to set up multi document dataset of high quality. This blog is about how to download Wikipedia pages as pdf for research purpose.

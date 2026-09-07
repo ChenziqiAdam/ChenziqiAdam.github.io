@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "How to integrate Gemini into your extension?"
-date:   2024-11-18 19:20:50 +0800
-categories:
-  - CS
-  - Skills
-  - AI
+title: "How to integrate Gemini into your extension?"
+date: 2024-11-18 19:20:50 +0800
+description: Integrating the Gemini API into a Chrome extension.
 tags:
-  - Google
-  - Gemini
+  - chrome-extension
+  - gemini
+  - llm
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
-
 ### How to integrate Gemini into your extension?
 Chrome Extensions do not support direct `import` in your **javascript** code. And its official [Gemini API samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/ai.gemini-in-the-cloud) are confusing I think. So here is how I figure out how to make it. Your can also see my [Chrome Extension Time Guardian](https://github.com/ChenziqiAdam/Time-Guardian).
 

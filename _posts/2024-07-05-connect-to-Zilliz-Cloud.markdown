@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "How to connect to Zilliz Cloud"
-date:   2024-07-05 14:57:40 +0800
-categories:
-  - CS
-  - RA
-  - Skills
+title: "How to connect to Zilliz Cloud"
+date: 2024-07-05 14:57:40 +0800
+description: Connecting to Zilliz Cloud (managed Milvus).
 tags:
-  - Zilliz
+  - vector-database
+  - zilliz
+  - python
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to connect to Zilliz Cloud in Python?
 1. Install **PyMilvus** (Python SDK) (This works for Python after **3.7**). If you want to install a specific version, see the [official document](https://docs.zilliz.com/docs/install-sdks#install-pymilvus-python-sdk).

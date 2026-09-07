@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "How to deploy websites on a remote server"
-date:   2024-09-24 19:07:30 +0800
-categories:
-  - CS
-  - Skills
+title: "How to deploy websites on a remote server"
+date: 2024-09-24 19:07:30 +0800
+description: Deploying a website on a remote server.
 tags:
-  - Flask
+  - servers
+  - nginx
+  - deployment
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
-
 ### How to deploy your websites on your remote server?
 It is a good idea to use your remote server to host your websites. This blog takes a Flask app as an example.
 

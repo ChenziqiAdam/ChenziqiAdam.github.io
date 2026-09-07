@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Mermaid Diagram in Obsidian"
-date:   2026-01-26 15:09:15 +0800
-categories:
-  - CS
-  - Skills
+title: "Mermaid Diagram in Obsidian"
+date: 2026-01-26 15:09:15 +0800
+description: Using Mermaid diagrams in Obsidian.
 tags:
-  - Obsidian
+  - obsidian
+  - mermaid
+  - diagrams
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
-
 # How to use Mermaid Diagram in Obsidian
 
 ## What is Mermaid

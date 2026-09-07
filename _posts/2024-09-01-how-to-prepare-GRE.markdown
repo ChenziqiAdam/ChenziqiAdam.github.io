@@ -1,11 +1,14 @@
 ---
 layout: post
-title:  "如何自学备考GRE"
-date:   2024-09-01 14:19:40 +0800
-categories:
-  - Others
+title: "如何自学备考GRE"
+date: 2024-09-01 14:19:40 +0800
+description: Self-studying for the GRE.
 tags:
-  - GRE
+  - gre
+categories:
+  - Life
+toc:
+  beginning: true
 ---
 ### 如何两个月自学GRE实现GRE325+
 > **Note**: This blog is for **Chinese students** to prepare for **GRE**.
