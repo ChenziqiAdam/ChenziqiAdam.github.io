@@ -1,4 +1,4 @@
-# ghost04718.github.io
+# chenziqiadam.github.io
 
 Personal website of Ziqi (Adam) Chen.
 
