@@ -2,7 +2,7 @@
 layout: post
 title: "How to connect to Zilliz Cloud"
 date: 2024-07-05 14:57:40 +0800
-description: Connecting to Zilliz Cloud (managed Milvus).
+description: "Connecting to Zilliz Cloud (managed Milvus)."
 tags:
   - vector-database
   - zilliz

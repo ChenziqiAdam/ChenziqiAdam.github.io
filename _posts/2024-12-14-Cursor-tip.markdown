@@ -2,7 +2,7 @@
 layout: post
 title: "Ten Tips for Cursor"
 date: 2024-12-14 13:53:15 +0800
-description: Ten practical tips for working in Cursor.
+description: "Ten practical tips for working in Cursor."
 tags:
   - cursor
   - ai-coding

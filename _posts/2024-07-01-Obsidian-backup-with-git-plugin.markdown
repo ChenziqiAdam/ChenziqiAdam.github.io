@@ -2,7 +2,7 @@
 layout: post
 title: "How to backup Obsidian"
 date: 2024-07-01 23:08:10 +0800
-description: Backing up an Obsidian vault with the Git plugin.
+description: "Backing up an Obsidian vault with the Git plugin."
 tags:
   - obsidian
   - git

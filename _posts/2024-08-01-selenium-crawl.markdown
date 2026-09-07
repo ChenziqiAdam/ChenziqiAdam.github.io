@@ -2,7 +2,7 @@
 layout: post
 title: "How to crawl with Python Selenium"
 date: 2024-08-01 17:02:30 +0800
-description: Web scraping with Python and Selenium.
+description: "Web scraping with Python and Selenium."
 tags:
   - python
   - selenium

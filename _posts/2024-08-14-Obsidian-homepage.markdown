@@ -2,7 +2,7 @@
 layout: post
 title: "How to DIY Obsidian homepage"
 date: 2024-08-14 14:14:15 +0800
-description: Building a custom Obsidian homepage dashboard.
+description: "Building a custom Obsidian homepage dashboard."
 tags:
   - obsidian
   - dataview

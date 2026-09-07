@@ -2,7 +2,7 @@
 layout: post
 title: "How to edit multiple files in Obsidian"
 date: 2024-07-02 17:51:25 +0800
-description: Editing multiple files at once in Obsidian.
+description: "Editing multiple files at once in Obsidian."
 tags:
   - obsidian
 categories:

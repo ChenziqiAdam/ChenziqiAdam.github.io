@@ -2,7 +2,7 @@
 layout: post
 title: "How to create your own site"
 date: 2024-07-02 15:35:45 +0800
-description: Building a personal site from scratch.
+description: "Building a personal site from scratch."
 tags:
   - jekyll
   - github-pages

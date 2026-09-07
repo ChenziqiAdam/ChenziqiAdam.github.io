@@ -2,7 +2,7 @@
 layout: post
 title: "How to sync Obsidian on iPad with PC"
 date: 2024-09-05 18:43:30 +0800
-description: Syncing an Obsidian vault between iPad and PC via GitHub.
+description: "Syncing an Obsidian vault between iPad and PC via GitHub."
 tags:
   - obsidian
   - git

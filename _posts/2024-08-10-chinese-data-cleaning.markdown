@@ -2,7 +2,7 @@
 layout: post
 title: "How to clean Chinese text data"
 date: 2024-08-10 16:12:00 +0800
-description: Cleaning Chinese text data for NLP.
+description: "Cleaning Chinese text data for NLP."
 tags:
   - python
   - nlp

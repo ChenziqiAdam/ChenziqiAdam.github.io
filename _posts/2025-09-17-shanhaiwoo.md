@@ -2,7 +2,7 @@
 layout: post
 title: "ShanhaiWoo - My First Web3 Popup Event"
 date: 2025-09-17 14:28:45 +0800
-description: ShanHaiWoo: my first Web3 popup event.
+description: "ShanHaiWoo: my first Web3 popup event."
 tags:
   - web3
   - events

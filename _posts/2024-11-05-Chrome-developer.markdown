@@ -2,7 +2,7 @@
 layout: post
 title: "How to become Chrome Extension developer?"
 date: 2024-11-05 16:27:40 +0800
-description: Getting started as a Chrome extension developer.
+description: "Getting started as a Chrome extension developer."
 tags:
   - chrome-extension
   - javascript

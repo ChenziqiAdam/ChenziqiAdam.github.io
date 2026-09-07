@@ -2,7 +2,7 @@
 layout: post
 title: "Ever lost track of time while browsing? Try Time Guardian!"
 date: 2024-11-20 21:07:10 +0800
-description: Time Guardian: a browser extension that nudges you when you lose track of time.
+description: "Time Guardian: a browser extension that nudges you when you lose track of time."
 tags:
   - chrome-extension
   - gemini

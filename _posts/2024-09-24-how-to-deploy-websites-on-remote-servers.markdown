@@ -2,7 +2,7 @@
 layout: post
 title: "How to deploy websites on a remote server"
 date: 2024-09-24 19:07:30 +0800
-description: Deploying a website on a remote server.
+description: "Deploying a website on a remote server."
 tags:
   - servers
   - nginx

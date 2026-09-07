@@ -2,7 +2,7 @@
 layout: post
 title: "How to connect to a remote server"
 date: 2024-07-01 18:41:15 +0800
-description: Connecting to a remote server over SSH.
+description: "Connecting to a remote server over SSH."
 tags:
   - ssh
   - servers

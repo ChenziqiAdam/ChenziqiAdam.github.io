@@ -2,7 +2,7 @@
 layout: post
 title: "Learn from GitHub Issues"
 date: 2026-03-16 21:06:00 +0800
-description: What you can learn from reading GitHub issues.
+description: "What you can learn from reading GitHub issues."
 tags:
   - github
   - open-source

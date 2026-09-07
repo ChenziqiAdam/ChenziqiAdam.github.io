@@ -2,7 +2,7 @@
 layout: post
 title: "How to design and implement an AI agent"
 date: 2024-09-08 15:41:20 +0800
-description: Designing and implementing an LLM agent from first principles.
+description: "Designing and implementing an LLM agent from first principles."
 tags:
   - llm
   - agents

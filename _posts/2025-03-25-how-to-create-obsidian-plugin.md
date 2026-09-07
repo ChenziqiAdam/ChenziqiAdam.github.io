@@ -2,7 +2,7 @@
 layout: post
 title: "How to create your own Obsidian plugin?"
 date: 2025-03-25 19:15:20 +0800
-description: Writing your first Obsidian plugin.
+description: "Writing your first Obsidian plugin."
 tags:
   - obsidian
   - plugin

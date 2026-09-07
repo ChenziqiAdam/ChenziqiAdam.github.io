@@ -2,7 +2,7 @@
 layout: post
 title: "How to get the first internship?"
 date: 2025-06-02 15:24:30 +0800
-description: How I landed my first internship.
+description: "How I landed my first internship."
 tags:
   - internship
   - career

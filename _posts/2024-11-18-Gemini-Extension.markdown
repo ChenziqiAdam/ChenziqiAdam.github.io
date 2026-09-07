@@ -2,7 +2,7 @@
 layout: post
 title: "How to integrate Gemini into your extension?"
 date: 2024-11-18 19:20:50 +0800
-description: Integrating the Gemini API into a Chrome extension.
+description: "Integrating the Gemini API into a Chrome extension."
 tags:
   - chrome-extension
   - gemini

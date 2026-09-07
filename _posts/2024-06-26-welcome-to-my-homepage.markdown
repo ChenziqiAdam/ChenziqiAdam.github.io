@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to my site!"
 date: 2024-06-26 21:07:15 +0800
-description: A short hello and what this blog is for.
+description: "A short hello and what this blog is for."
 tags:
   - site
 categories:

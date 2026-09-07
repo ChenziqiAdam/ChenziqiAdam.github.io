@@ -2,7 +2,7 @@
 layout: post
 title: "How to find a suitable research advisor?"
 date: 2026-05-24 21:06:00 +0800
-description: How to find a research advisor who is a good fit.
+description: "How to find a research advisor who is a good fit."
 tags:
   - advising
   - career
