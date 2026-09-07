@@ -1,10 +1,10 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to connect to Alibaba Cloud RDS | Ziqi Chen </title> <meta name="author" content="Ziqi Chen"> <meta name="description" content="Personal website of Ziqi (Adam) Chen — CS undergraduate at CUHK-Shenzhen, working on LLMs and multi-agent systems. "> <meta name="keywords" content="Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to connect to Alibaba Cloud RDS | Ziqi Chen </title> <meta name="author" content="Ziqi Chen"> <meta name="description" content="Connecting to an Alibaba Cloud RDS instance from Python."> <meta name="keywords" content="Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%BB&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://chenziqiadam.github.io/blog/2024/Aliyun-RDS-with-Python/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.svg?v=67055143c4c2209bb25827e970cd92a6"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://chenziqiadam.github.io/blog/2024/Aliyun-RDS-with-Python/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ziqi</span> Chen </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/collection/">collection </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to connect to Alibaba Cloud RDS</h1> <p class="post-meta"> Created on July 01, 2024 </p> <p class="post-tags"> <a href="/blog/2024"> <i class="fa-solid fa-calendar fa-sm"></i> 2024 </a>   ·   <a href="/blog/tag/alibaba-cloud"> <i class="fa-solid fa-hashtag fa-sm"></i> Alibaba Cloud</a>   ·   <a href="/blog/category/cs"> <i class="fa-solid fa-tag fa-sm"></i> CS</a>   <a href="/blog/category/ra"> <i class="fa-solid fa-tag fa-sm"></i> RA</a>   <a href="/blog/category/skills"> <i class="fa-solid fa-tag fa-sm"></i> Skills</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h3 id="how-to-connect-to-alibaba-cloud-aliyun-rds-mysql-version-in-python">How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python</h3> <ol> <li>Retrive your host from your RDS console as well as your RDS account and password (<strong>make sure your account have access to your target database</strong>)</li> <li>Install PyMySQL (this applies for <strong>Python3</strong>, not sure about older verions) <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>pip install pymysql
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ziqi</span> Chen </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/collection/">collection </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to connect to Alibaba Cloud RDS</h1> <p class="post-meta"> Created on July 01, 2024 </p> <p class="post-tags"> <a href="/blog/2024"> <i class="fa-solid fa-calendar fa-sm"></i> 2024 </a>   ·   <a href="/blog/tag/database"> <i class="fa-solid fa-hashtag fa-sm"></i> database</a>   <a href="/blog/tag/python"> <i class="fa-solid fa-hashtag fa-sm"></i> python</a>   <a href="/blog/tag/alibaba-cloud"> <i class="fa-solid fa-hashtag fa-sm"></i> alibaba-cloud</a>   ·   <a href="/blog/category/tutorial"> <i class="fa-solid fa-tag fa-sm"></i> Tutorial</a> </p> </header> <article class="post-content"> <div id="table-of-contents"> <ul id="toc" class="section-nav"> <li class="toc-entry toc-h3"><a href="#how-to-connect-to-alibaba-cloud-aliyun-rds-mysql-version-in-python">How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python</a></li> </ul> </div> <hr> <div id="markdown-content"> <h3 id="how-to-connect-to-alibaba-cloud-aliyun-rds-mysql-version-in-python">How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python</h3> <ol> <li>Retrive your host from your RDS console as well as your RDS account and password (<strong>make sure your account have access to your target database</strong>)</li> <li>Install PyMySQL (this applies for <strong>Python3</strong>, not sure about older verions) <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>pip install pymysql
 </code></pre></div> </div> </li> <li>Example code:</li> </ol> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pymysql.cursors</span>
 
 <span class="n">connection</span> <span class="o">=</span> <span class="n">pymysql</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="sh">'</span><span class="s">your_host</span><span class="sh">'</span><span class="p">,</span>
@@ -94,7 +94,7 @@ ninja.data = [{
         
           title: "How to prepare for SURP interviews?",
         
-        description: "",
+        description: "Preparing for SURP research interviews.",
         section: "Posts",
         handler: () => {
           
@@ -105,7 +105,7 @@ ninja.data = [{
         
           title: "How to find a suitable research advisor?",
         
-        description: "",
+        description: "How to find a research advisor who is a good fit.",
         section: "Posts",
         handler: () => {
           
@@ -116,7 +116,7 @@ ninja.data = [{
         
           title: "Learn from GitHub Issues",
         
-        description: "",
+        description: "What you can learn from reading GitHub issues.",
         section: "Posts",
         handler: () => {
           
@@ -127,7 +127,7 @@ ninja.data = [{
         
           title: "Five Tips for Openclaw",
         
-        description: "",
+        description: "Five tips for getting more out of OpenClaw.",
         section: "Posts",
         handler: () => {
           
@@ -138,7 +138,7 @@ ninja.data = [{
         
           title: "Mermaid Diagram in Obsidian",
         
-        description: "",
+        description: "Using Mermaid diagrams in Obsidian.",
         section: "Posts",
         handler: () => {
           
@@ -149,7 +149,7 @@ ninja.data = [{
         
           title: "Systematic Overview of MAS",
         
-        description: "",
+        description: "A systematic overview of LLM-based multi-agent systems.",
         section: "Posts",
         handler: () => {
           
@@ -160,7 +160,7 @@ ninja.data = [{
         
           title: "How to deploy a local model as an API endpoint",
         
-        description: "",
+        description: "Serving a local model as an API endpoint.",
         section: "Posts",
         handler: () => {
           
@@ -171,7 +171,7 @@ ninja.data = [{
         
           title: "ShanhaiWoo - My First Web3 Popup Event",
         
-        description: "",
+        description: "ShanHaiWoo: my first Web3 popup event.",
         section: "Posts",
         handler: () => {
           
@@ -182,7 +182,7 @@ ninja.data = [{
         
           title: "Synapse - Your Obsidian Local Knowledge Engine",
         
-        description: "",
+        description: "Synapse: a local knowledge engine for Obsidian.",
         section: "Posts",
         handler: () => {
           
@@ -193,7 +193,7 @@ ninja.data = [{
         
           title: "How to prepare pdf datasets from Wikipedia?",
         
-        description: "",
+        description: "Building PDF datasets from Wikipedia.",
         section: "Posts",
         handler: () => {
           
@@ -204,7 +204,7 @@ ninja.data = [{
         
           title: "How to chat with your local ChatGPT?",
         
-        description: "",
+        description: "Running a local ChatGPT-style model with Ollama.",
         section: "Posts",
         handler: () => {
           
@@ -215,7 +215,7 @@ ninja.data = [{
         
           title: "How to start your Web3 journey?",
         
-        description: "",
+        description: "Getting started with Web3 through Binance.",
         section: "Posts",
         handler: () => {
           
@@ -226,7 +226,7 @@ ninja.data = [{
         
           title: "How to set up Clash on Linux server?",
         
-        description: "",
+        description: "Setting up Clash on a Linux server.",
         section: "Posts",
         handler: () => {
           
@@ -237,7 +237,7 @@ ninja.data = [{
         
           title: "How to get the first internship?",
         
-        description: "",
+        description: "How I landed my first internship.",
         section: "Posts",
         handler: () => {
           
@@ -248,7 +248,7 @@ ninja.data = [{
         
           title: "How to create your own Obsidian plugin?",
         
-        description: "",
+        description: "Writing your first Obsidian plugin.",
         section: "Posts",
         handler: () => {
           
@@ -259,7 +259,7 @@ ninja.data = [{
         
           title: "How to create your own chatbots?",
         
-        description: "",
+        description: "Creating custom chatbots on Poe.",
         section: "Posts",
         handler: () => {
           
@@ -270,7 +270,7 @@ ninja.data = [{
         
           title: "Introduction to Web3 and DePIN",
         
-        description: "",
+        description: "An introduction to Web3 and DePIN.",
         section: "Posts",
         handler: () => {
           
@@ -281,7 +281,7 @@ ninja.data = [{
         
           title: "How to build a full stack app with AWS?",
         
-        description: "",
+        description: "Building a full-stack app on AWS.",
         section: "Posts",
         handler: () => {
           
@@ -292,7 +292,7 @@ ninja.data = [{
         
           title: "Ten Tips for Cursor",
         
-        description: "",
+        description: "Ten practical tips for working in Cursor.",
         section: "Posts",
         handler: () => {
           
@@ -303,7 +303,7 @@ ninja.data = [{
         
           title: "Ever lost track of time while browsing? Try Time Guardian!",
         
-        description: "",
+        description: "Time Guardian: a browser extension that nudges you when you lose track of time.",
         section: "Posts",
         handler: () => {
           
@@ -314,7 +314,7 @@ ninja.data = [{
         
           title: "How to integrate Gemini into your extension?",
         
-        description: "",
+        description: "Integrating the Gemini API into a Chrome extension.",
         section: "Posts",
         handler: () => {
           
@@ -325,7 +325,7 @@ ninja.data = [{
         
           title: "How to become Chrome Extension developer?",
         
-        description: "",
+        description: "Getting started as a Chrome extension developer.",
         section: "Posts",
         handler: () => {
           
@@ -336,7 +336,7 @@ ninja.data = [{
         
           title: "How to deploy websites on a remote server",
         
-        description: "",
+        description: "Deploying a website on a remote server.",
         section: "Posts",
         handler: () => {
           
@@ -347,7 +347,7 @@ ninja.data = [{
         
           title: "How to design and implement an AI agent",
         
-        description: "",
+        description: "Designing and implementing an LLM agent from first principles.",
         section: "Posts",
         handler: () => {
           
@@ -358,7 +358,7 @@ ninja.data = [{
         
           title: "How to sync Obsidian on iPad with PC",
         
-        description: "",
+        description: "Syncing an Obsidian vault between iPad and PC via GitHub.",
         section: "Posts",
         handler: () => {
           
@@ -369,7 +369,7 @@ ninja.data = [{
         
           title: "如何自学备考GRE",
         
-        description: "",
+        description: "Self-studying for the GRE.",
         section: "Posts",
         handler: () => {
           
@@ -380,7 +380,7 @@ ninja.data = [{
         
           title: "How to DIY Obsidian homepage",
         
-        description: "",
+        description: "Building a custom Obsidian homepage dashboard.",
         section: "Posts",
         handler: () => {
           
@@ -391,7 +391,7 @@ ninja.data = [{
         
           title: "How to clean Chinese text data",
         
-        description: "",
+        description: "Cleaning Chinese text data for NLP.",
         section: "Posts",
         handler: () => {
           
@@ -402,7 +402,7 @@ ninja.data = [{
         
           title: "How to crawl with Python Selenium",
         
-        description: "",
+        description: "Web scraping with Python and Selenium.",
         section: "Posts",
         handler: () => {
           
@@ -413,7 +413,7 @@ ninja.data = [{
         
           title: "How to implement your own Git",
         
-        description: "",
+        description: "Implementing a small version-control system, Gitlet.",
         section: "Posts",
         handler: () => {
           
@@ -424,7 +424,7 @@ ninja.data = [{
         
           title: "How to pass CLA in IntelliJ IDEA?",
         
-        description: "",
+        description: "Passing a CLA check inside IntelliJ IDEA.",
         section: "Posts",
         handler: () => {
           
@@ -435,7 +435,7 @@ ninja.data = [{
         
           title: "How to utilize AI hallucination",
         
-        description: "",
+        description: "Turning LLM hallucination into a useful signal for a legal QA system.",
         section: "Posts",
         handler: () => {
           
@@ -446,7 +446,7 @@ ninja.data = [{
         
           title: "How to connect to Zilliz Cloud",
         
-        description: "",
+        description: "Connecting to Zilliz Cloud (managed Milvus).",
         section: "Posts",
         handler: () => {
           
@@ -457,7 +457,7 @@ ninja.data = [{
         
           title: "How to edit multiple files in Obsidian",
         
-        description: "",
+        description: "Editing multiple files at once in Obsidian.",
         section: "Posts",
         handler: () => {
           
@@ -468,7 +468,7 @@ ninja.data = [{
         
           title: "How to create your own site",
         
-        description: "",
+        description: "Building a personal site from scratch.",
         section: "Posts",
         handler: () => {
           
@@ -479,7 +479,7 @@ ninja.data = [{
         
           title: "How to backup Obsidian",
         
-        description: "",
+        description: "Backing up an Obsidian vault with the Git plugin.",
         section: "Posts",
         handler: () => {
           
@@ -490,7 +490,7 @@ ninja.data = [{
         
           title: "How to connect to Alibaba Cloud RDS",
         
-        description: "",
+        description: "Connecting to an Alibaba Cloud RDS instance from Python.",
         section: "Posts",
         handler: () => {
           
@@ -501,7 +501,7 @@ ninja.data = [{
         
           title: "How to connect to a remote server",
         
-        description: "",
+        description: "Connecting to a remote server over SSH.",
         section: "Posts",
         handler: () => {
           
@@ -512,7 +512,7 @@ ninja.data = [{
         
           title: "My personal site is set up!",
         
-        description: "",
+        description: "Setting up this personal site.",
         section: "Posts",
         handler: () => {
           
@@ -523,7 +523,7 @@ ninja.data = [{
         
           title: "Welcome to my site!",
         
-        description: "",
+        description: "A short hello and what this blog is for.",
         section: "Posts",
         handler: () => {
           

@@ -1,10 +1,10 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to chat with your local ChatGPT? | Ziqi Chen </title> <meta name="author" content="Ziqi Chen"> <meta name="description" content="Personal website of Ziqi (Adam) Chen — CS undergraduate at CUHK-Shenzhen, working on LLMs and multi-agent systems. "> <meta name="keywords" content="Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to chat with your local ChatGPT? | Ziqi Chen </title> <meta name="author" content="Ziqi Chen"> <meta name="description" content="Running a local ChatGPT-style model with Ollama."> <meta name="keywords" content="Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%BB&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://chenziqiadam.github.io/blog/2025/local-llm/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.svg?v=67055143c4c2209bb25827e970cd92a6"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://chenziqiadam.github.io/blog/2025/local-llm/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ziqi</span> Chen </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/collection/">collection </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to chat with your local ChatGPT?</h1> <p class="post-meta"> Created on July 14, 2025 </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/tag/ollama"> <i class="fa-solid fa-hashtag fa-sm"></i> Ollama</a>   <a href="/blog/tag/gemma"> <i class="fa-solid fa-hashtag fa-sm"></i> Gemma</a>   ·   <a href="/blog/category/cs"> <i class="fa-solid fa-tag fa-sm"></i> CS</a>   <a href="/blog/category/skills"> <i class="fa-solid fa-tag fa-sm"></i> Skills</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h3 id="how-to-chat-with-your-local-chatgpt">How to chat with your local ChatGPT?</h3> <p>AIs like ChatGPT have becoming increasingly inseparatable for our local lives. Everytime platforms like ChatGPT or Claude went down, or our internet connection became unstable, our productivity drop dramatically and we cannot continue to work. With <strong>Ollama</strong>, you will be free from such panic and enjoy ChatGPT <strong>on your own computer</strong> even without internect connection!</p> <h4 id="0-prerequest">0. Prerequest</h4> <ul> <li>Laptop with at least <strong>16GB RAM</strong> (For my Macbook Pro 1 with 16GB RAM, it is easy to run <strong>Gemma3 4b</strong>)</li> <li>Access to <a href="https://github.com/" rel="external nofollow noopener" target="_blank">GitHub</a> </li> </ul> <h4 id="1-download-ollama">1. Download Ollama</h4> <ul> <li>Go to <a href="https://ollama.com/" rel="external nofollow noopener" target="_blank">Ollama</a> and download the latest version.</li> <li>Once you finished download, you do not have any AI on your computer yet. So you have to download the one you want by yourself.</li> </ul> <h4 id="2-download-ai">2. Download AI</h4> <ul> <li>Open your <strong>Terminal</strong>.</li> <li>Run the following command: <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>ollama pull gemma3:1b
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ziqi</span> Chen </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/collection/">collection </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to chat with your local ChatGPT?</h1> <p class="post-meta"> Created on July 14, 2025 </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/tag/llm"> <i class="fa-solid fa-hashtag fa-sm"></i> llm</a>   <a href="/blog/tag/ollama"> <i class="fa-solid fa-hashtag fa-sm"></i> ollama</a>   <a href="/blog/tag/local-models"> <i class="fa-solid fa-hashtag fa-sm"></i> local-models</a>   ·   <a href="/blog/category/tutorial"> <i class="fa-solid fa-tag fa-sm"></i> Tutorial</a> </p> </header> <article class="post-content"> <div id="table-of-contents"> <ul id="toc" class="section-nav"> <li class="toc-entry toc-h3"> <a href="#how-to-chat-with-your-local-chatgpt">How to chat with your local ChatGPT?</a> <ul> <li class="toc-entry toc-h4"><a href="#0-prerequest">0. Prerequest</a></li> <li class="toc-entry toc-h4"><a href="#1-download-ollama">1. Download Ollama</a></li> <li class="toc-entry toc-h4"><a href="#2-download-ai">2. Download AI</a></li> <li class="toc-entry toc-h4"><a href="#3-run-ai">3. Run AI</a></li> <li class="toc-entry toc-h4"> <a href="#4-setup-web-ui-optional">4. Setup Web UI (Optional)</a> <ul> <li class="toc-entry toc-h5"><a href="#41-install-docker">4.1 Install Docker</a></li> <li class="toc-entry toc-h5"><a href="#42-set-up-open-webui">4.2 Set up Open-WebUI</a></li> <li class="toc-entry toc-h5"><a href="#43-open-the-website">4.3 Open the Website</a></li> </ul> </li> </ul> </li> </ul> </div> <hr> <div id="markdown-content"> <h3 id="how-to-chat-with-your-local-chatgpt">How to chat with your local ChatGPT?</h3> <p>AIs like ChatGPT have becoming increasingly inseparatable for our local lives. Everytime platforms like ChatGPT or Claude went down, or our internet connection became unstable, our productivity drop dramatically and we cannot continue to work. With <strong>Ollama</strong>, you will be free from such panic and enjoy ChatGPT <strong>on your own computer</strong> even without internect connection!</p> <h4 id="0-prerequest">0. Prerequest</h4> <ul> <li>Laptop with at least <strong>16GB RAM</strong> (For my Macbook Pro 1 with 16GB RAM, it is easy to run <strong>Gemma3 4b</strong>)</li> <li>Access to <a href="https://github.com/" rel="external nofollow noopener" target="_blank">GitHub</a> </li> </ul> <h4 id="1-download-ollama">1. Download Ollama</h4> <ul> <li>Go to <a href="https://ollama.com/" rel="external nofollow noopener" target="_blank">Ollama</a> and download the latest version.</li> <li>Once you finished download, you do not have any AI on your computer yet. So you have to download the one you want by yourself.</li> </ul> <h4 id="2-download-ai">2. Download AI</h4> <ul> <li>Open your <strong>Terminal</strong>.</li> <li>Run the following command: <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>ollama pull gemma3:1b
 </code></pre></div> </div> </li> <li>This command will doanload <strong>Gemma3 1b</strong>, which is basically the lightest AI.</li> <li>For more models please check Ollama document <a href="https://github.com/ollama/ollama#quickstart" rel="external nofollow noopener" target="_blank">here</a>. <blockquote> <p><strong>Note</strong>: The bigger the size is, i.e. the number before <code class="language-plaintext highlighter-rouge">b</code>, the more powerful the model is. If your small model cannot handle your request, maybe it is because you feed it too many stuff and it cannot handle. Try with a larger one.</p> </blockquote> </li> </ul> <h4 id="3-run-ai">3. Run AI</h4> <ul> <li>Open your <strong>Terminal</strong>.</li> <li>Run the following command: <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>ollama run gemma3:1b
 </code></pre></div> </div> </li> </ul> <h4 id="4-setup-web-ui-optional">4. Setup Web UI (Optional)</h4> <p>If you want to use an <strong>interface</strong> just like ChatGPT, you may choose <a href="https://github.com/open-webui/open-webui" rel="external nofollow noopener" target="_blank">Open-WebUI</a>, which is the user interface supported for Ollama.</p> <h5 id="41-install-docker">4.1 Install Docker</h5> <ul> <li>Go to <a href="https://www.docker.com/" rel="external nofollow noopener" target="_blank">Docker</a> and download their latest verion.</li> </ul> <h5 id="42-set-up-open-webui">4.2 Set up Open-WebUI</h5> <ul> <li>Open your <strong>Terminal</strong> </li> <li>Run the command <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 3000:8080 <span class="nt">--add-host</span><span class="o">=</span>host.docker.internal:host-gateway <span class="nt">-v</span> open-webui:/app/backend/data <span class="nt">--name</span> open-webui <span class="nt">--restart</span> always ghcr.io/open-webui/open-webui:main
 </code></pre></div> </div> <blockquote> <p><strong>Note</strong>: Everytime you need to open the docker container if using Open-WebUI.</p> </blockquote> </li> </ul> <h5 id="43-open-the-website">4.3 Open the Website</h5> <ul> <li>Go to your browser and open <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code> </li> </ul> <p>Now let’s chat on your own computer!</p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/surp-interview/">How to prepare for SURP interviews?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/research-advisor/">How to find a suitable research advisor?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/github-issue/">Learn from GitHub Issues</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/openclaw/">Five Tips for Openclaw</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/obsidian-mermaid/">Mermaid Diagram in Obsidian</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/mas/">Systematic Overview of MAS</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/local-api/">How to deploy a local model as an API endpoint</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/shanhaiwoo/">ShanhaiWoo - My First Web3 Popup Event</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/synapse/">Synapse - Your Obsidian Local Knowledge Engine</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/wiki-pdf-dataset/">How to prepare pdf datasets from Wikipedia?</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Ziqi Chen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
@@ -78,7 +78,7 @@ ninja.data = [{
         
           title: "How to prepare for SURP interviews?",
         
-        description: "",
+        description: "Preparing for SURP research interviews.",
         section: "Posts",
         handler: () => {
           
@@ -89,7 +89,7 @@ ninja.data = [{
         
           title: "How to find a suitable research advisor?",
         
-        description: "",
+        description: "How to find a research advisor who is a good fit.",
         section: "Posts",
         handler: () => {
           
@@ -100,7 +100,7 @@ ninja.data = [{
         
           title: "Learn from GitHub Issues",
         
-        description: "",
+        description: "What you can learn from reading GitHub issues.",
         section: "Posts",
         handler: () => {
           
@@ -111,7 +111,7 @@ ninja.data = [{
         
           title: "Five Tips for Openclaw",
         
-        description: "",
+        description: "Five tips for getting more out of OpenClaw.",
         section: "Posts",
         handler: () => {
           
@@ -122,7 +122,7 @@ ninja.data = [{
         
           title: "Mermaid Diagram in Obsidian",
         
-        description: "",
+        description: "Using Mermaid diagrams in Obsidian.",
         section: "Posts",
         handler: () => {
           
@@ -133,7 +133,7 @@ ninja.data = [{
         
           title: "Systematic Overview of MAS",
         
-        description: "",
+        description: "A systematic overview of LLM-based multi-agent systems.",
         section: "Posts",
         handler: () => {
           
@@ -144,7 +144,7 @@ ninja.data = [{
         
           title: "How to deploy a local model as an API endpoint",
         
-        description: "",
+        description: "Serving a local model as an API endpoint.",
         section: "Posts",
         handler: () => {
           
@@ -155,7 +155,7 @@ ninja.data = [{
         
           title: "ShanhaiWoo - My First Web3 Popup Event",
         
-        description: "",
+        description: "ShanHaiWoo: my first Web3 popup event.",
         section: "Posts",
         handler: () => {
           
@@ -166,7 +166,7 @@ ninja.data = [{
         
           title: "Synapse - Your Obsidian Local Knowledge Engine",
         
-        description: "",
+        description: "Synapse: a local knowledge engine for Obsidian.",
         section: "Posts",
         handler: () => {
           
@@ -177,7 +177,7 @@ ninja.data = [{
         
           title: "How to prepare pdf datasets from Wikipedia?",
         
-        description: "",
+        description: "Building PDF datasets from Wikipedia.",
         section: "Posts",
         handler: () => {
           
@@ -188,7 +188,7 @@ ninja.data = [{
         
           title: "How to chat with your local ChatGPT?",
         
-        description: "",
+        description: "Running a local ChatGPT-style model with Ollama.",
         section: "Posts",
         handler: () => {
           
@@ -199,7 +199,7 @@ ninja.data = [{
         
           title: "How to start your Web3 journey?",
         
-        description: "",
+        description: "Getting started with Web3 through Binance.",
         section: "Posts",
         handler: () => {
           
@@ -210,7 +210,7 @@ ninja.data = [{
         
           title: "How to set up Clash on Linux server?",
         
-        description: "",
+        description: "Setting up Clash on a Linux server.",
         section: "Posts",
         handler: () => {
           
@@ -221,7 +221,7 @@ ninja.data = [{
         
           title: "How to get the first internship?",
         
-        description: "",
+        description: "How I landed my first internship.",
         section: "Posts",
         handler: () => {
           
@@ -232,7 +232,7 @@ ninja.data = [{
         
           title: "How to create your own Obsidian plugin?",
         
-        description: "",
+        description: "Writing your first Obsidian plugin.",
         section: "Posts",
         handler: () => {
           
@@ -243,7 +243,7 @@ ninja.data = [{
         
           title: "How to create your own chatbots?",
         
-        description: "",
+        description: "Creating custom chatbots on Poe.",
         section: "Posts",
         handler: () => {
           
@@ -254,7 +254,7 @@ ninja.data = [{
         
           title: "Introduction to Web3 and DePIN",
         
-        description: "",
+        description: "An introduction to Web3 and DePIN.",
         section: "Posts",
         handler: () => {
           
@@ -265,7 +265,7 @@ ninja.data = [{
         
           title: "How to build a full stack app with AWS?",
         
-        description: "",
+        description: "Building a full-stack app on AWS.",
         section: "Posts",
         handler: () => {
           
@@ -276,7 +276,7 @@ ninja.data = [{
         
           title: "Ten Tips for Cursor",
         
-        description: "",
+        description: "Ten practical tips for working in Cursor.",
         section: "Posts",
         handler: () => {
           
@@ -287,7 +287,7 @@ ninja.data = [{
         
           title: "Ever lost track of time while browsing? Try Time Guardian!",
         
-        description: "",
+        description: "Time Guardian: a browser extension that nudges you when you lose track of time.",
         section: "Posts",
         handler: () => {
           
@@ -298,7 +298,7 @@ ninja.data = [{
         
           title: "How to integrate Gemini into your extension?",
         
-        description: "",
+        description: "Integrating the Gemini API into a Chrome extension.",
         section: "Posts",
         handler: () => {
           
@@ -309,7 +309,7 @@ ninja.data = [{
         
           title: "How to become Chrome Extension developer?",
         
-        description: "",
+        description: "Getting started as a Chrome extension developer.",
         section: "Posts",
         handler: () => {
           
@@ -320,7 +320,7 @@ ninja.data = [{
         
           title: "How to deploy websites on a remote server",
         
-        description: "",
+        description: "Deploying a website on a remote server.",
         section: "Posts",
         handler: () => {
           
@@ -331,7 +331,7 @@ ninja.data = [{
         
           title: "How to design and implement an AI agent",
         
-        description: "",
+        description: "Designing and implementing an LLM agent from first principles.",
         section: "Posts",
         handler: () => {
           
@@ -342,7 +342,7 @@ ninja.data = [{
         
           title: "How to sync Obsidian on iPad with PC",
         
-        description: "",
+        description: "Syncing an Obsidian vault between iPad and PC via GitHub.",
         section: "Posts",
         handler: () => {
           
@@ -353,7 +353,7 @@ ninja.data = [{
         
           title: "如何自学备考GRE",
         
-        description: "",
+        description: "Self-studying for the GRE.",
         section: "Posts",
         handler: () => {
           
@@ -364,7 +364,7 @@ ninja.data = [{
         
           title: "How to DIY Obsidian homepage",
         
-        description: "",
+        description: "Building a custom Obsidian homepage dashboard.",
         section: "Posts",
         handler: () => {
           
@@ -375,7 +375,7 @@ ninja.data = [{
         
           title: "How to clean Chinese text data",
         
-        description: "",
+        description: "Cleaning Chinese text data for NLP.",
         section: "Posts",
         handler: () => {
           
@@ -386,7 +386,7 @@ ninja.data = [{
         
           title: "How to crawl with Python Selenium",
         
-        description: "",
+        description: "Web scraping with Python and Selenium.",
         section: "Posts",
         handler: () => {
           
@@ -397,7 +397,7 @@ ninja.data = [{
         
           title: "How to implement your own Git",
         
-        description: "",
+        description: "Implementing a small version-control system, Gitlet.",
         section: "Posts",
         handler: () => {
           
@@ -408,7 +408,7 @@ ninja.data = [{
         
           title: "How to pass CLA in IntelliJ IDEA?",
         
-        description: "",
+        description: "Passing a CLA check inside IntelliJ IDEA.",
         section: "Posts",
         handler: () => {
           
@@ -419,7 +419,7 @@ ninja.data = [{
         
           title: "How to utilize AI hallucination",
         
-        description: "",
+        description: "Turning LLM hallucination into a useful signal for a legal QA system.",
         section: "Posts",
         handler: () => {
           
@@ -430,7 +430,7 @@ ninja.data = [{
         
           title: "How to connect to Zilliz Cloud",
         
-        description: "",
+        description: "Connecting to Zilliz Cloud (managed Milvus).",
         section: "Posts",
         handler: () => {
           
@@ -441,7 +441,7 @@ ninja.data = [{
         
           title: "How to edit multiple files in Obsidian",
         
-        description: "",
+        description: "Editing multiple files at once in Obsidian.",
         section: "Posts",
         handler: () => {
           
@@ -452,7 +452,7 @@ ninja.data = [{
         
           title: "How to create your own site",
         
-        description: "",
+        description: "Building a personal site from scratch.",
         section: "Posts",
         handler: () => {
           
@@ -463,7 +463,7 @@ ninja.data = [{
         
           title: "How to backup Obsidian",
         
-        description: "",
+        description: "Backing up an Obsidian vault with the Git plugin.",
         section: "Posts",
         handler: () => {
           
@@ -474,7 +474,7 @@ ninja.data = [{
         
           title: "How to connect to Alibaba Cloud RDS",
         
-        description: "",
+        description: "Connecting to an Alibaba Cloud RDS instance from Python.",
         section: "Posts",
         handler: () => {
           
@@ -485,7 +485,7 @@ ninja.data = [{
         
           title: "How to connect to a remote server",
         
-        description: "",
+        description: "Connecting to a remote server over SSH.",
         section: "Posts",
         handler: () => {
           
@@ -496,7 +496,7 @@ ninja.data = [{
         
           title: "My personal site is set up!",
         
-        description: "",
+        description: "Setting up this personal site.",
         section: "Posts",
         handler: () => {
           
@@ -507,7 +507,7 @@ ninja.data = [{
         
           title: "Welcome to my site!",
         
-        description: "",
+        description: "A short hello and what this blog is for.",
         section: "Posts",
         handler: () => {
           
