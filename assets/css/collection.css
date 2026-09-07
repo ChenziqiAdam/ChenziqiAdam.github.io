@@ -1,0 +1,61 @@
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.collection-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--global-card-bg-color, var(--global-bg-color));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.collection-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.collection-card figcaption {
+  padding: 0.9rem 1rem 1rem;
+  flex: 1;
+}
+
+.collection-title {
+  font-weight: 600;
+  color: var(--global-text-color);
+  line-height: 1.3;
+}
+
+.collection-subtitle {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.5rem;
+}
+
+.collection-quote {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--global-text-color-light);
+  border-left: 2px solid var(--global-theme-color);
+  padding-left: 0.6rem;
+  margin: 0.5rem 0;
+}
+
+.collection-rating {
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}

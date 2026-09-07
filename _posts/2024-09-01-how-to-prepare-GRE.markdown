@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "如何自学备考GRE"
 date:   2024-09-01 14:19:40 +0800
 categories:

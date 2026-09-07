@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "Mermaid Diagram in Obsidian"
 date:   2026-01-26 15:09:15 +0800
 categories:

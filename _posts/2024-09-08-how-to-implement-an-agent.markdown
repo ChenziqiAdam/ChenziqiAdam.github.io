@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to design and implement an AI agent"
 date:   2024-09-08 15:41:20 +0800
 categories:
@@ -44,7 +44,7 @@ Actually, coding is relatively easy. What deserves your attention is **framework
 #### 4. Example Framework and Code
 This is my first agent for Chinese laws consultation.
 
-![agent-demo](/images/agent-demo.png)
+![agent-demo](/assets/img/agent-demo.png)
 
 {% highlight python %}
 # Chat

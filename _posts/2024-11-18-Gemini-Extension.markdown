@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to integrate Gemini into your extension?"
 date:   2024-11-18 19:20:50 +0800
 categories:

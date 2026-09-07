@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to connect to Alibaba Cloud RDS"
 date:   2024-07-01 21:05:55 +0800
 categories:

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to prepare pdf datasets from Wikipedia?"
 date:   2025-07-14 16:00:10 +0800
 categories:

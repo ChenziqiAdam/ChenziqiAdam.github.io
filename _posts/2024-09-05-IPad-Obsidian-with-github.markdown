@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to sync Obsidian on iPad with PC"
 date:   2024-09-05 18:43:30 +0800
 categories:

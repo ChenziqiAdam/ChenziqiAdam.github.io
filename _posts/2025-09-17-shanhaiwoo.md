@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "ShanhaiWoo - My First Web3 Popup Event"
 date:   2025-09-17 14:28:45 +0800
 categories:
@@ -12,7 +12,7 @@ tags:
 
 [ShanhaiWoo](https://www.shanhaiwoo.com/) is a **Web3 popup event** that provides a chance for participant to learn, collaborate and display. It provides **scholarship** including flight tickets and accomodation. In general, ShanhaiWoo is a valuable opportunity that not only allows you to explore by yourself, but also brings people together.
 
-![ShanhaiWoo](/images/shanhaiwoo.jpeg)
+![ShanhaiWoo](/assets/img/shanhaiwoo.jpeg)
 
 ### My Journey with ShanhaiWoo
 

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "Learn from GitHub Issues"
 date:   2026-03-16 21:06:00 +0800
 categories:

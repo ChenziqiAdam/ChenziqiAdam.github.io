@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to find a suitable research advisor?"
 date:   2026-05-24 21:06:00 +0800
 categories:

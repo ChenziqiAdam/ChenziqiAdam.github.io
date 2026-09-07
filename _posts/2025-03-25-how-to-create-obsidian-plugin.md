@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to create your own Obsidian plugin?"
 date:   2025-03-25 19:15:20 +0800
 categories:
@@ -39,7 +39,7 @@ Here are the [official guidelines](https://docs.obsidian.md/Plugins/Releasing/Pl
 This is my first plugin: [Daily News Briefing](https://github.com/ChenziqiAdam/Daily-News-Briefing). Try it out!
 
 #### Demo
-{% include video id="nbbisoqsZDc" provider="youtube" %}
+{% include video.liquid path="https://www.youtube.com/embed/nbbisoqsZDc" class="img-fluid rounded z-depth-1" %}
 
 
 Now it is done. Try out yourself!
