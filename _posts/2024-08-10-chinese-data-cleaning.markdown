@@ -1,10 +1,16 @@
 ---
 layout: post
-title:  "How to clean Chinese text data"
-date:   2024-08-10 16:12:00 +0800
+title: "How to clean Chinese text data"
+date: 2024-08-10 16:12:00 +0800
+description: "Cleaning Chinese text data for NLP."
+tags:
+  - python
+  - nlp
+  - data
 categories:
-  - CS
-  - Skills
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to clean Chinese network novel data?
 It is important for **ML** (machine learning) to prepare qualified data. After crawling on the internet, it is a must to clean the crawled data to improve the quality of data. This blog is an example for cleaning **Chinese network novels**. More about **crawling** see [my previous blog](/cs/skills/2024/08/01/selenium-crawl.html).

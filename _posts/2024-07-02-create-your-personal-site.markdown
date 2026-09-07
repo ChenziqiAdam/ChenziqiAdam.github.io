@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "How to create your own site"
-date:   2024-07-02 15:35:45 +0800
-categories:
-  - CS
-  - Skills
+title: "How to create your own site"
+date: 2024-07-02 15:35:45 +0800
+description: "Building a personal site from scratch."
 tags:
-  - Jekyll
-  - GitHub
-  - Minimal Mistakes
-  - Git
+  - jekyll
+  - github-pages
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to create your own site with GitHub Pages
 This blog will show the steps of how to create your own personal site like this.

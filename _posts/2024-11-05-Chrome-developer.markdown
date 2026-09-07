@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "How to become Chrome Extension developer?"
-date:   2024-11-05 16:27:40 +0800
-categories:
-  - CS
-  - Skills
+title: "How to become Chrome Extension developer?"
+date: 2024-11-05 16:27:40 +0800
+description: "Getting started as a Chrome extension developer."
 tags:
-  - Google
+  - chrome-extension
+  - javascript
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to become Chrome Extension developer?
 It is helpful to build **Chrome Extension** to accumulate real world experience, give your a sence of achievements and even add to your income! See my first extension **"Gentle Time Reminder** [here](https://chromewebstore.google.com/detail/gentle-time-reminder/ohoebhfifcpnhkhoihjlnmadbmamdinj).

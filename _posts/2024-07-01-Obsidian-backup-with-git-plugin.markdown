@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "How to backup Obsidian"
-date:   2024-07-01 23:08:10 +0800
-categories: 
-  - Skills
+title: "How to backup Obsidian"
+date: 2024-07-01 23:08:10 +0800
+description: "Backing up an Obsidian vault with the Git plugin."
 tags:
-  - Obsidian
-  - Git
+  - obsidian
+  - git
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to backup Obsidian with Git plugin
 Since Obsidian files are local, it is important to back them up. The Git plugin is a free and general option compared to the official.

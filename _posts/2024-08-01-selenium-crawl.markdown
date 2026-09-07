@@ -1,12 +1,16 @@
 ---
 layout: post
-title:  "How to crawl with Python Selenium"
-date:   2024-08-01 17:02:30 +0800
-categories:
-  - CS
-  - Skills
+title: "How to crawl with Python Selenium"
+date: 2024-08-01 17:02:30 +0800
+description: "Web scraping with Python and Selenium."
 tags:
-  - Selenium
+  - python
+  - selenium
+  - scraping
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to crawl network novels with Python Selenium
 It is important for **ML** (machine learning) to prepare qulified data. It is common to crawl on the internet to retrive the target data. This blog is an example for crawling **Chinese network novels**. More about **data cleaning** see [my next blog](/cs/skills/2024/08/10/chinese-data-cleaning.html).

@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "How to DIY Obsidian homepage"
-date:   2024-08-14 14:14:15 +0800
-categories:
-  - Skills
-  - Portfolio
+title: "How to DIY Obsidian homepage"
+date: 2024-08-14 14:14:15 +0800
+description: "Building a custom Obsidian homepage dashboard."
 tags:
-  - Obsidian
+  - obsidian
+  - dataview
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to DIY your Obsidian homepage from scratch?
 Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. 

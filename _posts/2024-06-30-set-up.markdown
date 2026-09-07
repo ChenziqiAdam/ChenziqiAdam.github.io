@@ -1,8 +1,15 @@
 ---
 layout: post
-title:  "My personal site is set up!"
-date:   2024-06-30 11:37:10 +0800
-categories: Others
+title: "My personal site is set up!"
+date: 2024-06-30 11:37:10 +0800
+description: "Setting up this personal site."
+tags:
+  - site
+  - jekyll
+categories:
+  - Life
+toc:
+  beginning: true
 ---
 ### Finally set up!
 My personal site is now set up!

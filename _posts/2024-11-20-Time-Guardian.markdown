@@ -1,17 +1,16 @@
 ---
 layout: post
-title:  "Ever lost track of time while browsing? Try Time Guardian!"
-date:   2024-11-20 21:07:10 +0800
-categories:
-  - CS
-  - Skills
-  - AI
-  - Portfolio
+title: "Ever lost track of time while browsing? Try Time Guardian!"
+date: 2024-11-20 21:07:10 +0800
+description: "Time Guardian: a browser extension that nudges you when you lose track of time."
 tags:
-  - Google
-  - Gemini
+  - chrome-extension
+  - gemini
+categories:
+  - Project
+toc:
+  beginning: true
 ---
-
 ## Guard Your Time
 Time Guardian is a **Chrome extension** designed to help you manage your time effectively. It provides smart time reminders using the **Gemini AI model**, ensuring you stay on track with your tasks and avoid distractions. [Download](https://chromewebstore.google.com/detail/time-guardian/nooddbcedmaojbhgebdcjdnkjbojjjeb) now!
 

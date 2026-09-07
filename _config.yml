@@ -15,7 +15,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 👻 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 url: https://chenziqiadam.github.io # the base hostname & protocol for your site
@@ -323,8 +323,8 @@ jekyll-archives:
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["llm", "obsidian", "agents", "multi-agent-systems", "rag", "chrome-extension", "git", "python"] # these tags will be displayed on the front page of your blog
+display_categories: ["Tutorial", "Research", "Project", "Web3", "Life"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  "Ten Tips for Cursor"
-date:   2024-12-14 13:53:15 +0800
-categories:
-  - CS
-  - Skills
-  - AI
+title: "Ten Tips for Cursor"
+date: 2024-12-14 13:53:15 +0800
+description: "Ten practical tips for working in Cursor."
 tags:
-  - Cursor
+  - cursor
+  - ai-coding
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### Ten Tips for Coding Better with Cursor
 [Cursor](https://www.cursor.com/) is the most helpful tool for **project development**. It is more than a simple IDE, but a software engineer. Check [my blog website](https://adamchen.tech) I created with Cursor. So here are ten tips I find helpful for coding better with Cursor.

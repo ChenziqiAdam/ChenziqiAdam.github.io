@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "How to design and implement an AI agent"
-date:   2024-09-08 15:41:20 +0800
-categories:
-  - CS
-  - RA
-  - AI
-  - Portfolio
+title: "How to design and implement an AI agent"
+date: 2024-09-08 15:41:20 +0800
+description: "Designing and implementing an LLM agent from first principles."
 tags:
-  - OpenAI
-  - Zilliz
+  - llm
+  - agents
+categories:
+  - Research
+toc:
+  beginning: true
 ---
 ### How to design and implement an AI agent for beginners?
 This blog is mainly for **beginners** about **AI agents**. **AI agents** are LLMs (large language models) that can **perform tasks on their own**. For example, call a calculator to calculate or search for answers in data bases, in order to **avoid hallucination**. Here we will go through **key conponents of agents**, **how to design agents' framework**, and **how to implement an agent**.

@@ -1,11 +1,15 @@
 ---
 layout: post
-title:  "How to pass CLA in IntelliJ IDEA?"
-date:   2024-07-18 15:02:30 +0800
-categories: 
-  - CS
+title: "How to pass CLA in IntelliJ IDEA?"
+date: 2024-07-18 15:02:30 +0800
+description: "Passing a CLA check inside IntelliJ IDEA."
 tags:
-  - IntelliJ IDEA
+  - intellij
+  - git
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to pass command line arguments (CLA) in IntelliJ IDEA?
 

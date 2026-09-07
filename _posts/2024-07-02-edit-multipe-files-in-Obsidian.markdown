@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "How to edit multiple files in Obsidian"
-date:   2024-07-02 17:51:25 +0800
-categories: 
-  - Skills
-  - CS
+title: "How to edit multiple files in Obsidian"
+date: 2024-07-02 17:51:25 +0800
+description: "Editing multiple files at once in Obsidian."
 tags:
-  - Git
-  - Obsidian
+  - obsidian
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to edit multiple files in Obsidian with Git
 I have encountered this problem before. I wanted to add a tag to all files in one folder, but I failed to find a good solution or plugin on the internet. However, I solved this myself with **Git**.

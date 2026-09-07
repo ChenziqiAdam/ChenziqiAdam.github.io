@@ -1,8 +1,14 @@
 ---
 layout: post
-title:  "Welcome to my site!"
-date:   2024-06-26 21:07:15 +0800
-categories: Others
+title: "Welcome to my site!"
+date: 2024-06-26 21:07:15 +0800
+description: "A short hello and what this blog is for."
+tags:
+  - site
+categories:
+  - Life
+toc:
+  beginning: true
 ---
 ### Welcome to Ziqi Chen's personal site!
 This is my personal site!

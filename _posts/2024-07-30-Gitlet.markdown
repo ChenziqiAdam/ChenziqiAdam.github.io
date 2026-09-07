@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "How to implement your own Git"
-date:   2024-07-30 16:16:15 +0800
-categories:
-  - CS
-  - Portfolio
+title: "How to implement your own Git"
+date: 2024-07-30 16:16:15 +0800
+description: "Implementing a small version-control system, Gitlet."
 tags:
-  - Git
+  - git
+  - java
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to implement your own version control system based on Git (based on UCB CS 61B)
 This blog is all based on **UCB CS 61B (Data Structures, Spring 2021)**. More see [the official website](https://sp21.datastructur.es/materials/proj/proj2/proj2).

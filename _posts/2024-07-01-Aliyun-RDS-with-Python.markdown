@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "How to connect to Alibaba Cloud RDS"
-date:   2024-07-01 21:05:55 +0800
-categories:
-  - CS
-  - RA
-  - Skills
+title: "How to connect to Alibaba Cloud RDS"
+date: 2024-07-01 21:05:55 +0800
+description: "Connecting to an Alibaba Cloud RDS instance from Python."
 tags:
-  - Alibaba Cloud
+  - database
+  - python
+  - alibaba-cloud
+categories:
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to connect to Alibaba Cloud (Aliyun) RDS (MySQL version) in Python
 

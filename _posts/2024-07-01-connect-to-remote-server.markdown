@@ -1,11 +1,15 @@
 ---
 layout: post
-title:  "How to connect to a remote server"
-date:   2024-07-01 18:41:15 +0800
+title: "How to connect to a remote server"
+date: 2024-07-01 18:41:15 +0800
+description: "Connecting to a remote server over SSH."
+tags:
+  - ssh
+  - servers
 categories:
-  - CS
-  - RA
-  - Skills
+  - Tutorial
+toc:
+  beginning: true
 ---
 ### How to connect to a remote server in Visual Studio Code
 This blog takes **Visual Studio Code** as an example for how to connect to a remote server.
