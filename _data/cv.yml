@@ -2,7 +2,6 @@ cv:
   name: Ziqi (Adam) Chen
   label: CS Undergraduate — CUHK-Shenzhen
   email: ziqichen1@link.cuhk.edu.cn
-  location: Hong Kong / Shenzhen
   summary: >
     Computer Science & Engineering undergraduate at CUHK-Shenzhen working on large
     language models and LLM-based multi-agent systems.
@@ -10,74 +9,57 @@ cv:
   sections:
     Education:
       - institution: The Chinese University of Hong Kong, Shenzhen
-        location: Shenzhen, China
         url: https://www.cuhk.edu.cn/en
         area: Computer Science & Engineering
         studyType: B.Eng.
         logo: cuhksz-logo.png
         start_date: 2023-09
         end_date: 2027-05
-        highlights:
-          - "GPA 3.7 (top 20%). Expected graduation May 2027."
       - institution: Suzhou High School
-        location: Suzhou, China
         studyType: High School Diploma
         logo: high-school-logo.jpeg
         start_date: 2020-09
         end_date: 2023-06
-        highlights: []
 
     Experience:
       - company: UChicago Summer Research Fellowship (SSRF)
         position: Research Intern
-        location: Chicago, IL (remote)
         url: https://cs.uchicago.edu/academics/undergraduate/summer-research/student-summer-research-fellowship-program/
         logo: uchi-logo.jpg
         start_date: 2026-04
         end_date: 2026-09
-        highlights: []
       - company: CUHK-Shenzhen FreedomAI Lab
         position: Research Assistant
-        location: Shenzhen, China
         url: https://freedomintelligence.github.io/
         logo: cuhksz-logo.png
         start_date: 2025-02
         end_date: 2026-05
-        highlights:
-          - "Structure-aware document analysis (DocMaster); task-adaptive communication topologies for multi-agent systems (MAS-Designer)."
       - company: Shenzhen Research Institute of Big Data
         position: Research Assistant
-        location: Shenzhen, China
         url: https://www.sribd.cn/en
         logo: sribd-logo.jpeg
         start_date: 2024-04
         end_date: 2024-12
-        highlights: []
       - company: Mortar
         position: Founding Engineer
-        location: Remote
         url: https://www.getmortar.ai/
         logo: mortar-logo.jpeg
         start_date: 2025-12
         end_date: 2026-02
-        highlights: []
       - company: Lalamove
         position: NLP Engineer
-        location: Hong Kong
         url: https://www.lalamove.com/
         logo: lalamove-logo.png
         start_date: 2025-05
         end_date: 2025-08
-        highlights: []
 
     Honors and Awards:
       - title: Undergraduate Research Award
         date: 2026-03
         awarder: CUHK-Shenzhen
-      - title: Dean's List
+      - title: Dean's List (2024 & 2025)
         date: 2025
         awarder: CUHK-Shenzhen
-        summary: 2024 and 2025.
       - title: CUMCM Third Prize
         date: 2025-09
       - title: ICM/MCM Honorable Mention

@@ -14,7 +14,7 @@ layouts and constructs a structure-aware semantic index that enables accurate
 document filtering and in-depth analysis. See the paper website
 [here](https://doc-master.github.io/).
 
-{% include figure.liquid loading="eager" path="assets/img/docmaster.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="DocMaster workflow" %}
+{% include figure.liquid loading="eager" path="assets/img/docmaster.png" class="img-fluid rounded z-depth-1" zoomable=true caption="DocMaster workflow" %}
 
 ## [MAS-Designer: Learning Task-Adaptive Communication Topologies for LLM-Based Multi-Agent Systems](/assets/pdf/MASDesigner.pdf)
 
