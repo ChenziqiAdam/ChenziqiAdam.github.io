@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to connect to a remote server"
 date:   2024-07-01 18:41:15 +0800
 categories:

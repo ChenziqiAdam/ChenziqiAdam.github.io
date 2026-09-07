@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to clean Chinese text data"
 date:   2024-08-10 16:12:00 +0800
 categories:

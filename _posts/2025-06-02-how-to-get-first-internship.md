@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to get the first internship?"
 date:   2025-06-02 15:24:30 +0800
 categories:
@@ -13,7 +13,7 @@ tags:
 
 本文针对中国学生如何找到自己的**第一份互联网实习**。博主最后收到了2家中厂和3家小厂的offer，遂记录分享一些tips。
 
-![statistic](/images/2025-internship-statistic.png)
+![statistic](/assets/img/2025-internship-statistic.png)
 	
 #### 1. 简历得精装
 - 简历上写的一定自己得非常了解，不然会扣分。

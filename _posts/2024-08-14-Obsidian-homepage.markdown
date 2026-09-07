@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to DIY Obsidian homepage"
 date:   2024-08-14 14:14:15 +0800
 categories:
@@ -14,7 +14,7 @@ As for me, a good homepage works as a **dashboard** and facilitate my workflow.
 Here is my version of Obsidian homepage, you can also download the **template vault** from [my GitHub repository](https://github.com/ChenziqiAdam/Obsidian-Homepage) and play around.
 
 #### Screenshots
-![screenshot](/images/obsidian-homepage-dark.png)
+![screenshot](/assets/img/obsidian-homepage-dark.png)
 
 #### Key Features
 - **Countdown**

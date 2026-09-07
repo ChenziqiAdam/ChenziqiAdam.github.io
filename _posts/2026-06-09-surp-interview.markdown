@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to prepare for SURP interviews?"
 date:   2026-06-09 16:38:35 +0800
 categories:

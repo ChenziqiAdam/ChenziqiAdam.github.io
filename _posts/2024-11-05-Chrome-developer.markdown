@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to become Chrome Extension developer?"
 date:   2024-11-05 16:27:40 +0800
 categories:

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "Ten Tips for Cursor"
 date:   2024-12-14 13:53:15 +0800
 categories:

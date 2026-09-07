@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to set up Clash on Linux server?"
 date:   2025-07-05 15:59:30 +0800
 categories:

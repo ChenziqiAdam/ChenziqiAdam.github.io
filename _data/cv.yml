@@ -1,0 +1,94 @@
+cv:
+  name: Ziqi (Adam) Chen
+  label: CS Undergraduate — CUHK-Shenzhen
+  email: ziqichen1@link.cuhk.edu.cn
+  location: Hong Kong / Shenzhen
+  image: ""
+  summary: >
+    Computer Science & Engineering undergraduate at CUHK-Shenzhen working on large
+    language models and LLM-based multi-agent systems.
+
+  social_networks:
+    - network: GitHub
+      username: ChenziqiAdam
+    - network: LinkedIn
+      username: ziqi-chen-adam
+
+  sections:
+    Education:
+      - institution: The Chinese University of Hong Kong, Shenzhen
+        location: Shenzhen, China
+        url: https://www.cuhk.edu.cn/en
+        area: Computer Science & Engineering
+        studyType: B.Eng.
+        start_date: 2023-09
+        end_date: 2027-05
+        score: "GPA 3.7 (top 20%)"
+        highlights:
+          - "Expected graduation May 2027."
+      - institution: Suzhou High School
+        location: Suzhou, China
+        area: ""
+        studyType: ""
+        start_date: 2020-09
+        end_date: 2023-06
+        highlights: []
+
+    Research Experience:
+      - company: UChicago Summer Research Fellowship (SSRF)
+        position: Research Intern
+        url: https://cs.uchicago.edu/academics/undergraduate/summer-research/student-summer-research-fellowship-program/
+        start_date: 2026-04
+        end_date: 2026-09
+        highlights: []
+      - company: CUHK-Shenzhen FreedomAI Lab
+        position: Research Assistant
+        url: https://freedomintelligence.github.io/
+        start_date: 2025-02
+        end_date: 2026-05
+        highlights: []
+      - company: Shenzhen Research Institute of Big Data
+        position: Research Assistant
+        url: https://www.sribd.cn/en
+        start_date: 2024-04
+        end_date: 2024-12
+        highlights: []
+
+    Experience:
+      - company: Mortar
+        position: Founding Engineer
+        url: https://www.getmortar.ai/
+        start_date: 2025-12
+        end_date: 2026-02
+        highlights: []
+      - company: Lalamove
+        position: NLP Engineer
+        url: https://www.lalamove.com/
+        start_date: 2025-05
+        end_date: 2025-08
+        highlights: []
+
+    Awards:
+      - title: Undergraduate Research Award
+        date: 2026-03
+        awarder: CUHK-Shenzhen
+      - title: Dean's List
+        date: 2025
+        awarder: CUHK-Shenzhen
+        summary: 2024 and 2025.
+      - title: CUMCM Third Prize
+        date: 2025-09
+      - title: ICM/MCM Honorable Mention
+        date: 2025-05
+      - title: GBA International Programming Contest, First Prize
+        date: 2025-04
+
+    Skills:
+      - name: Research
+        keywords: "LLMs, Multi-agent systems, RAG, Fine-tuning, Reinforcement learning"
+
+    Languages:
+      - name: Chinese
+        summary: Native speaker
+      - name: English
+        summary: "Fluent (TOEFL 111, GRE 329)"

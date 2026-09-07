@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to pass CLA in IntelliJ IDEA?"
 date:   2024-07-18 15:02:30 +0800
 categories: 

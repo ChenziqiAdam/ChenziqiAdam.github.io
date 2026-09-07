@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to edit multiple files in Obsidian"
 date:   2024-07-02 17:51:25 +0800
 categories: 

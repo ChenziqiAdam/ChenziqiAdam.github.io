@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "How to utilize AI hallucination"
 date:   2024-07-06 23:18:30 +0800
 categories: 
