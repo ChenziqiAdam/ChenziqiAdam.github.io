@@ -5,7 +5,7 @@ permalink: /projects/
 description: Plugins, extensions, and tools I have built.
 nav: true
 nav_order: 3
-display_categories: [plugins, extensions, other]
+display_categories: [Obsidian, Chrome, other]
 horizontal: false
 ---
 

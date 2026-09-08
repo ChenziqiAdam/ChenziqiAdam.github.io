@@ -4,7 +4,7 @@ title: Time Guardian
 description: A Chrome extension for smart time reminders powered by Gemini.
 img: assets/img/time-guardian.png
 importance: 2
-category: extensions
+category: Chrome
 ---
 
 Time Guardian helps you manage your time effectively, providing smart time
