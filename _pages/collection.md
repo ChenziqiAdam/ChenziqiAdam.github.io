@@ -31,7 +31,7 @@ toc:
         {% assign full = item.rating | floor %}
         {% assign has_half = item.rating | minus: full %}
         <div class="collection-rating" title="{{ item.rating }} / 5">
-          {% for i in (1..5) %}{% if i <= full %}&#9733;{% else %}&#9734;{% endif %}{% endfor %}{% if has_half > 0 %}&#189;{% endif %}
+          {% for i in (1..5) %}{% if i <= full %}<span class="star full">&#9733;</span>{% elsif has_half > 0 and i == full | plus: 1 %}<span class="star half">&#9733;</span>{% else %}<span class="star empty">&#9733;</span>{% endif %}{% endfor %}
         </div>
       </div>
     </div>
