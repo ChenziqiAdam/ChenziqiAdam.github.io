@@ -29,4 +29,4 @@ I am fortunate to conduct research with [Prof. Hongyuan Zha](https://sds.cuhk.ed
 
 My research interests center on efficient and adaptive LLMs, particularly in adaptive computation, self-evolving agents, and efficient reasoning. I am also interested in applying these techniques to AI for Science, especially scientific reasoning and software.
 
-See my [projects](/projects/) and [publications](/publications/) for more.
+See my [research](/research/) and [publications](/publications/) for more.
