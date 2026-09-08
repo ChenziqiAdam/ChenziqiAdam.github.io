@@ -25,23 +25,19 @@ toc:
   <figure class="collection-card">
     <div class="collection-cover">
       <img loading="lazy" src="{{ item.image | relative_url }}" alt="{{ item.alt }}">
-      {% if item.quote %}
-      <div class="collection-quote-overlay">
-        <p>&ldquo;{{ item.quote }}&rdquo;</p>
-      </div>
-      {% endif %}
-    </div>
-    <figcaption>
-      <div class="collection-title">{{ item.title }}</div>
-      <div class="collection-meta">
-        <span class="collection-subtitle">{{ item.subtitle }}</span>
+      <div class="collection-headline">
+        <div class="collection-title">{{ item.title }}</div>
+        <div class="collection-subtitle">{{ item.subtitle }}</div>
         {% assign full = item.rating | floor %}
         {% assign has_half = item.rating | minus: full %}
-        <span class="collection-rating" title="{{ item.rating }} / 5">
+        <div class="collection-rating" title="{{ item.rating }} / 5">
           {% for i in (1..5) %}{% if i <= full %}&#9733;{% else %}&#9734;{% endif %}{% endfor %}{% if has_half > 0 %}&#189;{% endif %}
-        </span>
+        </div>
       </div>
-    </figcaption>
+    </div>
+    {% if item.quote %}
+    <blockquote class="collection-quote">{{ item.quote }}</blockquote>
+    {% endif %}
   </figure>
   {% endfor %}
 </div>
