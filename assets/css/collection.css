@@ -59,7 +59,10 @@
 .collection-quote {
   margin: 0;
   padding: 0.7rem 0.95rem 0.95rem;
+  border: none;
   border-top: 1px solid var(--global-divider-color);
+  border-radius: 0;
+  background: none;
   font-size: 0.8rem;
   font-style: italic;
   line-height: 1.55;
