@@ -64,13 +64,4 @@
   font-style: italic;
   line-height: 1.55;
   color: var(--global-text-color-light);
-  background-color: var(--global-code-bg-color, rgba(128, 128, 128, 0.06));
-}
-
-.collection-quote::before {
-  content: "\201C";
-  color: var(--global-theme-color);
-  font-size: 1.1rem;
-  font-style: normal;
-  margin-right: 0.15rem;
 }

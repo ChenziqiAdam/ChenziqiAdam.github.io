@@ -4,7 +4,7 @@ permalink: /collection/
 title: collection
 description: Books, writers, musicians, films, series, anime, and games I keep coming back to.
 nav: true
-nav_order: 5
+nav_order: 4
 toc:
   sidebar: left
 ---

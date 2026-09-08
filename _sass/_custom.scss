@@ -2,39 +2,4 @@
 // Local style overrides on top of al_folio_core
 // -----------------------------------------------------------------------------
 
-// Keep the about-page profile photo compact, even on small screens.
-.profile {
-  max-width: 240px;
-
-  @media (min-width: 576px) {
-    width: 28%;
-    max-width: 280px;
-  }
-
-  img {
-    max-height: 340px;
-    object-fit: cover;
-  }
-}
-
-// CV entry logos (local override of _includes/cv/education.liquid + experience.liquid)
-.cv-entry-heading {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.cv-entry-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: #fff;
-  padding: 2px;
-  border: 1px solid var(--global-divider-color);
-}
-
-.cv-entry-heading-text h6 {
-  line-height: 1.35;
-}
+// (No local overrides currently.)

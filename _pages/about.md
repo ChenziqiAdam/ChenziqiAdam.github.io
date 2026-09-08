@@ -16,7 +16,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: false
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
@@ -40,5 +42,4 @@ coordinated: representing documents as hierarchical trees for accurate retrieval
 and analysis, and learning task-adaptive communication topologies for multi-agent
 systems.
 
-For a full account, see my [research](/research/), [projects](/projects/), and
-[CV](/cv/).
+See my [projects](/projects/) and [publications](/publications/) for more.
