@@ -4,7 +4,7 @@ title: Obsidian Homepage
 description: A custom homepage for Obsidian.
 img: assets/img/obsidian-homepage-dark.png
 importance: 6
-category: other
+category: Obsidian
 ---
 
 A custom homepage for Obsidian.

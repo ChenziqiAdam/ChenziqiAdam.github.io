@@ -3,7 +3,7 @@ layout: page
 title: Daily News Briefing
 description: An Obsidian plugin for AI-powered daily news summaries in your vault.
 importance: 1
-category: plugins
+category: Obsidian
 ---
 
 Get AI-powered daily news summaries directly in your Obsidian vault. Stay informed
