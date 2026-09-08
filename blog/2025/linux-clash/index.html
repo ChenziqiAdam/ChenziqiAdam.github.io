@@ -1,10 +1,10 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to set up Clash on Linux server? | Ziqi Chen </title> <meta name="author" content="Ziqi Chen"> <meta name="description" content="Setting up Clash on a Linux server."> <meta name="keywords" content="Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to set up Clash on Linux server? | Ziqi Chen </title> <meta name="author" content="Ziqi Chen"> <meta name="description" content="Setting up Clash on a Linux server."> <meta name="keywords" content="Ziqi Chen, Adam Chen, LLM, multi-agent systems, CUHK-Shenzhen, machine learning"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.svg?v=67055143c4c2209bb25827e970cd92a6"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://chenziqiadam.github.io/blog/2025/linux-clash/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ziqi</span> Chen </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/collection/">collection </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to set up Clash on Linux server?</h1> <p class="post-meta"> Created on July 05, 2025 </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/tag/linux"> <i class="fa-solid fa-hashtag fa-sm"></i> linux</a>   <a href="/blog/tag/networking"> <i class="fa-solid fa-hashtag fa-sm"></i> networking</a>   <a href="/blog/tag/clash"> <i class="fa-solid fa-hashtag fa-sm"></i> clash</a>   ·   <a href="/blog/category/tutorial"> <i class="fa-solid fa-tag fa-sm"></i> Tutorial</a> </p> </header> <article class="post-content"> <div id="table-of-contents"> <ul id="toc" class="section-nav"> <li class="toc-entry toc-h3"> <a href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E5%9B%BD%E5%86%85linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91">如何在国内Linux服务器科学上网</a> <ul> <li class="toc-entry toc-h4"> <a href="#0-%E5%87%86%E5%A4%87">0. 准备</a> <ul> <li class="toc-entry toc-h5"><a href="#01-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9C%89%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5">0.1 服务器有网络连接</a></li> <li class="toc-entry toc-h5"><a href="#02-%E6%8B%A5%E6%9C%89%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%9C%8D%E5%8A%A1">0.2 拥有科学上网服务</a></li> </ul> </li> <li class="toc-entry toc-h4"> <a href="#1-%E9%85%8D%E7%BD%AEclash">1. 配置Clash</a> <ul> <li class="toc-entry toc-h5"><a href="#11-%E5%AE%89%E8%A3%85clash">1.1 安装Clash</a></li> <li class="toc-entry toc-h5"><a href="#12-%E4%B8%8B%E8%BD%BDcountrydb">1.2 下载Country.db</a></li> <li class="toc-entry toc-h5"><a href="#13-%E8%AE%BE%E7%BD%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">1.3 设置配置文件</a></li> <li class="toc-entry toc-h5"><a href="#13-%E8%BF%90%E8%A1%8Cclash">1.3 运行Clash</a></li> </ul> </li> <li class="toc-entry toc-h4"> <a href="#2-%E9%85%8D%E7%BD%AEproxychains4">2. 配置Proxychains4</a> <ul> <li class="toc-entry toc-h5"><a href="#21-%E5%AE%89%E8%A3%85">2.1 安装</a></li> <li class="toc-entry toc-h5"><a href="#22-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">2.2 配置环境变量</a></li> <li class="toc-entry toc-h5"><a href="#23-%E9%85%8D%E7%BD%AEproxychainsconf%E6%96%87%E4%BB%B6">2.3 配置proxychains.conf文件</a></li> </ul> </li> <li class="toc-entry toc-h4"><a href="#3-%E6%B5%8B%E8%AF%95">3. 测试</a></li> </ul> </li> </ul> </div> <hr> <div id="markdown-content"> <h3 id="如何在国内linux服务器科学上网">如何在国内Linux服务器科学上网</h3> <blockquote> <p><strong>Note</strong>: This blog is for <strong>Chinese users</strong> to set up <strong>Clash</strong> on Linux servers <strong>in China</strong>.</p> </blockquote> <p>在<strong>国内</strong>使用服务器时，常常需要连接到外网下载文件或者调用API，由于国内<strong>网络限制</strong>导致往往只能从先下载到本地再上传到服务器。本文通过<strong>proxychain4</strong>和<strong>clash</strong>实现直接在服务器上切换代理。</p> <h4 id="0-准备">0. 准备</h4> <h5 id="01-服务器有网络连接">0.1 服务器有网络连接</h5> <ul> <li>测试服务器的<strong>网络连接</strong>。在命令行输入：</li> </ul> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl baidu.com
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ziqi</span> Chen </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/collection/">collection </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to set up Clash on Linux server?</h1> <p class="post-meta"> Created on July 05, 2025 </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/tag/linux"> <i class="fa-solid fa-hashtag fa-sm"></i> linux</a>   <a href="/blog/tag/networking"> <i class="fa-solid fa-hashtag fa-sm"></i> networking</a>   <a href="/blog/tag/clash"> <i class="fa-solid fa-hashtag fa-sm"></i> clash</a>   ·   <a href="/blog/category/tutorial"> <i class="fa-solid fa-tag fa-sm"></i> Tutorial</a> </p> </header> <article class="post-content"> <div id="table-of-contents"> <ul id="toc" class="section-nav"> <li class="toc-entry toc-h3"> <a href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E5%9B%BD%E5%86%85linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91">如何在国内Linux服务器科学上网</a> <ul> <li class="toc-entry toc-h4"> <a href="#0-%E5%87%86%E5%A4%87">0. 准备</a> <ul> <li class="toc-entry toc-h5"><a href="#01-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9C%89%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5">0.1 服务器有网络连接</a></li> <li class="toc-entry toc-h5"><a href="#02-%E6%8B%A5%E6%9C%89%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%9C%8D%E5%8A%A1">0.2 拥有科学上网服务</a></li> </ul> </li> <li class="toc-entry toc-h4"> <a href="#1-%E9%85%8D%E7%BD%AEclash">1. 配置Clash</a> <ul> <li class="toc-entry toc-h5"><a href="#11-%E5%AE%89%E8%A3%85clash">1.1 安装Clash</a></li> <li class="toc-entry toc-h5"><a href="#12-%E4%B8%8B%E8%BD%BDcountrydb">1.2 下载Country.db</a></li> <li class="toc-entry toc-h5"><a href="#13-%E8%AE%BE%E7%BD%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">1.3 设置配置文件</a></li> <li class="toc-entry toc-h5"><a href="#13-%E8%BF%90%E8%A1%8Cclash">1.3 运行Clash</a></li> </ul> </li> <li class="toc-entry toc-h4"> <a href="#2-%E9%85%8D%E7%BD%AEproxychains4">2. 配置Proxychains4</a> <ul> <li class="toc-entry toc-h5"><a href="#21-%E5%AE%89%E8%A3%85">2.1 安装</a></li> <li class="toc-entry toc-h5"><a href="#22-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">2.2 配置环境变量</a></li> <li class="toc-entry toc-h5"><a href="#23-%E9%85%8D%E7%BD%AEproxychainsconf%E6%96%87%E4%BB%B6">2.3 配置proxychains.conf文件</a></li> </ul> </li> <li class="toc-entry toc-h4"><a href="#3-%E6%B5%8B%E8%AF%95">3. 测试</a></li> </ul> </li> </ul> </div> <hr> <div id="markdown-content"> <h3 id="如何在国内linux服务器科学上网">如何在国内Linux服务器科学上网</h3> <blockquote> <p><strong>Note</strong>: This blog is for <strong>Chinese users</strong> to set up <strong>Clash</strong> on Linux servers <strong>in China</strong>.</p> </blockquote> <p>在<strong>国内</strong>使用服务器时，常常需要连接到外网下载文件或者调用API，由于国内<strong>网络限制</strong>导致往往只能从先下载到本地再上传到服务器。本文通过<strong>proxychain4</strong>和<strong>clash</strong>实现直接在服务器上切换代理。</p> <h4 id="0-准备">0. 准备</h4> <h5 id="01-服务器有网络连接">0.1 服务器有网络连接</h5> <ul> <li>测试服务器的<strong>网络连接</strong>。在命令行输入：</li> </ul> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl baidu.com
 </code></pre></div></div> <ul> <li>如果出现以下输出，则证明服务器有网络连接。</li> </ul> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 &lt;meta http-equiv<span class="o">=</span><span class="s2">"refresh"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"0;url=http://www.baidu.com/"</span><span class="o">&gt;</span>
 &lt;/html&gt;
@@ -34,18 +34,11 @@ socks4	127.0.0.1 10001
 socks5	127.0.0.1 10001
 http	127.0.0.1 10001
 </code></pre> <h4 id="3-测试">3. 测试</h4> <ul> <li>在任何命令前添加<code class="language-plaintext highlighter-rouge">proxychains4 </code>，即可使用对该条命令使用代理。</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proxychains4 curl google.com
-</code></pre></div></div> <ul> <li>如果成功看到返回HTML，则说明成功。</li> </ul> <p>祝各位配置顺利！</p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/surp-interview/">How to prepare for SURP interviews?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/research-advisor/">How to find a suitable research advisor?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/github-issue/">Learn from GitHub Issues</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/openclaw/">Five Tips for Openclaw</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/obsidian-mermaid/">Mermaid Diagram in Obsidian</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/mas/">Systematic Overview of MAS</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/local-api/">How to deploy a local model as an API endpoint</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/shanhaiwoo/">ShanhaiWoo - My First Web3 Popup Event</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/synapse/">Synapse - Your Obsidian Local Knowledge Engine</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/wiki-pdf-dataset/">How to prepare pdf datasets from Wikipedia?</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Ziqi Chen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+</code></pre></div></div> <ul> <li>如果成功看到返回HTML，则说明成功。</li> </ul> <p>祝各位配置顺利！</p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/surp-interview/">How to prepare for SURP interviews?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/research-advisor/">How to find a suitable research advisor?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/github-issue/">Learn from GitHub Issues</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/shanhaiwoo/">ShanhaiWoo - My First Web3 Popup Event</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/how-to-get-first-internship/">How to get the first internship?</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/Time-Guardian/">Ever lost track of time while browsing? Try Time Guardian!</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/IPad-Obsidian-with-github/">How to sync Obsidian on iPad with PC</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/how-to-prepare-GRE/">如何自学备考GRE</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/Obsidian-homepage/">How to DIY Obsidian homepage</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Ziqi Chen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
-</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-LB672VYSS3"></script> <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    window.dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-LB672VYSS3");
-</script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
     addBackToTop();
   </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
 // get the ninja-keys element
@@ -65,13 +58,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
-          },
-        },{id: "nav-research",
-          title: "research",
-          description: "Selected research projects on documents, multi-agent systems, and dialogue generation.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/research/";
           },
         },{id: "nav-publications",
           title: "publications",
@@ -93,13 +79,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/collection/";
-          },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Curriculum vitae. Use the button above to download the PDF version.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
           },
         },{id: "post-how-to-prepare-for-surp-interviews",
         
@@ -134,50 +113,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/github-issue/";
           
         },
-      },{id: "post-five-tips-for-openclaw",
-        
-          title: "Five Tips for Openclaw",
-        
-        description: "Five tips for getting more out of OpenClaw.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/openclaw/";
-          
-        },
-      },{id: "post-mermaid-diagram-in-obsidian",
-        
-          title: "Mermaid Diagram in Obsidian",
-        
-        description: "Using Mermaid diagrams in Obsidian.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/obsidian-mermaid/";
-          
-        },
-      },{id: "post-systematic-overview-of-mas",
-        
-          title: "Systematic Overview of MAS",
-        
-        description: "A systematic overview of LLM-based multi-agent systems.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/mas/";
-          
-        },
-      },{id: "post-how-to-deploy-a-local-model-as-an-api-endpoint",
-        
-          title: "How to deploy a local model as an API endpoint",
-        
-        description: "Serving a local model as an API endpoint.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/local-api/";
-          
-        },
       },{id: "post-shanhaiwoo-my-first-web3-popup-event",
         
           title: "ShanhaiWoo - My First Web3 Popup Event",
@@ -187,50 +122,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/shanhaiwoo/";
-          
-        },
-      },{id: "post-synapse-your-obsidian-local-knowledge-engine",
-        
-          title: "Synapse - Your Obsidian Local Knowledge Engine",
-        
-        description: "Synapse: a local knowledge engine for Obsidian.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/synapse/";
-          
-        },
-      },{id: "post-how-to-prepare-pdf-datasets-from-wikipedia",
-        
-          title: "How to prepare pdf datasets from Wikipedia?",
-        
-        description: "Building PDF datasets from Wikipedia.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/wiki-pdf-dataset/";
-          
-        },
-      },{id: "post-how-to-chat-with-your-local-chatgpt",
-        
-          title: "How to chat with your local ChatGPT?",
-        
-        description: "Running a local ChatGPT-style model with Ollama.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/local-llm/";
-          
-        },
-      },{id: "post-how-to-start-your-web3-journey",
-        
-          title: "How to start your Web3 journey?",
-        
-        description: "Getting started with Web3 through Binance.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/binance/";
           
         },
       },{id: "post-how-to-set-up-clash-on-linux-server",
@@ -255,61 +146,6 @@ ninja.data = [{
             window.location.href = "/blog/2025/how-to-get-first-internship/";
           
         },
-      },{id: "post-how-to-create-your-own-obsidian-plugin",
-        
-          title: "How to create your own Obsidian plugin?",
-        
-        description: "Writing your first Obsidian plugin.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/how-to-create-obsidian-plugin/";
-          
-        },
-      },{id: "post-how-to-create-your-own-chatbots",
-        
-          title: "How to create your own chatbots?",
-        
-        description: "Creating custom chatbots on Poe.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/Poe/";
-          
-        },
-      },{id: "post-introduction-to-web3-and-depin",
-        
-          title: "Introduction to Web3 and DePIN",
-        
-        description: "An introduction to Web3 and DePIN.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/Web3/";
-          
-        },
-      },{id: "post-how-to-build-a-full-stack-app-with-aws",
-        
-          title: "How to build a full stack app with AWS?",
-        
-        description: "Building a full-stack app on AWS.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/AWS-App/";
-          
-        },
-      },{id: "post-ten-tips-for-cursor",
-        
-          title: "Ten Tips for Cursor",
-        
-        description: "Ten practical tips for working in Cursor.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Cursor-tip/";
-          
-        },
       },{id: "post-ever-lost-track-of-time-while-browsing-try-time-guardian",
         
           title: "Ever lost track of time while browsing? Try Time Guardian!",
@@ -319,50 +155,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/Time-Guardian/";
-          
-        },
-      },{id: "post-how-to-integrate-gemini-into-your-extension",
-        
-          title: "How to integrate Gemini into your extension?",
-        
-        description: "Integrating the Gemini API into a Chrome extension.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Gemini-Extension/";
-          
-        },
-      },{id: "post-how-to-become-chrome-extension-developer",
-        
-          title: "How to become Chrome Extension developer?",
-        
-        description: "Getting started as a Chrome extension developer.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Chrome-developer/";
-          
-        },
-      },{id: "post-how-to-deploy-websites-on-a-remote-server",
-        
-          title: "How to deploy websites on a remote server",
-        
-        description: "Deploying a website on a remote server.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/how-to-deploy-websites-on-remote-servers/";
-          
-        },
-      },{id: "post-how-to-design-and-implement-an-ai-agent",
-        
-          title: "How to design and implement an AI agent",
-        
-        description: "Designing and implementing an LLM agent from first principles.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/how-to-implement-an-agent/";
           
         },
       },{id: "post-how-to-sync-obsidian-on-ipad-with-pc",
@@ -398,208 +190,42 @@ ninja.data = [{
             window.location.href = "/blog/2024/Obsidian-homepage/";
           
         },
-      },{id: "post-how-to-clean-chinese-text-data",
-        
-          title: "How to clean Chinese text data",
-        
-        description: "Cleaning Chinese text data for NLP.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/chinese-data-cleaning/";
-          
-        },
-      },{id: "post-how-to-crawl-with-python-selenium",
-        
-          title: "How to crawl with Python Selenium",
-        
-        description: "Web scraping with Python and Selenium.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/selenium-crawl/";
-          
-        },
-      },{id: "post-how-to-implement-your-own-git",
-        
-          title: "How to implement your own Git",
-        
-        description: "Implementing a small version-control system, Gitlet.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Gitlet/";
-          
-        },
-      },{id: "post-how-to-pass-cla-in-intellij-idea",
-        
-          title: "How to pass CLA in IntelliJ IDEA?",
-        
-        description: "Passing a CLA check inside IntelliJ IDEA.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/IntelliJ-IDEA-CLA/";
-          
-        },
-      },{id: "post-how-to-utilize-ai-hallucination",
-        
-          title: "How to utilize AI hallucination",
-        
-        description: "Turning LLM hallucination into a useful signal for a legal QA system.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/law-LLM/";
-          
-        },
-      },{id: "post-how-to-connect-to-zilliz-cloud",
-        
-          title: "How to connect to Zilliz Cloud",
-        
-        description: "Connecting to Zilliz Cloud (managed Milvus).",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/connect-to-Zilliz-Cloud/";
-          
-        },
-      },{id: "post-how-to-edit-multiple-files-in-obsidian",
-        
-          title: "How to edit multiple files in Obsidian",
-        
-        description: "Editing multiple files at once in Obsidian.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/edit-multipe-files-in-Obsidian/";
-          
-        },
-      },{id: "post-how-to-create-your-own-site",
-        
-          title: "How to create your own site",
-        
-        description: "Building a personal site from scratch.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/create-your-personal-site/";
-          
-        },
-      },{id: "post-how-to-backup-obsidian",
-        
-          title: "How to backup Obsidian",
-        
-        description: "Backing up an Obsidian vault with the Git plugin.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Obsidian-backup-with-git-plugin/";
-          
-        },
-      },{id: "post-how-to-connect-to-alibaba-cloud-rds",
-        
-          title: "How to connect to Alibaba Cloud RDS",
-        
-        description: "Connecting to an Alibaba Cloud RDS instance from Python.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Aliyun-RDS-with-Python/";
-          
-        },
-      },{id: "post-how-to-connect-to-a-remote-server",
-        
-          title: "How to connect to a remote server",
-        
-        description: "Connecting to a remote server over SSH.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/connect-to-remote-server/";
-          
-        },
-      },{id: "post-my-personal-site-is-set-up",
-        
-          title: "My personal site is set up!",
-        
-        description: "Setting up this personal site.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/set-up/";
-          
-        },
-      },{id: "post-welcome-to-my-site",
-        
-          title: "Welcome to my site!",
-        
-        description: "A short hello and what this blog is for.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/welcome-to-my-homepage/";
-          
-        },
-      },{id: "news-joined-mortar-https-www-getmortar-ai-as-a-founding-engineer",
-          title: 'Joined [Mortar](https://www.getmortar.ai/) as a founding engineer.',
-          description: "",
-          section: "News",},{id: "news-received-the-undergraduate-research-award-at-cuhk-shenzhen",
+      },{id: "news-received-the-undergraduate-research-award-at-cuhk-shenzhen",
           title: 'Received the Undergraduate Research Award at CUHK-Shenzhen.',
           description: "",
-          section: "News",},{id: "news-started-a-research-internship-in-the-uchicago-summer-research-fellowship-program",
-          title: 'Started a research internship in the UChicago Summer Research Fellowship program.',
+          section: "News",},{id: "news-started-research-internship-in-uchicago",
+          title: 'Started research internship in UChicago.',
           description: "",
-          section: "News",},{id: "projects-obsidian-homepage",
-          title: 'Obsidian Homepage',
-          description: "A custom homepage for Obsidian.",
+          section: "News",},{id: "projects-daily-muse",
+          title: 'Daily Muse',
+          description: "Blend your mood, the weather, and a touch of luck into generated art and literature.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/10_obsidian_homepage/";
+              window.location.href = "/projects/daily_muse/";
             },},{id: "projects-daily-news-briefing",
           title: 'Daily News Briefing',
           description: "An Obsidian plugin for AI-powered daily news summaries in your vault.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_daily_news_briefing/";
-            },},{id: "projects-sane",
-          title: 'SANE',
-          description: "Smart AI Note Evolution — an Obsidian plugin for keeping your vault sane.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_sane/";
-            },},{id: "projects-page-distill",
-          title: 'Page Distill',
-          description: "A Chrome extension that summarizes web pages on-device with Chrome&#39;s built-in Summarizer API.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_page_distill/";
-            },},{id: "projects-time-guardian",
-          title: 'Time Guardian',
-          description: "A Chrome extension for smart time reminders powered by Gemini.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_time_guardian/";
+              window.location.href = "/projects/daily_news_briefing/";
             },},{id: "projects-narrative-planner",
           title: 'Narrative Planner',
           description: "A GraphRAG-based interview planning system for memoir generation.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_narrative_planner/";
-            },},{id: "projects-daily-muse",
-          title: 'Daily Muse',
-          description: "Blend your mood, the weather, and a touch of luck into generated art and literature.",
+              window.location.href = "/projects/narrative_planner/";
+            },},{id: "projects-obsidian-homepage",
+          title: 'Obsidian Homepage',
+          description: "A custom homepage for Obsidian.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_daily_muse/";
-            },},{id: "projects-automcm",
-          title: 'AutoMCM',
-          description: "Automates the MCM/ICM competition workflow from problem analysis to submission-ready papers.",
+              window.location.href = "/projects/obsidian_homepage/";
+            },},{id: "projects-sane",
+          title: 'SANE',
+          description: "Smart AI Note Evolution — an Obsidian plugin for keeping your vault sane.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_automcm/";
-            },},{id: "projects-twinhospital",
-          title: 'TwinHospital',
-          description: "A digital twin simulator for hospital operations and resource scheduling.",
+              window.location.href = "/projects/sane/";
+            },},{id: "projects-time-guardian",
+          title: 'Time Guardian',
+          description: "A Chrome extension for smart time reminders powered by Gemini.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_twinhospital/";
-            },},{id: "projects-cs-notes",
-          title: 'CS Notes',
-          description: "A digital knowledge garden with notes from the CS courses I have taken.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_cs_notes/";
+              window.location.href = "/projects/time_guardian/";
             },},{
         id: 'social-cv',
         title: 'CV',
