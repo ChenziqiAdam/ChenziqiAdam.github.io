@@ -209,6 +209,14 @@ digitals:
     quote: "We are things that labor under the illusion of having a self, that accretion of sensory experience and feelings, programmed with total assurance that we are each somebody, when in fact everybody's nobody"
     rating: 4.5
 
+  - type: drama
+    title: "Dark Matter"
+    subtitle: "Apple TV"
+    image: "/assets/img/dark-matter.jpeg"
+    alt: "Drama: Dark Matter"
+    quote: "It is the imperfections of life that amount to a different kind of perfection."
+    rating: 4.5
+
   - type: movie
     title: "The Dark Knight Trilogy"
     subtitle: "Christopher Nolan"
