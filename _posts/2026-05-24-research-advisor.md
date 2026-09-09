@@ -4,13 +4,13 @@ title: "How to find a suitable research advisor?"
 date: 2026-05-24 21:06:00 +0800
 description: "How to find a research advisor who is a good fit."
 tags:
-  - advising
-  - career
+  - interview
 categories:
   - Research
 toc:
   beginning: true
 ---
+
 ### My Understanding of A Suitable Research Advisor
 > **Note**: This blog is for **Chinese students** to learn how to find a suitable **Research Advisor**.
 

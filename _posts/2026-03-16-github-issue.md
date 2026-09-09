@@ -5,12 +5,12 @@ date: 2026-03-16 21:06:00 +0800
 description: "What you can learn from reading GitHub issues."
 tags:
   - github
-  - open-source
 categories:
-  - Tutorial
+  - Research
 toc:
   beginning: true
 ---
+
 ### Helpful GitHub Issues.
 
 Recently I was working on the paper *Nested Learning* by GDM. Since there was no official code for the paper, which was reasonable given that Google they use their inside infra, I turned to GitHub for community effort.

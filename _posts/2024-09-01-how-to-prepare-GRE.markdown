@@ -6,10 +6,11 @@ description: "Self-studying for the GRE."
 tags:
   - gre
 categories:
-  - Life
+  - Tutorial
 toc:
   beginning: true
 ---
+
 ### 如何两个月自学GRE实现GRE325+
 > **Note**: This blog is for **Chinese students** to prepare for **GRE**.
 

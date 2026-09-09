@@ -4,13 +4,13 @@ title: "How to prepare for SURP interviews?"
 date: 2026-06-09 16:38:35 +0800
 description: "Preparing for SURP research interviews."
 tags:
-  - interviews
-  - career
+  - interview
 categories:
   - Research
 toc:
   beginning: true
 ---
+
 ### Five Tips for SURP Interviews
 
 #### 1. Practice your English. 

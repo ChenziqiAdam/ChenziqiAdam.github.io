@@ -5,13 +5,12 @@ date: 2024-09-05 18:43:30 +0800
 description: "Syncing an Obsidian vault between iPad and PC via GitHub."
 tags:
   - obsidian
-  - git
-  - ipad
 categories:
   - Tutorial
 toc:
   beginning: true
 ---
+
 ### How to sync your Obsidian on iPad with PC via GitHub?
 This blog requires you to backup your Obsidian vault via **GitHub**. See [my blog](/skills/2024/09/05/IPad-Obsidian-with-github.html) about how to do it.
 

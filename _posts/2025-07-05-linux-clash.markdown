@@ -4,14 +4,13 @@ title: "How to set up Clash on Linux server?"
 date: 2025-07-05 15:59:30 +0800
 description: "Setting up Clash on a Linux server."
 tags:
-  - linux
-  - networking
   - clash
 categories:
   - Tutorial
 toc:
   beginning: true
 ---
+
 ### 如何在国内Linux服务器科学上网
 > **Note**: This blog is for **Chinese users** to set up **Clash** on Linux servers **in China**.
 

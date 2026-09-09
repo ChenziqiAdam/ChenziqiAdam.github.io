@@ -5,12 +5,12 @@ date: 2024-08-14 14:14:15 +0800
 description: "Building a custom Obsidian homepage dashboard."
 tags:
   - obsidian
-  - dataview
 categories:
   - Tutorial
 toc:
   beginning: true
 ---
+
 ### How to DIY your Obsidian homepage from scratch?
 Obsidian **Homepage** plugin enables to open a specified note as a **homepage** upon launching Obsidian. 
 As for me, a good homepage works as a **dashboard** and facilitate my workflow. 
