@@ -128,7 +128,7 @@ analytics:
 enable_simple_analytics: false # Simple Analytics identifies a site by its domain, so it has no ID to set above
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google-site-verification: UEpsQaWfphCa_jGor6FJ5s8-Hdrf9Q7yCcGB8exMQbA # your google-site-verification ID (Google Search Console)
+google_site_verification: BAPCsXatue__MZoskOWS-Q7d6gp3fj8DAggxQ26q1Hs # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
