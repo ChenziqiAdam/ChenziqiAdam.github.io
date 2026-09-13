@@ -34,8 +34,7 @@
     .attr('viewBox', `0 0 ${width} ${height}`);
 
   const projection = d3.geoNaturalEarth1()
-    .scale(width / 5)
-    .translate([width / 2, height / 2]);
+    .fitSize([width, height], { type: 'Sphere' });
 
   const path = d3.geoPath().projection(projection);
 
@@ -58,29 +57,8 @@
         .attr('class', 'travel-map-dot')
         .attr('cx', d => projection(d.coords)[0])
         .attr('cy', d => projection(d.coords)[1])
-        .attr('r', 0)
+        .attr('r', d => d.size)
         .attr('opacity', 0.8);
-
-      dots.transition()
-        .delay((d, i) => i * 40)
-        .duration(600)
-        .attr('r', d => d.size);
-
-      dots.each(function (d) {
-        const circle = d3.select(this);
-        (function pulse() {
-          circle.transition()
-            .delay(600 + Math.random() * 1000)
-            .duration(1500)
-            .attr('r', d.size + 4)
-            .attr('opacity', 0.2)
-            .transition()
-            .duration(1500)
-            .attr('r', d.size)
-            .attr('opacity', 0.8)
-            .on('end', pulse);
-        })();
-      });
 
       dots.append('title').text(d => d.name);
     })
