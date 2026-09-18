@@ -2,7 +2,7 @@
 layout: page
 permalink: /collection/
 title: collection
-description: Books, writers, musicians, films, series, anime, and games I keep coming back to.
+description: Places, books, films, series, and anime I keep coming back to.
 nav: true
 nav_order: 5
 toc:

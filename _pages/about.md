@@ -31,4 +31,4 @@ My research interests center on **adaptive and efficient language models and age
 
 I am actively seeking PhD opportunities starting from 2027 Fall.
 
-See my [research](/research/) and [publications](/publications/) for more.
+See my [publications](/publications/) and [CV](/assets/pdf/CV.pdf) for more.

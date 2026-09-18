@@ -327,9 +327,6 @@ jekyll-archives:
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
 
-display_tags: ["llm", "obsidian", "rag", "multi-agent-systems", "web3", "career", "open-source"] # these tags will be displayed on the front page of your blog
-display_categories: ["Tutorial", "Research", "Project", "Web3", "Life"] # these categories will be displayed on the front page of your blog
-
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
