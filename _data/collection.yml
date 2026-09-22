@@ -146,6 +146,14 @@ digitals:
     rating: 5
 
   - type: drama
+    title: "Andor"
+    subtitle: "Disney"
+    image: "/assets/img/andor.jpeg"
+    alt: "Drama: Andor"
+    quote: "I burn my life to make a sunrise that I know I’ll never see."
+    rating: 5
+
+  - type: drama
     title: "The Mandalorian"
     subtitle: "Disney"
     image: "/assets/img/mandalorian.jpg"
