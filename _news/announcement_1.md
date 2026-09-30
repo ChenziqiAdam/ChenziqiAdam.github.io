@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started research internship in UChicago.
+Received the UChicago Student Summer Research Fellowship.
