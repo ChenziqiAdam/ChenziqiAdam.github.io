@@ -258,6 +258,14 @@ digitals:
     rating: 5
 
   - type: anime
+    title: "Made in Abyss"
+    subtitle: "Akihito Tsukushi"
+    image: "/assets/img/made-in-abyss.jpg"
+    alt: "Anime: Made in Abyss"
+    quote: "At the very least, realize your dreams and despair."
+    rating: 4.5
+
+  - type: anime
     title: "Cyberpunk Edgerunners"
     subtitle: "Netflix"
     image: "/assets/img/cyberpunk-edgerunners.jpg"
