@@ -226,6 +226,14 @@ digitals:
     rating: 4.5
 
   - type: movie
+    title: "Oppenheimer"
+    subtitle: "Christopher Nolan"
+    image: "/assets/img/oppenheimer.jpeg"
+    alt: "Movie: Oppenheimer"
+    quote: "Theory will only take you so far."
+    rating: 5
+
+  - type: movie
     title: "The Dark Knight Trilogy"
     subtitle: "Christopher Nolan"
     image: "/assets/img/dark-knight-trilogy.jpeg"
